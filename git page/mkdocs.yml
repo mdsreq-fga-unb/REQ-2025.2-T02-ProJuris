@@ -1,0 +1,13 @@
+site_name: LegisPro
+repo_url: https://github.com/mdsreq-fga-unb/REQ-2025.2-T02-ProJuris
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode 

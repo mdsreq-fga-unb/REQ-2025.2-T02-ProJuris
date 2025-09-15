@@ -1,0 +1,3 @@
+[submodule "REQ-2025.2-T02-ProJuris"]
+    path = REQ-2025.2-T02-ProJuris
+    url = https://github.com/mdsreq-fga-unb/REQ-2025.2-T02-ProJuris.git  
