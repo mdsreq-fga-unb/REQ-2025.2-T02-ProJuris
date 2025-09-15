@@ -3,11 +3,11 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - main  
+      - main 
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Checkout repository
@@ -22,4 +22,4 @@ jobs:
         run: pip install mkdocs mkdocs-material
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --remote-branch GitPage --force
+        run: mkdocs gh-deploy --force
