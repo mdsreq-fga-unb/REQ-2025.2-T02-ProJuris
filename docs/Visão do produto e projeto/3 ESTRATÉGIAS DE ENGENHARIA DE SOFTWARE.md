@@ -8,7 +8,7 @@ Tendo em vista as informações apresentadas no documento, a decisão sobre as e
 
 **Processo de Engenharia de Software**: eXtreme Programming (XP)
 
-**FrameWork**: Scrum
+**FrameWork**: Kanban
 
 ## 3.2 Quadro Comparativo
 
@@ -25,8 +25,8 @@ Tendo em vista as informações apresentadas no documento, a decisão sobre as e
 
 Dado a análise apresentada, consolidou-se a escolha do eXtreme Programming (XP) como processo principal para o desenvolvimento do produto. A decisão justifica-se pela sua notável adequação às necessidades do projeto e do cliente, que priorizam a flexibilidade e a qualidade do código em um ambiente de equipe pequena como a nossa.
 
-Nesse sentido, o XP, com seu foco em práticas de excelência técnica, como o Desenvolvimento Orientado a Testes (TDD) e a Programação em Par, garante um código de alta qualidade desde o início, sendo fundamental para um projeto que lida com dados confidenciais e que precisa ser robusto e confiável, a fim de minimizar o risco de erros e retrabalho. Ainda que o FDD também seja ágil, o processo é mais voltado para funcionalidades e à modelagem de domínio, o que não é o foco principal da equipe neste momento. O XP, por outro lado, vai direto ao ponto, priorizando a qualidade do código que irá sustentar o produto.
+Nesse sentido, o XP com seu foco em práticas de excelência técnica, como o Desenvolvimento Orientado a Testes (TDD) e a Programação em Par, garante um código de alta qualidade desde o início, sendo fundamental para um projeto que lida com dados confidenciais e que precisa ser robusto e confiável, a fim de minimizar o risco de erros e retrabalho. Ainda que o FDD também seja ágil, o processo é mais voltado para funcionalidades e à modelagem de domínio, o que não é o foco principal da equipe neste momento. O XP, por outro lado, vai direto ao ponto, priorizando a qualidade do código que irá sustentar o produto.
 
 Além disso, a filosofia do XP de aceitar mudanças como parte natural do processo se alinha perfeitamente com a necessidade de adaptação ao longo do projeto. Como a equipe não tem acesso a sistemas legados para testes de interoperabilidade, a capacidade de refatorar e se ajustar a novos requisitos de dados é crucial. O XP facilita essa flexibilidade, ao passo que o FDD, por justamente ser mais estruturado em torno de funcionalidades, poderia ter um processo de adaptação mais formal e lento.
 
-Portanto, a simplicidade e o foco do XP em comunicação direta e feedback contínuo se encaixam bem com a equipe pequena do projeto. O processo incentiva a colaboração e a transparência, elementos que garantem que todos os membros estejam alinhados com o Product Owner, minimizando ruídos e maximizando a eficiência da entrega.
+Portanto, a simplicidade e o foco do XP em comunicação direta e feedback contínuo se encaixam bem com a equipe pequena do projeto. O processo incentiva a colaboração e a transparência, elementos que garantem que todos os membros estejam alinhados com o gestor do projeto, minimizando ruídos e maximizando a eficiência da entrega.

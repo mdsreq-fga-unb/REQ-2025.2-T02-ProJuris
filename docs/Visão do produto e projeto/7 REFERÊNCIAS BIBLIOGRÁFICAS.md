@@ -1,0 +1,1 @@
+MARSICANO, George. Conceitos. In: MARSICANO, George. Requisitos de Software: Fundamentos, Evolução e Práticas. Versão 0.3, Draft. [s.l.]: [s.n.], 2025. p. 8-27
