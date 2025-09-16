@@ -253,18 +253,64 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entregas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../Entregas/Unidade%201/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Vídeo de Entrega da Unidade 1
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -563,6 +609,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7%20REFER%C3%8ANCIAS%20BIBLIOGR%C3%81FICAS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 REFERÊNCIAS BIBLIOGRÁFICAS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -756,16 +825,19 @@
 </li>
 </ul>
 <h2 id="23-tecnologias-a-serem-utilizadas">2.3 Tecnologias a Serem Utilizadas</h2>
-<p>A solução será desenvolvida em uma arquitetura web moderna a fim de garantira segurança e escalabilidade do produto de software. Construído em modelo MVC, as tecnologias foram escolhidas baseado na experiencia da equipe e em como poderíamos adequar ao domínio jurídico que exige controle rígido de segurança e dados bem estruturado, por isso aderimos ao ecossistema <strong>JavaScript</strong>.</p>
+<p>A solução será desenvolvida em uma arquitetura web moderna a fim de garantir a segurança e escalabilidade do produto de software. Construído em modelo MVC, as tecnologias foram escolhidas baseado na experiência da equipe e em como poderíamos adequar ao domínio jurídico que exige controle rígido de segurança e dados bem estruturado, por isso aderimos ao ecossistema <strong>JavaScript</strong>.</p>
 <ul>
 <li>
-<p><strong>Frontend</strong>: Dado os perfis de usuários distintivos que vão acessar as interfaces, precisamos de algo que seja dinamico e que suporte incrementação alinhada às iterações do produto, por isso escolhemos o React, que se adequa muito bem ao sistema, e possui suporte de tecnologias modernas para dashboards de indicadores.</p>
+<p><strong>Frontend</strong>: Dado os perfis de usuários distintivos que vão acessar as interfaces, precisamos de algo que seja dinâmico e que suporte incrementação alinhada às iterações do produto, por isso escolhemos o <strong>React</strong>, que se adequa muito bem ao sistema, e possui suporte de tecnologias modernas para dashboards de indicadores.</p>
 </li>
 <li>
-<p><strong>Backend</strong>: Para que seja construído a API do sistema com toda lógica e segurança, optamos por seguir com Node.js e Express, essa escolha se dá, principalmente pela uniformidade da linguagem, que acelera o desenvolvimento e a dinamica da equipe.</p>
+<p><strong>Backend</strong>: Para que seja construído a API do sistema com toda lógica e segurança, optamos por seguir com <strong>Node.js</strong> e <strong>Express</strong>, essa escolha se dá, principalmente pela uniformidade da linguagem, que acelera o desenvolvimento e a dinâmica da equipe.</p>
 </li>
 <li>
-<p><strong>Banco de dados</strong>: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, processos, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.</p>
+<p><strong>Banco de dados</strong>: Para o armazenamento estruturado das informações jurídicas, será utilizado o <strong>MySQL</strong>, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, processos, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.</p>
+</li>
+<li>
+<p><strong>Chatbot</strong>: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de seus processos jurídicos e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.</p>
 </li>
 </ul>
 <h2 id="24-pesquisa-de-mercado-e-analise-competitiva">2.4 Pesquisa de Mercado e Análise Competitiva</h2>
@@ -821,8 +893,8 @@
 </ul>
 <p>Diferenciar o produto por meio de um workflow visual, importador assistido, controles de acesso granulares e automações configuráveis permitirá atender às necessidades centrais do Cortes, Santos Advogados: visibilidade do fluxo, redução de retrabalho e manutenção do caráter pessoal do atendimento. Esses diferenciais tornam a solução mais apropriada para escritórios conservadores e enxutos do que plataformas genéricas e “tudo em um” que, apesar de ricas em funcionalidades, nem sempre resolvem problemas operacionais cotidianos.</p>
 <h2 id="25-analise-de-viabilidade">2.5 Análise de Viabilidade</h2>
-<p>A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, <mark>importador de Excel</mark>, notificações configuráveis e repositório pesquisável de cláusulas. </p>
-<p>O ideal é fazer por etapas: primeiro entender bem o que usam hoje (1-2 semanas), depois desenvolver um MVP com o essencial (2-4 semanas), testar o produto como piloto com o cliente (1 semana) e só então fazer correções finais (1 semana). No total, algo em torno de 2 meses. Em relação aos custos, como sendo um projeto acadêmico, a maior parte das coisas podem ser gratuitas: Git e GitHub para controlar o código, hospedagem em planos gratuitos para a demo e um banco leve como SQLite (ou armazenamento local) durante o desenvolvimento. Caso queiramos um domínio próprio ou algum serviço extra (por exemplo uma hospedagem paga ou ferramenta específica), os gastos tendem a ser pequenos; uma estimativa realista fica entre R$0 e R$1.000, dependendo do que escolhermos. Se for preciso terceirizar algo pontual, como um deploy profissional ou configuração de servidor, o ideal é combinar um pequeno orçamento coletivo entre os membros do grupo para cobrir esse custo.</p>
+<p>A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso dos processos e repositório pesquisável de cláusulas.   </p>
+<p>O ideal é fazer por etapas: primeiro entender bem e alinhar o escopo do projeto (2 semanas), depois desenvolver um MVP com o essencial (8-10 semanas), testar o produto como piloto com o cliente e só então fazer correções finais (1-2 semanas). No total, algo em torno de 3 meses. Em relação aos custos, como sendo um projeto acadêmico, a maior parte das coisas podem ser gratuitas: Git e GitHub para controlar o código, hospedagem em planos gratuitos para a demo e um banco leve como MySQL (ou armazenamento local) durante o desenvolvimento. Caso queiramos um domínio próprio ou algum serviço extra (por exemplo uma hospedagem paga ou ferramenta específica), os gastos tendem a ser pequenos; uma estimativa realista fica entre R$60,00 e R$1.000,00, dependendo do que o cliente escolher. Se for preciso terceirizar algo pontual, como um deploy profissional ou configuração de servidor, o ideal é combinar um pequeno orçamento coletivo entre os membros do grupo para cobrir esse custo.</p>
 <p>Os principais riscos e soluções identificados pelo grupo são: </p>
 <ol>
 <li>Complicação para a migração de dados das planilhas: a solução seria testar com amostras e ter um importador guiado; </li>
