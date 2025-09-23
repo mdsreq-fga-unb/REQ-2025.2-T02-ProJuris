@@ -1,5 +1,7 @@
 site_name: LegisPro
-repo_url: https://github.com/mdsreq-fga-unb/REQ-2025.2-T02-ProJuris
+repo_url: https://github.com/mdsreq-fga-unb/REQ-2025.2-T02-ProJuris.git
+site_url: https://mdsreq-fga-unb.github.io/REQ-2025.2-T02-ProJuris/
+site_dir: site
 theme:
   name: material
   palette:

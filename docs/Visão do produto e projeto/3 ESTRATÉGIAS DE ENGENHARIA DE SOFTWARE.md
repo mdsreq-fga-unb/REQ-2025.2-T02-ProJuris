@@ -1,32 +1,36 @@
+## 3 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE
+
 Tendo em vista as informações apresentadas no documento, a decisão sobre as estratégias de engenharia de software a serem utilizadas prioriza a adaptação constante e a entrega de valor de forma ágil para um cliente que precisa de resultados rápidos e visíveis, considerando feedbacks.
 
-## 3.1 Estratégia Priorizada
+### 3.1 Estratégia Priorizada
 
-**Abordagem de Desenvolvimento de Software**: Ágil
+Abordagem de Desenvolvimento de Software: Ágil
 
-**Ciclo de vida**: Iterativo e Incremental
+Ciclo de vida: Iterativo e Incremental
 
-**Processo de Engenharia de Software**: eXtreme Programming (XP)
+Processo de Engenharia de Software: Open Unified Process (Open UP)
 
-**FrameWork**: Kanban
+FrameWork: Kanban
 
-## 3.2 Quadro Comparativo
+### 3.2 Quadro Comparativo
 
-| Características | eXtreme Programming (XP) | Feature-Driven Development (FDD) |
-| - | - | - |
-| Filosofia Central | Foco na excelência técnica, comunicação constante e feedback rápido. Visa entregar software de alta qualidade através de práticas rigorosas de codificação e testes. | Foco na entrega de funcionalidades tangíveis. O trabalho é organizado e planejado em torno da construção de "features" ou funcionalidades valiosas para o cliente. |
-| Ciclo de Vida | Iterativo e Incremental. O trabalho é dividido em iterações curtas, geralmente de uma a duas semanas, onde o foco é entregar um software funcional e testado. | Iterativo e Incremental. O processo é dividido em cinco etapas, com as duas últimas sendo iterativas: "Projetar por Funcionalidade" e "Construir por Funcionalidade". |
-| Papéis (Funções) | Baseado em um conjunto de práticas como Programação em Par, Desenvolvimento Orientado a Testes e Refatoração Contínua. Sendo assim, a equipe inteira é responsável pelo código. | Baseado em um conjunto de práticas como a construção de Modelos de Domínio e a elaboração de Listas de Funcionalidades. O desenvolvimento é feito em times pequenos e orientados por funcionalidades. |
-| Ritmo de Trabalho | Constante e sustentável. O foco é manter um ritmo de trabalho que evite a exaustão da equipe e garanta a qualidade contínua do código. | Fluxo contínuo e disciplinado. O trabalho é planejado e executado de forma estruturada para garantir a entrega de funcionalidades completas no prazo. |
-| Documentação | Prioriza a entrega de software funcionando sobre a documentação extensiva. Nesse contexto, a documentação é mínima e focada apenas no essencial. | Embora seja ágil, é mais proativo na documentação. A modelagem de domínio é um ponto crucial, e a documentação é feita para cada funcionalidade. |
-| Controle de Mudanças | Altamente flexível. As mudanças são vistas como parte natural do processo e são incorporadas em ciclos de feedback curtos. | Mais estruturado. As mudanças são gerenciadas através da priorização das funcionalidades, mas o processo de desenvolvimento de cada uma é mais formalizado. |
+| Características | Open UP | Feature-Driven Development (FDD) |
+| --- | --- | --- |
+| Filosofia Central | Enfatiza uma abordagem mais estruturada e iterativa, focando na arquitetura do sistema e no gerenciamento de riscos desde o início para garantir uma base sólida e escalável. | Prioriza a entrega rápida de funcionalidades tangíveis para o cliente, o que pode levar a um foco excessivo em recursos de curto prazo em detrimento da coesão arquitetônica de longo prazo. |
+| Ciclo de Vida | Iterativo e Incremental. O trabalho é dividido em quatro fases, sendo elas: Iniciação, Elaboração, Construção e Transição. O desenvolvimento ocorre em ciclos curtos dentro dessas fases. | Iterativo e Incremental. O processo é dividido em cinco etapas, com as duas últimas sendo iterativas: "Projetar por Funcionalidade" e "Construir por Funcionalidade". |
+| Papéis (Funções) | Possui papéis bem definidos como Gerente de Projeto, Arquiteto e Desenvolvedor. Possui um foco na colaboração e na comunicação entre os papéis, tornando-o ideal para equipes enxutas como a nossa. | Baseado em um conjunto de práticas como a construção de Modelos de Domínio e a elaboração de Listas de Funcionalidades. O desenvolvimento é feito em times pequenos e orientados por funcionalidades. |
+| Ritmo de Trabalho | Seu ritmo é guiado por iterações que priorizam os maiores riscos e a arquitetura, promovendo um workflow adaptável e estável desde o início. | O trabalho avança em ciclos curtos e constantes focados em funcionalidades, mas depende de um esforço inicial maior de modelagem e planejamento detalhado. |
+| Documentação | Prioriza uma documentação mínima e essencial, focada em alinhar o entendimento com a visão do produto. Nesse sentido, a colaboração e a comunicação são incentivadas para evitar excesso de artefatos. | Embora seja ágil, é mais proativo na documentação. A modelagem de domínio é um ponto crucial, e a documentação é feita para cada funcionalidade. |
+| Controle de Mudanças | Gerencia mudanças através de um processo iterativo e estruturado, com foco em mitigar riscos e manter a arquitetura, permitindo maior controle e previsibilidade sobre o impacto das alterações no projeto | Lida com mudanças de forma mais granular e reativa, focando na entrega de funcionalidades em ciclos curtos, novas solicitações são adicionadas à lista de funcionalidades, o que pode fragmentar a visão arquitetônica global. |
 
-## 3.3 Justificativa
+### 3.3 Justificativa
 
-Dado a análise apresentada, consolidou-se a escolha do eXtreme Programming (XP) como processo principal para o desenvolvimento do produto. A decisão justifica-se pela sua notável adequação às necessidades do projeto e do cliente, que priorizam a flexibilidade e a qualidade do código em um ambiente de equipe pequena como a nossa.
+Para o desenvolvimento do LegisPro, que exige um processo leve, adaptável e eficiente, avaliamos abordagens ágeis que privilegiasse flexibilidade e entregas frequentes. Nesse contexto, o OpenUP destaca-se como alternativa adequada, por sua natureza interativa, que favorece ciclos curtos de desenvolvimento e feedback contínuo, além de reduzir a burocracia sem comprometer a qualidade
 
-Nesse sentido, o XP com seu foco em práticas de excelência técnica, como o Desenvolvimento Orientado a Testes (TDD) e a Programação em Par, garante um código de alta qualidade desde o início, sendo fundamental para um projeto que lida com dados confidenciais e que precisa ser robusto e confiável, a fim de minimizar o risco de erros e retrabalho. Ainda que o FDD também seja ágil, o processo é mais voltado para funcionalidades e à modelagem de domínio, o que não é o foco principal da equipe neste momento. O XP, por outro lado, vai direto ao ponto, priorizando a qualidade do código que irá sustentar o produto.
+Dado a análise apresentada, a escolha do Open Unified Process (OpenUP) como processo de engenharia de software, em conjunto com o framework Kanban para gestão do fluxo de trabalho, configurou-se como a mais adequada para o projeto. Essa abordagem combina a estrutura leve de um processo com a flexibilidade de um framework, alinhando-se perfeitamente às necessidades do cliente e à dinâmica da nossa equipe enxuta.
 
-Além disso, a filosofia do XP de aceitar mudanças como parte natural do processo se alinha perfeitamente com a necessidade de adaptação ao longo do projeto. Como a equipe não tem acesso a sistemas legados para testes de interoperabilidade, a capacidade de refatorar e se ajustar a novos requisitos de dados é crucial. O XP facilita essa flexibilidade, ao passo que o FDD, por justamente ser mais estruturado em torno de funcionalidades, poderia ter um processo de adaptação mais formal e lento.
+O OpenUP foi escolhido por sua natureza iterativa e por sua clara divisão em fases, que oferece um roteiro sólido e previsível para o desenvolvimento. Isso é essencial para um projeto com entregas semanais, seguindo o cronograma previsto pelo KanBan, pois nos permite planejar, executar e validar o produto de forma organizada, garantindo que o escopo e os objetivos sejam alcançados sem a burocracia de processos mais formais. O OpenUP foca na colaboração, o que facilita a comunicação com o cliente e o alinhamento de expectativas em cada etapa.
 
-Portanto, a simplicidade e o foco do XP em comunicação direta e feedback contínuo se encaixam bem com a equipe pequena do projeto. O processo incentiva a colaboração e a transparência, elementos que garantem que todos os membros estejam alinhados com o gestor do projeto, minimizando ruídos e maximizando a eficiência da entrega.
+Nesse sentido, o Kanban fica responsável por gerenciar o fluxo de trabalho diário, mostrando de forma visual como as tarefas evoluem do backlog até a conclusão. Enquanto o OpenUP define as demandas e o prazo do que será realizado em termos de fases do projeto, o Kanban cuida de como o trabalho deve fluir, permitindo que a equipe puxe as tarefas de acordo com a capacidade real. Com um quadro visual, a equipe pode puxar as tarefas do backlog continuamente, sem a rigidez de sprints fixas. Essa flexibilidade é crucial para se adaptar a mudanças rápidas e prioridades de última hora, garantindo que o tempo do sócio e da equipe sejam otimizados ao máximo.
+
+Portanto, a combinação de OpenUP e Kanban oferece o melhor dos dois mundos: uma estrutura de processo clara para guiar o projeto do início ao fim e a agilidade necessária para o dia a dia. Essa abordagem nos permite entregar valor de forma contínua, com transparência e alta previsibilidade, minimizando riscos e garantindo a satisfação do cliente.
