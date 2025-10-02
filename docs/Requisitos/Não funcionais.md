@@ -1,4 +1,4 @@
-### Requisitos Não Funcionais
+### Requisitos Não Funcionais *(RNF01 é requisito funcional, explicar navegação simplificada RNF07, Rnf01 repete algum outro requisito)
 
 ---
 
@@ -10,7 +10,7 @@
 
 ---
 
-## Tarefa: Workflow Visual (Kanban)
+## Tarefa: Workflow Visual (Kanban) *(analisar a viabilidade do ux no RNF05, verificar se tira ou n RNF08)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
@@ -20,12 +20,14 @@
 
 ---
 
-## Tarefa: Atribuição e Transferência de Responsabilidade
+## Tarefa: Atribuição e Transferência de Responsabilidade *(prof falou para tirar essa tarefa inteira)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
 | **RNF01** | Não-funcional — Segurança | Controle de acesso por perfis (repetido, aplicado aqui). |
-| **RNF05 / RNF07 / RNF09** | Não-funcional | Usabilidade (≤500ms), usabilidade multi-perfil e salvamento automático a cada 20 minutos (confiabilidade, perda <0,01%). |
+| **RNF05** | Não-funcional | Usabilidade (≤500ms). |
+| **RNF07** | Não-funcional | Usabilidade multi-perfil. |
+| **RNF09** | Não-funcional | Salvamento automático a cada 20 minutos (confiabilidade, perda <0,01%). |
 
 ---
 
@@ -58,7 +60,9 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RNF05 / RNF06 / RNF02** | Não-funcional | Usabilidade (≤500ms), identidade visual, e desempenho (suporte 300–400 processos, resposta ≤500ms para 95%). |
+| **RNF02** | Não-funcional | desempenho (suporte 300–400 processos, resposta ≤500ms para 95%). |
+| **RNF05** | Não-funcional | Usabilidade (≤500ms). |
+| **RNF06** | Não-funcional | Identidade visual. |
 
 ---
 
@@ -66,7 +70,7 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RNF01 / RNF11** | Não-funcional | Manutenibilidade (documentação de APIs/schemas). |
+| **RNF01 / RNF11** | Não-funcional | Manutenibilidade (documentação de APIs/schemas). EU NÃO SEI COMO QUERBRAR ESSA PARTE!!|
 
 ---
 
@@ -74,6 +78,7 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RNF05 / RNF09** | Não-funcional | Usabilidade (interface responsiva ≤500ms) e confiabilidade (salvamento automático cada 20 minutos). |
+| **RNF05** | Não-funcional | Usabilidade (interface responsiva ≤500ms). |
+| **RNF09** | Não-funcional | Confiabilidade (salvamento automático cada 20 minutos). |
 
 ---

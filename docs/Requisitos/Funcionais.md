@@ -6,9 +6,9 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF01** | Funcional | Cadastrar processo com informações detalhadas (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
-| **RF02** | Funcional | Editar processo para atualizar informações (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
-| **RF03** | Funcional | Visualizar processo com todos os detalhes (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
+| **RF01** | Funcional | Cadastrar processo com informações detalhadas | essas informações devem conter cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF02** | Funcional | Editar processo | deve ser possível atualizar informações como cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF03** | Funcional | Visualizar processo | deve apresentar todos os detalhes do processo como cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável. |
 
 ---
 
@@ -16,6 +16,7 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
+| **RF0X** | funcional | Área de criação de processos no quadro kanban | permitindo adicionar detalhes do processo |
 | **RF04** | Funcional | Exibir processos em quadro Kanban com etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
 
 ---
@@ -42,7 +43,7 @@
 
 ---
 
-## Tarefa: Notificações e Mensagens Automatizadas
+## Tarefa: Notificações e Mensagens Automatizadas *(preicsa ser revisado / não é funcional)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
@@ -67,18 +68,19 @@
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
 | **RF15** | Funcional | Dashboard com indicadores: nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
-| **RF16** | Funcional | Gerar relatórios filtráveis e exportáveis (PDF/CSV) baseados nos indicadores. |
+| **RF16** | Funcional | Gerar relatório filtrável e exportável (PDF/CSV) | baseados nos indicadores. |
 
 ---
 
-## Tarefa: Auditoria / Trilha de Atividades
+## Tarefa: Auditoria / Trilha de Atividades *(são regras de negócio)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
 | **RF17** | Funcional | Registrar log de ações (criação, edição, mudança de status, anexos) com usuário e data. |
-| **RF18** | Funcional | Consultar log de auditoria e exportar em formato estruturado para conformidade. |
+| **RF18** | Funcional | Consultar log de auditoria | em formato estruturado para conformidade. | 
+| **RF19** | Funcional | exportar log de auditoria | em formato estruturado para conformidade. |
 
-## Tarefa: Revisão de Atribuições
+## Tarefa: Revisão de Atribuições *(Detalhamento do RF04)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
