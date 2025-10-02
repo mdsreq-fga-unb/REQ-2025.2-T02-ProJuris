@@ -13,6 +13,7 @@
 ## Tarefa: Workflow Visual (Kanban)
 
 | ID | Tipo | Descrição |
+| :--- | :--- | :--- |
 | **RNF05** | Não-funcional — Usabilidade | Interface intuitiva e responsiva; tempo de carregamento ≤ 500ms; seguir diretrizes de UX. |
 | **RNF06** | Não-funcional — Usabilidade / Brand | Adaptar interface à identidade visual (cores, logotipo, tipografia). |
 | **RNF08** | Não-funcional — Acessibilidade | Seguir WCAG 2.1 nível AA (validar necessidade específica). |
