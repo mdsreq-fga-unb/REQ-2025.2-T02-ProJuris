@@ -17,8 +17,6 @@
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
 | **RF04** | Funcional | Exibir processos em quadro Kanban com etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
-| **RNF05** | Não-funcional — Usabilidade | Interface intuitiva e responsiva; tempo de carregamento ≤ 500ms; seguir diretrizes de UX. |
-
 
 ---
 
@@ -33,14 +31,6 @@
 | **RF21** | Funcional | Atualizar estado da atribuição na página da atribuição ou no dashboard do estagiário. |
 | **RF23** | Funcional | Notificar estagiário sobre novas atribuições, prazos próximos ou atrasos. |
 | **RF24** | Funcional | Notificar sócio sobre conclusão ou atraso das atribuições. |
-
----
-
-## Tarefa: Importador Assistido de Planilhas (Excel → Sistema)
-
-| ID | Tipo | Descrição |
-| :--- | :--- | :--- |
-| **RF07** | Funcional | Importar planilha Excel com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
 
 ---
 
