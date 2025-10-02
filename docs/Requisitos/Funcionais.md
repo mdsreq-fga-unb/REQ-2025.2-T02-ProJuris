@@ -1,21 +1,95 @@
 ### Requisitos Funcionais
 
-| ID | Descrição |
-| :--- | :--- |
-| **RF01** | **Gestão de Processos / Demandas:** Permitir criar, editar e visualizar processos/demandas com campos: título, cliente, responsável, prazo, prioridade, tags e status; cada processo liga-se a um caso jurídico único. |
-| **RF02** | **Workflow Visual (Kanban):** Exibir as demandas em um quadro visual por etapas (ex.: Elaboração → Revisão → Pendente Cliente → Concluída) com caixa de seleção de fases para mudar de etapa e atualização automática do responsável. |
-| **RF03** | **Atribuição e Transferência de Responsabilidade:** Possibilitar atribuir demandas a usuários, transferir responsabilidade entre perfis (estagiário → sócio) e notificar automaticamente os envolvidos da mudança. |
-| **RF04** | **Importador Assistido de Planilhas (Excel → Sistema):** Permitir importar uma planilha Excel, mapear colunas para campos do sistema, validar dados e criar/atualizar processos em lote com pré-visualização das alterações. |
-| **RF05** | **Anexação e Gerenciamento de Documentos:** Anexar, versionar, visualizar e baixar documentos vinculados a cada processo; controlar metadados (quem anexou, quando) e permitir pesquisa por nome/data. |
-| **RF06** | **Notificações e Mensagens Automatizadas (incl. WhatsApp):** Disparar alertas configuráveis (prazo crítico, mudança de status, novo anexo) por e-mail/WhatsApp usando templates pré-aprovados; permitir envio manual de relatórios padronizados ao cliente. |
-| **RF07** | **Repositório Pesquisável de Modelos e Cláusulas:** Armazenar templates, cláusulas e modelos de honorários com tags e busca por palavras-chave; possibilitar inserir trechos em minutas e manter versão/autor dos modelos. |
-| **RF08** | **Dashboard de Indicadores e Relatórios:** Mostrar nº processos por status, tempo médio de resolução, taxa de cumprimento de prazos; gerar relatórios filtráveis e exportáveis (PDF/CSV) para acompanhamento gerencial. |
-| **RF09** | **Auditoria / Trilha de Atividades:** Registrar todas as ações relevantes (criação/edição/status/baixar/anexar) com usuário e data; permitir consulta e exportação do log para fins de conformidade. |
-| **RF10** | **Restrição de acesso:** O estagiário terá funcionalidades e utilidades limitadas quando comparado com o administrador. |
-| **RF11** | **Visualizar todas as atribuições:** A interface do programa deverá ser intuitiva, rápida e responsiva, mostrando todas as atribuições do estagiário logo na página inicial. |
-| **RF12** | **Atualizar o estado da Atribuição:** Através da página da atribuição ou da dashboard do Estagiário. |
-| **RF13** | **Salvar automaticamente atualizações de atribuição (desejável):** O sistema deverá salvar de 20 em 20 minutos o estado atual das edições do usuário para o banco de dados, de forma a evitar perda de dados e informações. |
-| **RF14** | **Notificações (Estagiário):** O sistema deverá notificar quando o usuário receber uma ou mais atribuições, quando uma atribuição estiver próxima do vencimento ou quando for atrasada. |
-| **RF15** | **Notificar Sócio de atualização nas atribuições:** Assim que uma ou mais atribuições forem concluídas ou entrarem em atraso, o sistema deverá sinalizar o Sócio que atribuiu a tarefa. |
-| **RF16** | **Requisitar revisões de andamento de processos:** O sistema deverá, antes de salvar o estado da atribuição como "concluído", mostrar ao usuário uma tela de revisão do documento para evitar erros. |
-| **RF17** | **Busca de cláusulas no repositório:** Permitir a busca de cláusulas no repositório de cláusulas e modelos. |
+---
+
+## Tarefa: Gestão de Processos / Demandas
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF01** | Funcional | Cadastrar processo com informações detalhadas (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
+| **RF02** | Funcional | Editar processo para atualizar informações (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
+| **RF03** | Funcional | Visualizar processo com todos os detalhes (cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável). |
+
+---
+
+## Tarefa: Workflow Visual (Kanban)
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF04** | Funcional | Exibir processos em quadro Kanban com etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RNF05** | Não-funcional — Usabilidade | Interface intuitiva e responsiva; tempo de carregamento ≤ 500ms; seguir diretrizes de UX. |
+
+
+---
+
+## Tarefa: Atribuição e Transferência de Responsabilidade
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF05** | Funcional | Atribuir processo a usuário específico; notificar automaticamente o responsável. |
+| **RF06** | Funcional | Transferir responsabilidade entre perfis (ex.: estagiário → sócio) com notificação. |
+| **RF19** | Funcional | Restringir funcionalidades para estagiários em comparação ao administrador. |
+| **RF20** | Funcional | Exibir todas as atribuições do estagiário na página inicial (interface intuitiva e responsiva). |
+| **RF21** | Funcional | Atualizar estado da atribuição na página da atribuição ou no dashboard do estagiário. |
+| **RF23** | Funcional | Notificar estagiário sobre novas atribuições, prazos próximos ou atrasos. |
+| **RF24** | Funcional | Notificar sócio sobre conclusão ou atraso das atribuições. |
+
+---
+
+## Tarefa: Importador Assistido de Planilhas (Excel → Sistema)
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF07** | Funcional | Importar planilha Excel com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
+
+---
+
+## Tarefa: Importador Assistido de Planilhas (Excel → Sistema)
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF07** | Funcional | Importar planilha Excel com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
+
+---
+
+## Tarefa: Notificações e Mensagens Automatizadas
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF10** | Funcional | Enviar notificações automáticas (e-mail/WhatsApp) para prazos críticos, mudanças de status ou novos anexos usando templates. |
+| **RF11** | Funcional | Enviar relatórios padronizados manualmente ao cliente (e-mail/WhatsApp). |
+
+---
+
+## Tarefa: Repositório Pesquisável de Modelos e Cláusulas
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF12** | Funcional | Armazenar templates, cláusulas e modelos de honorários com tags e busca por palavras-chave. |
+| **RF13** | Funcional | Inserir trechos de templates/cláusulas em minutas. |
+| **RF14** | Funcional | Versionar templates/cláusulas; registrar autor e data. |
+| **RF26** | Funcional | Pesquisar cláusulas e modelos por palavras-chave. |
+
+---
+
+## Tarefa: Dashboard de Indicadores e Relatórios
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF15** | Funcional | Dashboard com indicadores: nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
+| **RF16** | Funcional | Gerar relatórios filtráveis e exportáveis (PDF/CSV) baseados nos indicadores. |
+
+---
+
+## Tarefa: Auditoria / Trilha de Atividades
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF17** | Funcional | Registrar log de ações (criação, edição, mudança de status, anexos) com usuário e data. |
+| **RF18** | Funcional | Consultar log de auditoria e exportar em formato estruturado para conformidade. |
+
+## Tarefa: Revisão de Atribuições
+
+| ID | Tipo | Descrição |
+| :--- | :--- | :--- |
+| **RF25** | Funcional | Exibir tela de revisão de documentos antes de marcar atribuição como concluída. |
