@@ -580,21 +580,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 — Escopo do MVP (o que será entregue)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inclui-must" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inclui (MUST):
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -805,21 +790,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 — Escopo do MVP (o que será entregue)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inclui-must" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inclui (MUST):
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -844,21 +814,40 @@
 <h1 id="documento-de-especificacao-tecnica-mvp-sistema-de-gestao-juridica">Documento de Especificação Técnica - MVP Sistema de Gestão Jurídica</h1>
 <h2 id="1-escopo-do-mvp-o-que-sera-entregue">1 — Escopo do MVP (o que será entregue)</h2>
 <p><strong>Objetivo:</strong> entregar valor mínimo viável para gestão de processos jurídicos com workflow visual, atribuição de responsáveis, anexação de documentos e notificações essenciais.</p>
-<h3 id="inclui-must">Inclui (MUST):</h3>
-<ul>
-<li>Autenticação + controle de acesso por perfil (estagiário, advogado, sócio).</li>
-<li>CRUD de Processos (RF01, RF02, RF03).</li>
-<li>Quadro Kanban com etapas configuráveis e drag/drop que atualiza responsável (RF04).</li>
-<li>Atribuição e transferência de responsabilidade + notificações básicas (RF05, RF06, RF19, RF20, RF21, RF23, RF24).</li>
-<li>Upload de anexos com metadados e versão básica (RF08, RF09).</li>
-<li>Importador assistido de planilhas (pré-visualização + mapeamento) (RF07).</li>
-<li>Logs de auditoria (RF17, RF18).</li>
-<li>Repositório básico de templates/cláusulas com tags e busca (RF12, RF26, RF13 básica).</li>
-<li>Notificações críticas por e-mail (prazos críticos, novas atribuições) usando templates (RF10).</li>
-<li>Dashboard de indicadores básicos (processos por status, % no prazo, prazos críticos) e export CSV (RF15, RF16 minimal).</li>
-<li>Tela de revisão de atribuições antes de conclusão (RF25).</li>
-<li>Requisitos não-funcionais implementados: autenticação, criptografia em trânsito (TLS), medidas iniciais para criptografia em repouso (configuração DB/armazenamento), autosave a cada 20 minutos (RNF09), logs, documentação mínima de API/schemas (RNF11).</li>
-</ul>
+<p>Critérios de Escolha para o MVP</p>
+<p>Valor de Negócio: Priorizar tarefas que maximizem eficiência operacional, reduzam atrasos em prazos e melhorem a tomada de decisão gerencial, alinhando-se aos indicadores mencionados (ex.: % de processos atrasados, tempo médio de resolução).</p>
+<p>Necessidades de Sistema: Incluir funcionalidades core que formem a base do sistema (ex.: gerenciamento de processos), essenciais para suportar outras tarefas.</p>
+<p>Complexidade e Viabilidade: Focar em tarefas de baixa a média complexidade para entrega rápida (6-8 semanas), evitando integrações externas complexas (ex.: WhatsApp) no MVP inicial.</p>
+<p>Feedback Iterativo: Selecionar um conjunto mínimo que permita testes com usuários reais (estagiários, advogados, sócios) para validar hipóteses antes de expansões.</p>
+<p>Tarefas e Requisitos do MVP</p>
+<p>Tarefa: Gestão de Processos / Demandas</p>
+<p>RF01 – Cadastrar processo com informações detalhadas, incluindo cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável.</p>
+<p>RF02 – Editar processo para atualizar informações como cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável.</p>
+<p>RF03 – Visualizar processo com todos os detalhes, incluindo cliente, número do processo, petição modelo, atividade, andamento, prazo e responsável.</p>
+<p>Tarefa: Atribuição e Transferência de Responsabilidade</p>
+<p>RF05 – Atribuir processo a um usuário específico, com notificação automática ao responsável.</p>
+<p>RF06 – Transferir responsabilidade de processo entre perfis (ex.: estagiário para sócio) com notificação automática aos envolvidos.</p>
+<p>RF19 – Restringir acesso de estagiários a funcionalidades específicas, limitando ações em comparação com administradores.</p>
+<p>RF20 – Exibir todas as atribuições do estagiário na página inicial, com interface intuitiva e responsiva.</p>
+<p>RF21 – Atualizar estado de atribuição diretamente na página da atribuição ou no dashboard do estagiário.</p>
+<p>RF23 – Notificar estagiário sobre novas atribuições, prazos próximos ou atrasados.</p>
+<p>RF24 – Notificar sócio sobre conclusão ou atraso de atribuições realizadas por estagiários.</p>
+<p>Tarefa: Anexação e Gerenciamento de Documentos</p>
+<p>RF08 – Anexar documentos a processos, com controle de versão, metadados (quem anexou, quando) e opções de visualização e download.</p>
+<p>RF09 – Pesquisar documentos anexados por nome ou data.</p>
+<p>Tarefa: Auditoria / Trilha de Atividades</p>
+<p>RF17 – Registrar log de ações (criação, edição, mudança de status, anexos) com usuário e data para auditoria.</p>
+<p>RF18 – Consultar log de auditoria e exportar em formato estruturado para conformidade.</p>
+<p>Tarefa: Dashboard de Indicadores e Relatórios</p>
+<p>RF15 – Exibir dashboard com indicadores, incluindo número de processos por status (aberto, em andamento, concluído), percentual de processos dentro do prazo vs. atrasados, tempo médio de resolução, tempo médio de atraso, número de prazos críticos (7 dias ou menos), meta de tempo por tipo de processo, tempo até primeira ação e taxa de reapresentação/retrabalho.</p>
+<p>RF16 – Gerar relatórios filtráveis e exportáveis em PDF ou CSV com base nos indicadores do dashboard.</p>
+<p>Escopo do MVP</p>
+<p>O MVP abrange o núcleo funcional de um sistema de gerenciamento de processos jurídicos, focado em atender as dores principais de um escritório de advocacia: organização de demandas, colaboração entre perfis (estagiários e sócios), rastreamento de ações, armazenamento seguro de documentos e visibilidade gerencial. Ele cobre o ciclo básico de um processo jurídico (criar/atribuir → anexar documentos → monitorar → auditar), garantindo:</p>
+<p>Eficiência Operacional: Centralização de processos e atribuições reduz retrabalho e desorganização.</p>
+<p>Conformidade: Auditoria e controle de documentos asseguram rastreabilidade e aderência a normas como LGPD.</p>
+<p>Tomada de Decisão: Dashboard com indicadores-chave (ex.: prazos críticos) suporta decisões rápidas.</p>
+<p>Usabilidade: Interface intuitiva para diferentes perfis, com foco em adoção rápida.</p>
+<p>Excluímos do MVP tarefas mais complexas (ex.: Workflow Kanban, Notificações por WhatsApp, Repositório de Cláusulas) para viabilizar entrega ágil e coletar feedback. Iterações futuras podem incluir essas funcionalidades, com base em validações do MVP.</p>
 
 
 
