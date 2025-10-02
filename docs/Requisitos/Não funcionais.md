@@ -58,8 +58,6 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF15** | Funcional | Dashboard com indicadores: nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
-| **RF16** | Funcional | Gerar relatórios filtráveis e exportáveis (PDF/CSV) baseados nos indicadores. |
 | **RNF05 / RNF06 / RNF02** | Não-funcional | Usabilidade (≤500ms), identidade visual, e desempenho (suporte 300–400 processos, resposta ≤500ms para 95%). |
 
 ---
@@ -68,8 +66,6 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF17** | Funcional | Registrar log de ações (criação, edição, mudança de status, anexos) com usuário e data. |
-| **RF18** | Funcional | Consultar log de auditoria e exportar em formato estruturado para conformidade. |
 | **RNF01 / RNF11** | Não-funcional | Manutenibilidade (documentação de APIs/schemas). |
 
 ---
