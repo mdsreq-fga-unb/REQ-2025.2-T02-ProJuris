@@ -17,19 +17,19 @@
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
 | **RF0X** | funcional | Área de criação de processos no quadro kanban | permitindo adicionar detalhes do processo |
-| **RF04** | Funcional | Exibir processos em quadro Kanban com etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RF04** | Funcional | Exibir processos em quadro Kanban | deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
 
 ---
 
-## Tarefa: Atribuição e Transferência de Responsabilidade
+## Tarefa: Atribuição e Transferência de Responsabilidade *(RF 23 e 24 são regras de negócio)
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF05** | Funcional | Atribuir processo a usuário específico; notificar automaticamente o responsável. |
-| **RF06** | Funcional | Transferir responsabilidade entre perfis (ex.: estagiário → sócio) com notificação. |
-| **RF19** | Funcional | Restringir funcionalidades para estagiários em comparação ao administrador. |
-| **RF20** | Funcional | Exibir todas as atribuições do estagiário na página inicial (interface intuitiva e responsiva). |
-| **RF21** | Funcional | Atualizar estado da atribuição na página da atribuição ou no dashboard do estagiário. |
+| **RF05** | Funcional | Atribuir processo a usuário específico | notificar automaticamente o responsável. |
+| **RF06** | Funcional | Transferir responsabilidade entre perfis | (ex.: estagiário → sócio) com notificação. |
+| **RF19** | Funcional | Restringir funcionalidades para estagiários | em comparação ao administrador. |
+| **RF20** | Funcional | Exibir todas as atribuições do estagiário | na página inicial (interface intuitiva e responsiva). |
+| **RF21** | Funcional | Atualizar estado da atribuição | na página da atribuição ou no dashboard do estagiário. |
 | **RF23** | Funcional | Notificar estagiário sobre novas atribuições, prazos próximos ou atrasos. |
 | **RF24** | Funcional | Notificar sócio sobre conclusão ou atraso das atribuições. |
 
@@ -39,16 +39,7 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF07** | Funcional | Importar planilha Excel com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
-
----
-
-## Tarefa: Notificações e Mensagens Automatizadas *(preicsa ser revisado / não é funcional)
-
-| ID | Tipo | Descrição |
-| :--- | :--- | :--- |
-| **RF10** | Funcional | Enviar notificações automáticas (e-mail/WhatsApp) para prazos críticos, mudanças de status ou novos anexos usando templates. |
-| **RF11** | Funcional | Enviar relatórios padronizados manualmente ao cliente (e-mail/WhatsApp). |
+| **RF07** | Funcional | Importar planilha Excel | com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
 
 ---
 
@@ -56,10 +47,10 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF12** | Funcional | Armazenar templates, cláusulas e modelos de honorários com tags e busca por palavras-chave. |
+| **RF12** | Funcional | Armazenar templates, cláusulas e modelos de honorários | com tags e busca por palavras-chave. |
 | **RF13** | Funcional | Inserir trechos de templates/cláusulas em minutas. |
-| **RF14** | Funcional | Versionar templates/cláusulas; registrar autor e data. |
-| **RF26** | Funcional | Pesquisar cláusulas e modelos por palavras-chave. |
+| **RF14** | Funcional | Versionar templates/cláusulas | registrar autor e data. |
+| **RF26** | Funcional | Pesquisar cláusulas e modelos | por palavras-chave. |
 
 ---
 
@@ -67,8 +58,8 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF15** | Funcional | Dashboard com indicadores: nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
-| **RF16** | Funcional | Gerar relatório filtrável e exportável (PDF/CSV) | baseados nos indicadores. |
+| **RF15** | Funcional | Dashboard com indicadores | nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
+| **RF16** | Funcional | Gerar relatório filtrável e exportável | o formato do relatório deve ser PDF/CSV e baseado nos indicadores. |
 
 ---
 
@@ -76,7 +67,7 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF17** | Funcional | Registrar log de ações (criação, edição, mudança de status, anexos) com usuário e data. |
+| **RF17** | Funcional | Registrar log de ações | (criação, edição, mudança de status, anexos) com usuário e data. |
 | **RF18** | Funcional | Consultar log de auditoria | em formato estruturado para conformidade. | 
 | **RF19** | Funcional | exportar log de auditoria | em formato estruturado para conformidade. |
 
@@ -84,4 +75,4 @@
 
 | ID | Tipo | Descrição |
 | :--- | :--- | :--- |
-| **RF25** | Funcional | Exibir tela de revisão de documentos antes de marcar atribuição como concluída. |
+| **RF25** | Funcional | Exibir tela de revisão de documentos | antes de marcar atribuição como concluída. |
