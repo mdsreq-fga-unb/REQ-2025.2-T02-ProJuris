@@ -750,6 +750,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de negócio
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -948,6 +957,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de negócio
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -999,6 +1017,18 @@
 <td style="text-align: left;">Usabilidade para diferentes perfis</td>
 <td style="text-align: left;">(estagiários, advogados, sócios) com navegação simplificada.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><strong>RNF03</strong></td>
+<td style="text-align: left;">Não-funcional — Usabilidade</td>
+<td style="text-align: left;">Especificações da Interface e Fluxo</td>
+<td style="text-align: left;">As interfaces devem seguir especificações funcionais claras para garantir consistência. Exemplos: O formulário de processo deve conter os campos definidos em Kanban  eve ter colunas configuráveis (DR 02). O importador deve ter mapeamento e pré-visualizaçã o (DR 03, DR 04).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF09</strong></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint)  em erros. Todo novo código deve ser revisado por pelo menos um outro membro da equipe antes de ser integrado à versão principal.</td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1042,8 +1072,8 @@
 <tr>
 <td style="text-align: left;"><strong>RNF01</strong></td>
 <td style="text-align: left;">Não-funcional — Segurança</td>
-<td style="text-align: left;">Controle de acesso por perfis</td>
-<td style="text-align: left;">(repetido, aplicado aqui).</td>
+<td style="text-align: left;">Controle de Acesso por Perfil (RBAC)</td>
+<td style="text-align: left;">O acesso a dados e funcionalidades deve ser validado no back-end a cada requisição, com base nos perfis definidos (estagiário, advogado, sócio).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>RNF05</strong></td>
@@ -1109,6 +1139,12 @@
 <td style="text-align: left;">Salvamento automático a cada 20 minutos</td>
 <td style="text-align: left;">perda de dados &lt; 0,01%.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><strong>RNF04</strong></td>
+<td style="text-align: left;">Não-funcional — Confiabilidade</td>
+<td style="text-align: left;">Prevenção de Perda de Dados em Formulários</td>
+<td style="text-align: left;">Em formulários longos ou de preenchimento complexo (ex: cadastro de processo), o conteúdo deve ser salvo periodicamente , permitindo a recuperação em  aso de fechamento acidental da aba.</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1145,9 +1181,9 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RNF02</strong></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">desempenho</td>
-<td style="text-align: left;">suporte 300–400 processos, resposta ≤500ms para 95%.</td>
+<td style="text-align: left;">Não-funcional — desempenho</td>
+<td style="text-align: left;">Experiência de Carregamento Ágil</td>
+<td style="text-align: left;">Interface: O carregamento das telas principais (Dashboard, Kanban) deve ser percebido pelo usuário como ágil, sem esperas frustrantes, utilizando indicadores visuais de carregamento ("spinners"). Processamento : A importação de planilhas de volume considerável deve ocorrer em segundo plano, e sistema deve notificar o usuário quando o processo for concluído.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>RNF05</strong></td>
@@ -1232,6 +1268,43 @@
 <td style="text-align: left;">Funcional</td>
 <td style="text-align: left;">Enviar relatório padronizado</td>
 <td style="text-align: left;">manualmente ao cliente por e-mail e WhatsApp.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regras-de-negocio">Regras de negócio</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nome</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RNF05</strong></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Prevenção de Duplicidade na Importação</td>
+<td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número do Processo" como chave única. Se o número não existir, um novo processo é criado. Se já existir, os dados do processo existente são atualizados. O sistema não deve permitir a criação de dois processos com o mesmo número.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF06</strong></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Sincronização de Status (Kanban, Atribuição)</td>
+<td style="text-align: left;">Ao mover um card de processo para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' do processo deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão').</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF07</strong></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Auditoria Compulsória de Ações</td>
+<td style="text-align: left;">O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir processo; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF08</strong></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Sistema de Notificações por Evento</td>
+<td style="text-align: left;">O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atra sada.</td>
 </tr>
 </tbody>
 </table>

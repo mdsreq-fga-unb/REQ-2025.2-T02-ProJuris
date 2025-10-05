@@ -998,7 +998,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RF0X</strong></td>
-<td style="text-align: left;">funcional</td>
+<td style="text-align: left;">Funcional</td>
 <td style="text-align: left;">Área de criação de processos no quadro kanban</td>
 <td style="text-align: left;">permitindo adicionar detalhes do processo</td>
 </tr>
@@ -1007,6 +1007,12 @@
 <td style="text-align: left;">Funcional</td>
 <td style="text-align: left;">Exibir processos em quadro Kanban</td>
 <td style="text-align: left;">deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RFXX</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Criar quadros kanban</td>
+<td style="text-align: left;">O usuário deve ser capaz de construir novos quadros de atividades kanban</td>
 </tr>
 </tbody>
 </table>
@@ -1079,10 +1085,40 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RF07</strong></td>
+<td style="text-align: left;"><strong>RF07.1</strong></td>
 <td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Importar planilha Excel</td>
-<td style="text-align: left;">com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização.</td>
+<td style="text-align: left;">Iniciar importação e fazer upload de arquivo</td>
+<td style="text-align: left;">O sistema deve prover uma interface para o upload de um arquivo (.xlsx ou .csv) e oferecer um modelo de planilha para download com os cabeçalhos exatos: Cliente, Processo nº, Petição modelo, Atividade, Andamento e Prazo (útil).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF07.2</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Mapear colunas da planilha (De-Para)</td>
+<td style="text-align: left;">Após o upload, o sistema deve associar automaticamente as colunas do arquivo aos campos do sistema. O usuário deve poder confirmar ou corrigir o mapeamento para Cliente, Processo nº, Petição modelo, Atividade, Andamento e Prazo (útil).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF07.3</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Validar dados e exibir pré-visualização</td>
+<td style="text-align: left;">O sistema deve usar a coluna Processo nº como chave única para determinar a ação: Criar (se o número não existe) ou Atualizar (se o número já existe). A pré-visualização deve exibir esta ação para cada linha.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF07.4</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Destacar erros na pré-visualização</td>
+<td style="text-align: left;">Na pré-visualização, o sistema deve marcar e desabilitar linhas com erros, como a ausência de Cliente ou Processo nº (campos obrigatórios), ou um formato de data inválido no campo Prazo (útil).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF07.5</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Executar importação em lote</td>
+<td style="text-align: left;">Após a confirmação do usuário, o sistema deve executar as operações no banco de dados, populando ou alterando os campos Cliente, Petição modelo, Atividade, Andamento e Prazo (útil) de acordo com cada Processo nº da planilha.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF07.6</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Apresentar relatório de conclusão</td>
+<td style="text-align: left;">Ao final, o sistema deve exibir um relatório sumário detalhando o total de processos criados, atualizados e o número de linhas ignoradas por erros, oferecendo um log com os detalhes das falhas.</td>
 </tr>
 </tbody>
 </table>
@@ -1137,16 +1173,58 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RF15</strong></td>
+<td style="text-align: left;"><strong>RF15.1</strong></td>
 <td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Dashboard com indicadores</td>
-<td style="text-align: left;">nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho.</td>
+<td style="text-align: left;">Exibir painel de indicadores (Dashboard)</td>
+<td style="text-align: left;">O sistema deve apresentar uma tela principal (Dashboard) que servirá como contêiner para os diversos indicadores de performance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.2</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Processos por Status</td>
+<td style="text-align: left;">O dashboard deve exibir um gráfico mostrando a quantidade total de processos para cada status do Kanban.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.3</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Desempenho de Prazos (% On-time)</td>
+<td style="text-align: left;">O dashboard deve exibir um indicador percentual mostrando a proporção de processos concluídos dentro do prazo versus os atrasados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.4</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Tempo Médio de Resolução (TMR)</td>
+<td style="text-align: left;">O dashboard deve calcular e exibir o tempo médio (em dias) que os processos levam desde a sua criação até a sua conclusão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.5</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Prazos Críticos</td>
+<td style="text-align: left;">O dashboard deve destacar em uma lista ou contador o número de processos ativos cujo prazo se encerra nos próximos 7 dias.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.6</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Tempo até Primeira Ação (TTA)</td>
+<td style="text-align: left;">O dashboard deve exibir o tempo médio que um novo processo leva para ter sua primeira ação ou mudança de status registrada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.7</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Taxa de Retrabalho</td>
+<td style="text-align: left;">O dashboard deve exibir a porcentagem de processos que, após avançarem, retornam para uma etapa anterior no fluxo de trabalho.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF15.8</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Indicador - Tempo Médio de Atraso</td>
+<td style="text-align: left;">Para os processos concluídos com atraso, o dashboard deve calcular e exibir o tempo médio (em dias) desse atraso.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>RF16</strong></td>
 <td style="text-align: left;">Funcional</td>
 <td style="text-align: left;">Gerar relatório filtrável e exportável</td>
-<td style="text-align: left;">o formato do relatório deve ser PDF/CSV e baseado nos indicadores.</td>
+<td style="text-align: left;">Permitir a geração de relatórios com base nos indicadores, com opções de filtro e exportação para PDF ou CSV.</td>
 </tr>
 </tbody>
 </table>
