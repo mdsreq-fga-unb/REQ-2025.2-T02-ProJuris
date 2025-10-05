@@ -16,8 +16,10 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF0X** | funcional | Área de criação de processos no quadro kanban | permitindo adicionar detalhes do processo |
+| **RF0X** | Funcional | Área de criação de processos no quadro kanban | permitindo adicionar detalhes do processo |
 | **RF04** | Funcional | Exibir processos em quadro Kanban | deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RFXX** | Funcional | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban |
+
 
 ---
 
@@ -39,7 +41,12 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF07** | Funcional | Importar planilha Excel | com mapeamento de colunas (Cliente, Processo nº, Atividade, Andamento, Prazo), criar/atualizar processos em lote com pré-visualização. |
+| **RF07.1** | Funcional | Iniciar importação e fazer upload de arquivo | O sistema deve prover uma interface para o upload de um arquivo (.xlsx ou .csv) e oferecer um modelo de planilha para download com os cabeçalhos exatos: Cliente, Processo nº, Petição modelo, Atividade, Andamento e Prazo (útil).| 
+| **RF07.2** | Funcional | Mapear colunas da planilha (De-Para) | Após o upload, o sistema deve associar automaticamente as colunas do arquivo aos campos do sistema. O usuário deve poder confirmar ou corrigir o mapeamento para Cliente, Processo nº, Petição modelo, Atividade, Andamento e Prazo (útil). |
+| **RF07.3** | Funcional | Validar dados e exibir pré-visualização | O sistema deve usar a coluna Processo nº como chave única para determinar a ação: Criar (se o número não existe) ou Atualizar (se o número já existe). A pré-visualização deve exibir esta ação para cada linha. |
+| **RF07.4** | Funcional | Destacar erros na pré-visualização | Na pré-visualização, o sistema deve marcar e desabilitar linhas com erros, como a ausência de Cliente ou Processo nº (campos obrigatórios), ou um formato de data inválido no campo Prazo (útil). |
+| **RF07.5** | Funcional | Executar importação em lote | Após a confirmação do usuário, o sistema deve executar as operações no banco de dados, populando ou alterando os campos Cliente, Petição modelo, Atividade, Andamento e Prazo (útil) de acordo com cada Processo nº da planilha. |
+| **RF07.6** | Funcional | Apresentar relatório de conclusão | Ao final, o sistema deve exibir um relatório sumário detalhando o total de processos criados, atualizados e o número de linhas ignoradas por erros, oferecendo um log com os detalhes das falhas. | 
 
 ---
 
@@ -58,8 +65,15 @@
 
 | ID | Tipo | Nome |Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF15** | Funcional | Dashboard com indicadores | nº processos por status, % no prazo vs atrasados, tempo médio de resolução/atraso, nº prazos críticos (≤7 dias), metas por tipo, tempo até primeira ação, taxa de reapresentação/retrabalho. |
-| **RF16** | Funcional | Gerar relatório filtrável e exportável | o formato do relatório deve ser PDF/CSV e baseado nos indicadores. |
+| **RF15.1** | Funcional | Exibir painel de indicadores (Dashboard) | O sistema deve apresentar uma tela principal (Dashboard) que servirá como contêiner para os diversos indicadores de performance. |
+| **RF15.2** | Funcional | Indicador - Processos por Status | O dashboard deve exibir um gráfico mostrando a quantidade total de processos para cada status do Kanban. |
+| **RF15.3** | Funcional | Indicador - Desempenho de Prazos (% On-time) | O dashboard deve exibir um indicador percentual mostrando a proporção de processos concluídos dentro do prazo versus os atrasados. |
+| **RF15.4** | Funcional | Indicador - Tempo Médio de Resolução (TMR) | O dashboard deve calcular e exibir o tempo médio (em dias) que os processos levam desde a sua criação até a sua conclusão. |
+| **RF15.5** | Funcional | Indicador - Prazos Críticos | O dashboard deve destacar em uma lista ou contador o número de processos ativos cujo prazo se encerra nos próximos 7 dias. |
+| **RF15.6** | Funcional | Indicador - Tempo até Primeira Ação (TTA) | O dashboard deve exibir o tempo médio que um novo processo leva para ter sua primeira ação ou mudança de status registrada. |
+| **RF15.7** | Funcional | Indicador - Taxa de Retrabalho | O dashboard deve exibir a porcentagem de processos que, após avançarem, retornam para uma etapa anterior no fluxo de trabalho. |
+| **RF15.8** | Funcional | Indicador - Tempo Médio de Atraso | Para os processos concluídos com atraso, o dashboard deve calcular e exibir o tempo médio (em dias) desse atraso. |
+| **RF16** | Funcional | Gerar relatório filtrável e exportável | Permitir a geração de relatórios com base nos indicadores, com opções de filtro e exportação para PDF ou CSV. |
 
 ---
 

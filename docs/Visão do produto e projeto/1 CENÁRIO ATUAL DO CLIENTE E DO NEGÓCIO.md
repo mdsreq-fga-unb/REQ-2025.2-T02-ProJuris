@@ -28,6 +28,8 @@ Para um escritório conservador e enxuto como o Cortes, Santos Advogados, este c
 
 ### 1.2 Identificação da Oportunidade ou Problema
 
+![Diagrama de  Ishikawa](../imagens/Diagrama_de_Ishikawa.png)
+
 O escritório enfrenta um gargalo operacional na gestão e no acompanhamento das demandas processuais, exigindo que o sócio faça checagens diárias manuais a fim de repassar as tarefas por planilha ao estagiário. Além dessa rotina consumir um tempo crucial, que poderia ser usado para outras demandas, gera risco de retrabalho e reduz a visibilidade sobre a real responsabilidade de cada ação. Tal cenário gera frustração nos clientes, que acreditam não haver trabalho em andamento, abrindo espaço para uma solução mais simples e focada em: ordenação de demandas, indicadores de pendência/urgência e notificações automáticas aos clientes.
 
 * Alto volume de processos: lidam com cerca de 300--400 ativos;
