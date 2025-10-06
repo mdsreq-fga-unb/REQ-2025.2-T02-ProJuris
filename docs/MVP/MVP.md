@@ -55,6 +55,8 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 - Dashboard de indicadores
 - Repositório de cláusulas
 
+![Tabela MVP](../imagens/Tabela_mvp.png)
+
 ---
 
 ## 4. Framework de Desenvolvimento: Kanban + OpenUp
