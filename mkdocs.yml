@@ -16,8 +16,9 @@ nav:
   - MVP:
     - 'MVP': 'MVP/MVP.md'
   - Requisitos:
-    - 'Funcionais': 'Requisitos/Funcionais.md'
-    - 'Não Funcionais': 'Requisitos/Não funcionais.md'
+    - 'Funcionais': 'Requisitos/1 - Funcionais.md'
+    - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
+    - 'Backlog': 'Requisitos/3 - Backlog.md'
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
 

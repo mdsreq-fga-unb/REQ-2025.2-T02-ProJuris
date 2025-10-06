@@ -1,94 +1,130 @@
-# Mínimo Produto Viável (MVP)
-
-Esta página detalha o Product Backlog, os critérios de priorização e a definição do Mínimo Produto Viável (MVP) do nosso projeto, com base na análise de Esforço x Impacto.
-
-## 1. Product Backlog
-
-O backlog do produto é composto pelas seguintes funcionalidades e suas respectivas atividades:
-
-### Gestão das demandas
-- Cadastrar demanda com informações pertinentes
-- Editar processo Workflow
-- Atribuir atividades
-- Restrições de acesso
-- Transferir responsabilidade das atividades
-- Gerir tipos de avaliações de exigência
-
-### Kanban
-- Atualizar processo kanban
-- Área de criação de processo no Kanban
-- Solicitar revisão de atividade
-- Visualizar processo kanban
-
-### Dashboard
-- Exibir painel de indicadores (Dashboard)
-- Indicador - Demandas por Status
-- Indicador - Desempenho de Prazos (% On-time)
-- Indicador - Tempo Médio de Resolução (TMR)
-- Indicador - Prazos Críticos
-- Indicador - Tempo até Primeira Ação (TTA)
-- Indicador - Taxa de Retrabalho
-- Gerar relatório filtrável e exportável
-
-### Importador de planilha
-- Iniciar importação e fazer upload da planilha
-- Mapear colunas da planilha (De-Para)
-- Destacar erros na pré-visualização
-- Validar dados e permitir visualização
-- Executar importação em lote
-- Apresentar relatório de conclusão
-
-### Mensagem automática
-- Gerenciar Dados de Gatilho para Notificação
-- Gerenciar Templates de Mensagem (Workflow)
-- Configurar Gatilho de Notificação Automática
-- Enviar Notificação via WhatsApp na Conclusão
-- Registrar Envio de Notificação no Log
-
-### Repositório de Cláusulas
-- Armazenar e pesquisar templates e cláusulas
-- Inserir trechos de templates de minutas
-- Versionar templates/cláusulas
+# Declaração de MVP
+## Sistema de Gestão de Processos Jurídicos
 
 ---
 
-## 2. Priorização do Backlog
+## 1. Visão do Produto
 
-Para definir a prioridade das funcionalidades, utilizamos uma análise de Esforço x Impacto, com os seguintes critérios:
+**Nome do Produto:** Projuris
 
-### Critérios de Priorização
-
-* **Complexidade (Esforço):** Avaliado de acordo com a quantidade de requisitos (funcionais e não funcionais) associados a cada atividade e a experiência da equipe em implementá-los.
-* **Valor de negócio (Impacto):** Avaliado com base na comunicação com o cliente sobre o que era mais importante, classificado da seguinte forma:
-    * **0:** Necessidade do sistema
-    * **1:** Funcionalidades principais
-    * **2:** Funcionalidades desejáveis/inovadoras
-    * **3:** Funcionalidades cortadas
-
-### Matriz Esforço x Impacto
-
-O resultado da análise posicionou as funcionalidades nos seguintes quadrantes:
-
-![Tabela esforço X valor de negócio](../imagens/Tabela_mvp.png)
+O LegisPro é uma plataforma para escritórios de advocacia que precisam organizar e distribuir demandas processuais entre sócios e estagiários. A solução oferece controle de prazos, petições modelo e gestão hierárquica de responsabilidades através de quadros Kanban, garantindo visibilidade e organização no fluxo de trabalho jurídico.
 
 ---
 
-## 3. Mínimo Produto Viável (MVP)
+## 2. Objetivos do MVP
 
-Com base na matriz de priorização, o MVP será composto pelas funcionalidades de **alto impacto** e **baixo esforço**, garantindo uma entrega de valor rápida e eficiente.
+### Objetivo Principal
+Validar que escritórios de advocacia conseguem gerenciar processos jurídicos de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.
 
-As funcionalidades selecionadas para o MVP são:
+### Objetivos Específicos
+- Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.
+- Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada.
+- Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.
+- Estabelecer controle de acesso diferenciado por cargo (Sócio vs Estagiário)
 
-### Tema 1: Gestão das Demandas
-- Cadastrar demanda com informações pertinentes
-- Editar processo Workflow
-- Atribuir atividades
-- Restrições de acesso
-- Transferir responsabilidade das atividades
-- Gerir tipos de avaliações de exigência
+### Critérios de Sucesso
+-  100% dos processos contêm todas as informações obrigatórias
+-  Tempo de atribuição/transferência de atividade rápida
+-  Taxa de adoção pelos estagiários no 1ª mês
+-  Zero processos sem responsável atribuído
+-  Redução de perguntas sobre responsabilidades
 
-### Tema 2: Kanban
-- Atualizar processo kanban
-- Área de criação de processo no Kanban
-- Solicitar revisão de atividade
-- Visualizar processo kanban
+---
+
+## 3. Escopo do MVP
+
+### Funcionalidades Incluídas (In Scope)
+
+| Prioridade | ID | Funcionalidade | Descrição |
+|------------|-----|----------------|-----------|
+| MUST | RF-01 | Cadastrar processo | Cadastro com cliente, número, petição modelo, atividade, andamento, prazo e responsável |
+| MUST | RF-02 | Editar processo | Atualizar informações do processo |
+| MUST | RF-03 | Atribuir atividades | Vincular tarefas a pessoas específicas |
+| MUST | RF-04 | Restrição de acesso | Controle por cargo: Sócio (visão total) e Estagiário (apenas suas atribuições) |
+| MUST | RF-05 | Transferir responsabilidade | Reatribuir atividades entre pessoas |
+| MUST | RF-07 | Visualizar detalhes | Exibir informações completas do processo |
+| MUST | RF-08 | Cadastrar usuários | Sócio cadastra novos estagiários e sócios |
+| MUST | RF-09 | Atualizar no Kanban | Alterar detalhes diretamente no quadro |
+| MUST | RF-12 | Kanban com etapas | Colunas configuráveis (Elaboração → Revisão → Pendente Cliente → Concluída) |
+| SHOULD | RF-06 | Dashboard do estagiário | Visualização de todas as atribuições do estagiário |
+| SHOULD | RF-10 | Criar processo no Kanban | Adicionar processo direto do quadro |
+
+### Funcionalidades Excluídas (Out of Scope)
+- Funcionalidades de automação de mensagem
+- Importador de planilhas
+- Dashboard de indicadores
+- Repositório de cláusulas
+
+---
+
+## 4. Framework de Desenvolvimento: Kanban + OpenUp
+
+### 4.1 Kanban para o Desenvolvimento do MVP
+
+**Políticas do Board de Desenvolvimento:**
+
+- **BACKLOG**: Requisitos (RF-01 a RF-12) refinados e prontos para implementação
+- **TO DO**: Work items priorizados para a sprint atual
+- **IN PROGRESS**: Desenvolvimento ativo (máximo 3 itens para equipe de 2 devs)
+- **REVIEW**: Code review e testes de aceitação (máximo 2 itens)
+- **DONE**: Funcionalidade completa, testada e validada
+
+**WIP Limits:**
+- In Progress: 3 (1,5x o número de desenvolvedores)
+- Review: 2 (evita gargalo na validação)
+
+**Pull System:**
+- Desenvolvedores puxam novos work items apenas quando concluem o anterior
+- Prioridade: MUST > SHOULD > Could
+
+
+---
+
+### 4.2 Exemplo de Fluxo: Desenvolvimento do RF-01
+
+1. **BACKLOG**: RF-01 é detalhado em 3 work items
+   - WI-001: Backend - API de cadastro
+   - WI-002: Frontend - Formulário
+   - WI-003: Testes integrados
+
+2. **TO DO**: WI-001 é priorizado para início (MUST)
+
+3. **IN PROGRESS**: 
+   - Dev 1 puxa WI-001
+   - Aplica TDD: escreve teste, depois implementa
+   - Duração: 2 dias
+
+4. **REVIEW**:
+   - Code review por Dev 2
+   - Validação dos critérios de aceitação
+   - Testes automatizados executados
+
+5. **DONE**:
+   - API funcionando
+   - Testes passando
+   - Documentação atualizada
+   - Dev 1 puxa próximo item (WI-002)
+
+---
+
+### 4.3 Métricas de Acompanhamento
+
+**Métricas Kanban (do nosso desenvolvimento):**
+- **Lead Time**: Tempo de Backlog até Done
+- **Cycle Time**: Tempo de To Do até Done
+- **Throughput**: Work items concluídos por semana
+- **Bloqueios**: Quantidade e tempo de itens bloqueados
+
+---
+
+### 4.4 Definição de Pronto (Definition of Done)
+
+-  Código implementado conforme requisito
+-  Testes unitários escritos e passando (cobertura ≥ 80%)
+-  Code review aprovado por outro desenvolvedor
+-  Funcionalidade testada manualmente
+-  Validada com Product Owner (quando aplicável)
+-  Documentação técnica atualizada
+-  Sem bugs críticos ou bloqueantes
+-  Integrado ao branch principal
+
