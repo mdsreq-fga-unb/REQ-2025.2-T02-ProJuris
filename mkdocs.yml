@@ -13,14 +13,16 @@ nav:
     - 'Interação Equipe e Cliente': 'Visão do produto e projeto/5 INTERAÇÃO ENTRE EQUIPE E CLIENTE.md'
     - 'Lições Aprendidas': 'Visão do produto e projeto/6 LIÇÕES APRENDIDAS.md'
     - 'Referências': 'Visão do produto e projeto/7 REFERÊNCIAS BIBLIOGRÁFICAS.md'
-  - MVP:
-    - 'MVP': 'MVP/MVP.md'
   - Requisitos:
     - 'Funcionais': 'Requisitos/1 - Funcionais.md'
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
     - 'Backlog': 'Requisitos/3 - Backlog.md'
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
+  - Atas:
+    - '15-09': 'Atas/3_15-09.md'
+    - '22-09': 'Atas/4_22-09.md'
+    - '06-11': 'Atas/6_06-11.md'
 
 theme:
   name: material

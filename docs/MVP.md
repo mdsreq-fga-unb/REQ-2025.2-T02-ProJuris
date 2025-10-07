@@ -3,15 +3,8 @@
 
 ---
 
-## 1. Visão do Produto
 
-**Nome do Produto:** Projuris
-
-O LegisPro é uma plataforma para escritórios de advocacia que precisam organizar e distribuir demandas processuais entre sócios e estagiários. A solução oferece controle de prazos, petições modelo e gestão hierárquica de responsabilidades através de quadros Kanban, garantindo visibilidade e organização no fluxo de trabalho jurídico.
-
----
-
-## 2. Objetivos do MVP
+## 1. Objetivos do MVP
 
 ### Objetivo Principal
 Validar que escritórios de advocacia conseguem gerenciar processos jurídicos de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.
@@ -31,9 +24,21 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 
 ---
 
+## 2. critérios de priorização (e sua aplicação): valor de negócio x avaliação técnica
+
+- **MUST**: são absolutamente essenciais para que o produto funcione minimamente, resolva o problema central de visibilidade do fluxo de trabalho e atenda aos requisitos críticos de segurança e confiabilidade de um ambiente jurídico.
+
+- **SHOULD**: são muito importantes, trazem alto valor agregado ao usuário e melhoram drasticamente a eficiência e a qualidade dos dados, mas existe um contorno (workaround) manual e temporário que o usuário pode executar no MVP.
+
+- **COULD**: são desejáveis (nice-to-have), melhoram a experiência do usuário e a governança a longo prazo, mas não são cruciais para resolver o problema central do fluxo de trabalho. Sua ausência não impede o uso do MVP.
+
+- **WONT**: estão fora do escopo do MVP por enquanto, porque seu custo de implementação é proibitivo em relação ao valor que entregam nesta primeira versão, ou porque a funcionalidade já está coberta por um requisito Must Have mais simples.
+
+---
+
 ## 3. Escopo do MVP
 
-### Funcionalidades Incluídas (In Scope)
+### Funcionalidades Incluídas
 
 | Prioridade | ID | Funcionalidade | Descrição |
 |------------|-----|----------------|-----------|
@@ -49,17 +54,17 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 | SHOULD | RF-06 | Dashboard do estagiário | Visualização de todas as atribuições do estagiário |
 | SHOULD | RF-10 | Criar processo no Kanban | Adicionar processo direto do quadro |
 
-### Funcionalidades Excluídas (Out of Scope)
+### Funcionalidades Excluídas 
 - Funcionalidades de automação de mensagem
 - Importador de planilhas
 - Dashboard de indicadores
 - Repositório de cláusulas
 
-![Tabela MVP](../imagens/Tabela_mvp.png)
+![Tabela MVP](./imagens/Tabela_mvp.png)
 
 ---
 
-## 4. Framework de Desenvolvimento: Kanban + OpenUp
+## 4. Framework de Desenvolvimento
 
 ### 4.1 Kanban para o Desenvolvimento do MVP
 
@@ -112,6 +117,7 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 ### 4.3 Métricas de Acompanhamento
 
 **Métricas Kanban (do nosso desenvolvimento):**
+
 - **Lead Time**: Tempo de Backlog até Done
 - **Cycle Time**: Tempo de To Do até Done
 - **Throughput**: Work items concluídos por semana
@@ -129,4 +135,3 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 -  Documentação técnica atualizada
 -  Sem bugs críticos ou bloqueantes
 -  Integrado ao branch principal
-
