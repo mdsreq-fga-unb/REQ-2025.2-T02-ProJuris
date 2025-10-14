@@ -906,28 +906,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../MVP/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    MVP
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1069,7 +1047,7 @@
 <h2 id="2-solucao-proposta">2 SOLUÇÃO PROPOSTA</h2>
 <h3 id="21-objetivos-do-produto">2.1 Objetivos do Produto</h3>
 <h4 id="objetivos-geral">Objetivos Geral</h4>
-<p>Superar as limitações do controle manual de processos jurídicos no escritório Cortes, Santos Advogados, por meio de uma solução digital que aumente a eficiência operacional, a transparência interna e a qualidade da comunicação com clientes.</p>
+<p>Superar as limitações do controle manual de demandas no escritório Cortes, Santos Advogados, por meio de uma solução digital que aumente a eficiência operacional, a transparência interna e a qualidade da comunicação com clientes.</p>
 <h4 id="objetivos-especificos">Objetivos Específicos</h4>
 <table>
 <thead>
@@ -1093,7 +1071,7 @@
 </tr>
 <tr>
 <td>OE4</td>
-<td>Melhorar a comunicação com clientes por meio de atualizações proativas sobre o andamento de seus processos.</td>
+<td>Melhorar a comunicação com clientes por meio de atualizações proativas sobre o andamento de suas demandas.</td>
 </tr>
 <tr>
 <td>OE5</td>
@@ -1118,14 +1096,14 @@
 <ul>
 <li>Frontend: Dado os perfis de usuários distintivos que vão acessar as interfaces, precisamos de algo que seja dinâmico e que suporte incrementação alinhada às iterações do produto, por isso escolhemos o React, que se adequa muito bem ao sistema, e possui suporte de tecnologias modernas para dashboards de indicadores.</li>
 <li>Backend: Para que seja construído a API do sistema com toda lógica e segurança, optamos por seguir com Node.js e Express, essa escolha se dá, principalmente pela uniformidade da linguagem, que acelera o desenvolvimento e a dinâmica da equipe.</li>
-<li>Banco de dados: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, processos, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.</li>
-<li>Chatbot: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de seus processos jurídicos e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.</li>
+<li>Banco de dados: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, demandas, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.</li>
+<li>Chatbot: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de suas demandas e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.</li>
 </ul>
 <h3 id="24-pesquisa-de-mercado-e-analise-competitiva">2.4 Pesquisa de Mercado e Análise Competitiva</h3>
 <p>O mercado brasileiro de softwares jurídicos oferece diversas plataformas maduras voltadas ao controle de prazos, gerenciamento documental e painéis de controle (como Projuris, Astrea, ADVBOX e entre outros). Apesar da robustez funcional dessas soluções, observam-se lacunas relevantes para escritórios conservadores e enxutos como o Cortes, Santos Advogados: rigidez de fluxos, dificuldades na migração de dados vindos de Excel, e automações que, quando impostas de forma genérica, podem comprometer o atendimento personalizado.</p>
 <p>As soluções já existentes no mercado costumam oferecer:</p>
 <ul>
-<li>Centralização de processos e documentos, reduzindo o uso de planilhas;</li>
+<li>Centralização de demandas e documentos, reduzindo o uso de planilhas;</li>
 <li>Controle de prazos e notificações automáticas;</li>
 <li>Repositórios de modelos e templates reutilizáveis;</li>
 <li>Dashboards e indicadores gerenciais para apoio à decisão;</li>
@@ -1146,7 +1124,7 @@
 </ul>
 <p>Diferenciar o produto por meio de um workflow visual, importador assistido, controles de acesso granulares e automações configuráveis permitirá atender às necessidades centrais do Cortes, Santos Advogados: visibilidade do fluxo, redução de retrabalho e manutenção do caráter pessoal do atendimento. Esses diferenciais tornam a solução mais apropriada para escritórios conservadores e enxutos do que plataformas genéricas e "tudo em um" que, apesar de ricas em funcionalidades, nem sempre resolvem problemas operacionais cotidianos.</p>
 <h3 id="25-analise-de-viabilidade">2.5 Análise de Viabilidade</h3>
-<p>A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso dos processos e repositório pesquisável de cláusulas.</p>
+<p>A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso das demandas e repositório pesquisável de cláusulas.</p>
 <p>O ideal é fazer por etapas: primeiro entender bem e alinhar o escopo do projeto (2 semanas), depois desenvolver um MVP com o essencial (8-10 semanas), testar o produto como piloto com o cliente e só então fazer correções finais (1-2 semanas). No total, algo em torno de 3 meses. Em relação aos custos, como sendo um projeto acadêmico, a maior parte das coisas podem ser gratuitas: Git e GitHub para controlar o código, hospedagem em planos gratuitos para a demo e um banco leve como MySQL (ou armazenamento local) durante o desenvolvimento. Caso queiramos um domínio próprio ou algum serviço extra (por exemplo uma hospedagem paga ou ferramenta específica), os gastos tendem a ser pequenos; uma estimativa realista fica entre R$60,00 e R$1.000,00, dependendo do que o cliente escolher. Se for preciso terceirizar algo pontual, como um deploy profissional ou configuração de servidor, o ideal é combinar um pequeno orçamento coletivo entre os membros do grupo para cobrir esse custo.</p>
 <p>Os principais riscos e soluções identificados pelo grupo são:</p>
 <p>1) Complicação para a migração de dados das planilhas: a solução seria testar com amostras e ter um importador guiado;</p>

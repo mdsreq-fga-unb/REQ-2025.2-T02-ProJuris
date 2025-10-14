@@ -871,28 +871,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../MVP/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    MVP
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1088,7 +1066,7 @@
 <td style="text-align: left;"><strong>RNF05</strong></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Prevenção de Duplicidade na Importação</td>
-<td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número do Processo" como chave única. Se o número não existir, um novo processo é criado. Se já existir, os dados do processo existente são atualizados. O sistema não deve permitir a criação de dois processos com o mesmo número.</td>
+<td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número do Processo" como chave única. Se o número não existir, um novo processo é criado. Se já existir, os dados do processo existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>RNF06</strong></td>
@@ -1108,6 +1086,12 @@
 <td style="text-align: left;">Sistema de Notificações por Evento</td>
 <td style="text-align: left;">O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atra sada.</td>
 </tr>
+<tr>
+<td style="text-align: left;"><strong>RNF04</strong></td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: left;">Restriçao de acesso</td>
+<td style="text-align: left;">o sistema deve ter restrições de acesso com relação ao cargo da pessoa.</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1123,7 +1107,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF-09</strong></td>
+<td style="text-align: left;"><strong>RNF-010</strong></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Qualidade e Manutenibilidade do Código</td>
 <td style="text-align: left;">O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal.</td>
