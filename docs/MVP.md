@@ -10,10 +10,9 @@
 Validar que escritórios de advocacia conseguem gerenciar processos jurídicos de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.
 
 ### Objetivos Específicos
-- Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.
-- Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada.
-- Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.
-- Estabelecer controle de acesso diferenciado por cargo (Sócio vs Estagiário)
+- OE1 (Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.)
+- OE2 (Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada.)
+- OE3 (Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.)
 
 ### Critérios de Sucesso
 -  100% dos processos contêm todas as informações obrigatórias
@@ -34,33 +33,42 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 
 - **WONT**: estão fora do escopo do MVP por enquanto, porque seu custo de implementação é proibitivo em relação ao valor que entregam nesta primeira versão, ou porque a funcionalidade já está coberta por um requisito Must Have mais simples.
 
+## 2.1 Níveis de Complexidade
+
+| **Nível de Complexidade** | **Descrição (Custo de Trabalho)** |
+|----------------------------|----------------------------------|
+| **1 - Baixa** | O esforço de trabalho é mínimo. A implementação é direta e não requer decisões complexas ou coordenação externa. |
+| **2 - Média** | O esforço de trabalho é padrão para uma funcionalidade (alguns dias, dentro de um micro-incremento ou parte de um Work Item). O caminho de implementação é bem compreendido. |
+| **3 - Alta** | O esforço é significativo (vários dias ou mais de uma semana). Requer coordenação entre diferentes desenvolvedores ou papéis (como Analista e Arquiteto). Pode envolver integração com sistemas legados ou de terceiros (Requisitos de Interface). |
+| **4 - Proibitiva** | O esforço é extremamente grande, podendo consumir a maior parte de uma iteração. Envolve alta incerteza técnica, exige mudanças arquiteturais significativas, ou requer aquisição de novo conhecimento/tecnologia. |
+
 ---
 
 ## 3. Escopo do MVP
 
 ### Funcionalidades Incluídas
 
-| Prioridade | ID | Funcionalidade | Descrição |
-|------------|-----|----------------|-----------|
-| MUST | RF-01 | Cadastrar processo | Cadastro com cliente, número, petição modelo, atividade, andamento, prazo e responsável |
-| MUST | RF-02 | Editar processo | Atualizar informações do processo |
-| MUST | RF-03 | Atribuir atividades | Vincular tarefas a pessoas específicas |
-| MUST | RF-04 | Restrição de acesso | Controle por cargo: Sócio (visão total) e Estagiário (apenas suas atribuições) |
-| MUST | RF-05 | Transferir responsabilidade | Reatribuir atividades entre pessoas |
-| MUST | RF-07 | Visualizar detalhes | Exibir informações completas do processo |
-| MUST | RF-08 | Cadastrar usuários | Sócio cadastra novos estagiários e sócios |
-| MUST | RF-09 | Atualizar no Kanban | Alterar detalhes diretamente no quadro |
-| MUST | RF-12 | Kanban com etapas | Colunas configuráveis (Elaboração → Revisão → Pendente Cliente → Concluída) |
-| SHOULD | RF-06 | Dashboard do estagiário | Visualização de todas as atribuições do estagiário |
-| SHOULD | RF-10 | Criar processo no Kanban | Adicionar processo direto do quadro |
+| Objetivos Específicos | Prioridade | ID | Funcionalidade | Descrição |
+|----------------------|-----------|----|----------------|-----------|
+| OE1 | MUST | RF-01 | Cadastrar processo | Cadastro com cliente, número, petição modelo, atividade, andamento, prazo e responsável |
+| OE1 | MUST | RF-02 | Editar processo | Atualizar informações do processo |
+| OE2 | MUST | RF-03 | Atribuir atividades | Vincular tarefas a pessoas específicas |
+| OE2 | MUST | RF-04 | Restrição de acesso | Controle por cargo: Sócio (visão total) e Estagiário (apenas suas atribuições) |
+| OE2 | MUST | RF-05 | Transferir responsabilidade | Reatribuir atividades entre pessoas |
+| OE1 | MUST | RF-07 | Visualizar detalhes | Exibir informações completas do processo |
+| OE3 | MUST | RF-08 | Cadastrar usuários | Sócio cadastra novos estagiários e sócios |
+| OE1 | MUST | RF-09 | Atualizar no Kanban | Alterar detalhes diretamente no quadro |
+| OE1 | MUST | RF-12 | Kanban com etapas | Colunas configuráveis (Elaboração → Revisão → Pendente Cliente → Concluída) |
+| OE1 | SHOULD | RF-06 | Dashboard do estagiário | Visualização de todas as atribuições do estagiário |
+| OE1 | SHOULD | RF-10 | Criar processo no Kanban | Adicionar processo direto do quadro |
 
-### Funcionalidades Excluídas 
+### Funcionalidades Excluídas
 - Funcionalidades de automação de mensagem
 - Importador de planilhas
 - Dashboard de indicadores
 - Repositório de cláusulas
 
-![Tabela MVP](./imagens/Tabela_mvp.png)
+![Tabela MVP](./imagens/Esforco_Impacto.png)
 
 ---
 
@@ -84,8 +92,6 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 - Desenvolvedores puxam novos work items apenas quando concluem o anterior
 - Prioridade: MUST > SHOULD > Could
 
-
----
 
 ### 4.2 Exemplo de Fluxo: Desenvolvimento do RF-01
 
@@ -112,7 +118,6 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
    - Documentação atualizada
    - Dev 1 puxa próximo item (WI-002)
 
----
 
 ### 4.3 Métricas de Acompanhamento
 
@@ -123,7 +128,6 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 - **Throughput**: Work items concluídos por semana
 - **Bloqueios**: Quantidade e tempo de itens bloqueados
 
----
 
 ### 4.4 Definição de Pronto (Definition of Done)
 
