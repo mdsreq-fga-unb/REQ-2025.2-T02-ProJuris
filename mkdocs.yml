@@ -19,7 +19,7 @@ nav:
     - 'Backlog': 'Requisitos/3 - Work Item List.md'
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
-    - 'Reuniões com o cliente': 'Entregas/Reuniao Cliente'
+    - 'Reuniões com o cliente': 'Entregas/Reuniao Cliente.md'
   - Atas:
     - '15-09': 'Atas/3_15-09.md'
     - '22-09': 'Atas/4_22-09.md'
