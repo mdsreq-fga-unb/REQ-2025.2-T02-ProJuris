@@ -7,7 +7,6 @@
 | **RF01** | Funcional | Cadastrar demandas com informações detalhadas | essas informações devem conter cliente, número do demandas, petição modelo, atividade, andamento, prazo e responsável. |
 | **RF02** | Funcional | Editar demandas | deve ser possível atualizar informações como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
 | **RF03** | Funcional | Atribuir atividades | o sistema deve ser possível atribuir atividades a pessoas específicas. |
-
 | **RF04** | Funcional | Transferir responsabilidade das atividades | o sistema deve ser possível transferir a responsabilidade de uma atividade para outra pessoa. |
 | **RF05** | Funcional | Exibir todas as atribuições do estagiário | o sistema deve ter as atribuições do estagiário, mostrando as atividades a serem feitas. |
 | **RF06** | Funcional | Mostrar detalhes das atividades | o sistema deve apresentar todos os detalhes do demandas como cliente, número do demandas, petição modelo, atividade, andamento, prazo e responsável. |
