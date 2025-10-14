@@ -4,7 +4,7 @@
 
 #### Objetivos Geral
 
-Superar as limitações do controle manual de processos jurídicos no escritório Cortes, Santos Advogados, por meio de uma solução digital que aumente a eficiência operacional, a transparência interna e a qualidade da comunicação com clientes.
+Superar as limitações do controle manual de demandas no escritório Cortes, Santos Advogados, por meio de uma solução digital que aumente a eficiência operacional, a transparência interna e a qualidade da comunicação com clientes.
 
 #### Objetivos Específicos
 
@@ -13,7 +13,7 @@ Superar as limitações do controle manual de processos jurídicos no escritóri
 | OE1 | Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas. |
 | OE2 | Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada. |
 | OE3 | Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento. |
-| OE4 | Melhorar a comunicação com clientes por meio de atualizações proativas sobre o andamento de seus processos. |
+| OE4 | Melhorar a comunicação com clientes por meio de atualizações proativas sobre o andamento de suas demandas. |
 | OE5 | Fornecer indicadores de desempenho que apoiem a tomada de decisão estratégica e o controle das operações. |
 
 ### 2.2 Características da Solução
@@ -35,8 +35,8 @@ A solução será desenvolvida em uma arquitetura web moderna a fim de garantir 
 
 * Frontend: Dado os perfis de usuários distintivos que vão acessar as interfaces, precisamos de algo que seja dinâmico e que suporte incrementação alinhada às iterações do produto, por isso escolhemos o React, que se adequa muito bem ao sistema, e possui suporte de tecnologias modernas para dashboards de indicadores.
 * Backend: Para que seja construído a API do sistema com toda lógica e segurança, optamos por seguir com Node.js e Express, essa escolha se dá, principalmente pela uniformidade da linguagem, que acelera o desenvolvimento e a dinâmica da equipe.
-* Banco de dados: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, processos, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.
-* Chatbot: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de seus processos jurídicos e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.
+* Banco de dados: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, demandas, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.
+* Chatbot: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de suas demandas e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.
 
 ### 2.4 Pesquisa de Mercado e Análise Competitiva
 
@@ -44,7 +44,7 @@ O mercado brasileiro de softwares jurídicos oferece diversas plataformas madura
 
 As soluções já existentes no mercado costumam oferecer:
 
-* Centralização de processos e documentos, reduzindo o uso de planilhas;
+* Centralização de demandas e documentos, reduzindo o uso de planilhas;
 * Controle de prazos e notificações automáticas;
 * Repositórios de modelos e templates reutilizáveis;
 * Dashboards e indicadores gerenciais para apoio à decisão;
@@ -68,7 +68,7 @@ Diferenciar o produto por meio de um workflow visual, importador assistido, cont
 
 ### 2.5 Análise de Viabilidade
 
-A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso dos processos e repositório pesquisável de cláusulas.
+A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso das demandas e repositório pesquisável de cláusulas.
 
 O ideal é fazer por etapas: primeiro entender bem e alinhar o escopo do projeto (2 semanas), depois desenvolver um MVP com o essencial (8-10 semanas), testar o produto como piloto com o cliente e só então fazer correções finais (1-2 semanas). No total, algo em torno de 3 meses. Em relação aos custos, como sendo um projeto acadêmico, a maior parte das coisas podem ser gratuitas: Git e GitHub para controlar o código, hospedagem em planos gratuitos para a demo e um banco leve como MySQL (ou armazenamento local) durante o desenvolvimento. Caso queiramos um domínio próprio ou algum serviço extra (por exemplo uma hospedagem paga ou ferramenta específica), os gastos tendem a ser pequenos; uma estimativa realista fica entre R$60,00 e R$1.000,00, dependendo do que o cliente escolher. Se for preciso terceirizar algo pontual, como um deploy profissional ou configuração de servidor, o ideal é combinar um pequeno orçamento coletivo entre os membros do grupo para cobrir esse custo.
 

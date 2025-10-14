@@ -16,13 +16,14 @@ nav:
   - Requisitos:
     - 'Funcionais': 'Requisitos/1 - Funcionais.md'
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
-    - 'Backlog': 'Requisitos/3 - Backlog.md'
+    - 'Backlog': 'Requisitos/3 - Work Item List.md'
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
   - Atas:
     - '15-09': 'Atas/3_15-09.md'
     - '22-09': 'Atas/4_22-09.md'
     - '06-11': 'Atas/6_06-11.md'
+  - MVP: 'MVP.md'
 
 theme:
   name: material
