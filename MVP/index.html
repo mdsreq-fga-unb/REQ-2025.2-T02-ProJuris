@@ -934,6 +934,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#21-niveis-de-complexidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Níveis de Complexidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-escopo-do-mvp" class="md-nav__link">
     <span class="md-ellipsis">
       3. Escopo do MVP
@@ -1112,6 +1121,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#21-niveis-de-complexidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Níveis de Complexidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-escopo-do-mvp" class="md-nav__link">
     <span class="md-ellipsis">
       3. Escopo do MVP
@@ -1222,10 +1240,9 @@
 <p>Validar que escritórios de advocacia conseguem gerenciar processos jurídicos de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.</p>
 <h3 id="objetivos-especificos">Objetivos Específicos</h3>
 <ul>
-<li>Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.</li>
-<li>Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada.</li>
-<li>Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.</li>
-<li>Estabelecer controle de acesso diferenciado por cargo (Sócio vs Estagiário)</li>
+<li>OE1 (Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.)</li>
+<li>OE2 (Reduzir a sobrecarga do sócio na atribuição de tarefas, permitindo que o fluxo de demandas seja distribuído de forma mais ágil e organizada.)</li>
+<li>OE3 (Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.)</li>
 </ul>
 <h3 id="criterios-de-sucesso">Critérios de Sucesso</h3>
 <ul>
@@ -1251,12 +1268,40 @@
 <p><strong>WONT</strong>: estão fora do escopo do MVP por enquanto, porque seu custo de implementação é proibitivo em relação ao valor que entregam nesta primeira versão, ou porque a funcionalidade já está coberta por um requisito Must Have mais simples.</p>
 </li>
 </ul>
+<h2 id="21-niveis-de-complexidade">2.1 Níveis de Complexidade</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Nível de Complexidade</strong></th>
+<th><strong>Descrição (Custo de Trabalho)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 - Baixa</strong></td>
+<td>O esforço de trabalho é mínimo. A implementação é direta e não requer decisões complexas ou coordenação externa.</td>
+</tr>
+<tr>
+<td><strong>2 - Média</strong></td>
+<td>O esforço de trabalho é padrão para uma funcionalidade (alguns dias, dentro de um micro-incremento ou parte de um Work Item). O caminho de implementação é bem compreendido.</td>
+</tr>
+<tr>
+<td><strong>3 - Alta</strong></td>
+<td>O esforço é significativo (vários dias ou mais de uma semana). Requer coordenação entre diferentes desenvolvedores ou papéis (como Analista e Arquiteto). Pode envolver integração com sistemas legados ou de terceiros (Requisitos de Interface).</td>
+</tr>
+<tr>
+<td><strong>4 - Proibitiva</strong></td>
+<td>O esforço é extremamente grande, podendo consumir a maior parte de uma iteração. Envolve alta incerteza técnica, exige mudanças arquiteturais significativas, ou requer aquisição de novo conhecimento/tecnologia.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="3-escopo-do-mvp">3. Escopo do MVP</h2>
 <h3 id="funcionalidades-incluidas">Funcionalidades Incluídas</h3>
 <table>
 <thead>
 <tr>
+<th>Objetivos Específicos</th>
 <th>Prioridade</th>
 <th>ID</th>
 <th>Funcionalidade</th>
@@ -1265,66 +1310,77 @@
 </thead>
 <tbody>
 <tr>
+<td>OE1</td>
 <td>MUST</td>
 <td>RF-01</td>
 <td>Cadastrar processo</td>
 <td>Cadastro com cliente, número, petição modelo, atividade, andamento, prazo e responsável</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>MUST</td>
 <td>RF-02</td>
 <td>Editar processo</td>
 <td>Atualizar informações do processo</td>
 </tr>
 <tr>
+<td>OE2</td>
 <td>MUST</td>
 <td>RF-03</td>
 <td>Atribuir atividades</td>
 <td>Vincular tarefas a pessoas específicas</td>
 </tr>
 <tr>
+<td>OE2</td>
 <td>MUST</td>
 <td>RF-04</td>
 <td>Restrição de acesso</td>
 <td>Controle por cargo: Sócio (visão total) e Estagiário (apenas suas atribuições)</td>
 </tr>
 <tr>
+<td>OE2</td>
 <td>MUST</td>
 <td>RF-05</td>
 <td>Transferir responsabilidade</td>
 <td>Reatribuir atividades entre pessoas</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>MUST</td>
 <td>RF-07</td>
 <td>Visualizar detalhes</td>
 <td>Exibir informações completas do processo</td>
 </tr>
 <tr>
+<td>OE3</td>
 <td>MUST</td>
 <td>RF-08</td>
 <td>Cadastrar usuários</td>
 <td>Sócio cadastra novos estagiários e sócios</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>MUST</td>
 <td>RF-09</td>
 <td>Atualizar no Kanban</td>
 <td>Alterar detalhes diretamente no quadro</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>MUST</td>
 <td>RF-12</td>
 <td>Kanban com etapas</td>
 <td>Colunas configuráveis (Elaboração → Revisão → Pendente Cliente → Concluída)</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>SHOULD</td>
 <td>RF-06</td>
 <td>Dashboard do estagiário</td>
 <td>Visualização de todas as atribuições do estagiário</td>
 </tr>
 <tr>
+<td>OE1</td>
 <td>SHOULD</td>
 <td>RF-10</td>
 <td>Criar processo no Kanban</td>
@@ -1339,7 +1395,7 @@
 <li>Dashboard de indicadores</li>
 <li>Repositório de cláusulas</li>
 </ul>
-<p><img alt="Tabela MVP" src="../imagens/Tabela_mvp.png" /></p>
+<p><img alt="Tabela MVP" src="../imagens/Esforco_Impacto.png" /></p>
 <hr />
 <h2 id="4-framework-de-desenvolvimento">4. Framework de Desenvolvimento</h2>
 <h3 id="41-kanban-para-o-desenvolvimento-do-mvp">4.1 Kanban para o Desenvolvimento do MVP</h3>
@@ -1357,7 +1413,6 @@
 <p><strong>Pull System:</strong>
 - Desenvolvedores puxam novos work items apenas quando concluem o anterior
 - Prioridade: MUST &gt; SHOULD &gt; Could</p>
-<hr />
 <h3 id="42-exemplo-de-fluxo-desenvolvimento-do-rf-01">4.2 Exemplo de Fluxo: Desenvolvimento do RF-01</h3>
 <ol>
 <li><strong>BACKLOG</strong>: RF-01 é detalhado em 3 work items</li>
@@ -1393,7 +1448,6 @@
 <li>Documentação atualizada</li>
 <li>Dev 1 puxa próximo item (WI-002)</li>
 </ol>
-<hr />
 <h3 id="43-metricas-de-acompanhamento">4.3 Métricas de Acompanhamento</h3>
 <p><strong>Métricas Kanban (do nosso desenvolvimento):</strong></p>
 <ul>
@@ -1402,7 +1456,6 @@
 <li><strong>Throughput</strong>: Work items concluídos por semana</li>
 <li><strong>Bloqueios</strong>: Quantidade e tempo de itens bloqueados</li>
 </ul>
-<hr />
 <h3 id="44-definicao-de-pronto-definition-of-done">4.4 Definição de Pronto (Definition of Done)</h3>
 <ul>
 <li>Código implementado conforme requisito</li>
