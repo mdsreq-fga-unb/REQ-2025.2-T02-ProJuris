@@ -74,68 +74,64 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 
 ## 4. Framework de Desenvolvimento
 
-### 4.1 Kanban para o Desenvolvimento do MVP
+## Regras do Kanban para a Produção do MVP
 
-**Políticas do Board de Desenvolvimento:**
+O Kanban é utilizado para garantir que o trabalho flua de forma contínua e previsível, alinhado com o ciclo de vida Iterativo e Incremental do OpenUP.
 
-- **BACKLOG**: Requisitos (RF-01 a RF-12) refinados e prontos para implementação
-- **TO DO**: Work items priorizados para a sprint atual
-- **IN PROGRESS**: Desenvolvimento ativo (máximo 3 itens para equipe de 2 devs)
-- **REVIEW**: Code review e testes de aceitação (máximo 2 itens)
-- **DONE**: Funcionalidade completa, testada e validada
+---
 
-**WIP Limits:**
-- In Progress: 3 (1,5x o número de desenvolvedores)
-- Review: 2 (evita gargalo na validação)
+## 1. Políticas do Board de Desenvolvimento
 
-**Pull System:**
-- Desenvolvedores puxam novos work items apenas quando concluem o anterior
-- Prioridade: MUST > SHOULD > Could
+O quadro Kanban está estruturado com colunas que representam as etapas do fluxo de trabalho, desde a preparação até a conclusão.
 
+| **Coluna** | **Descrição** | **Regras e Propósito** |
+|-------------|----------------|-------------------------|
+| **WORK ITEM LIST** | Contém os requisitos (RF-01 a RF-12) que foram refinados e estão prontos para implementação. | É a fonte de trabalho priorizada para o time. |
+| **TO DO** | Lista de Work items priorizados especificamente para a sprint atual. | O trabalho é puxado desta coluna para a implementação. |
+| **IN PROGRESS** | Fase de desenvolvimento ativo. | Sujeito ao Limite WIP (máximo 3). |
+| **REVIEW** | Fase de Code review e testes de aceitação. | Sujeito ao Limite WIP (máximo 2) para evitar gargalos na validação. |
+| **DONE** | Funcionalidade que está completa, testada e validada. | Atende integralmente à Definição de Pronto (DoD). |
 
-### 4.2 Exemplo de Fluxo: Desenvolvimento do RF-01
+---
 
-1. **BACKLOG**: RF-01 é detalhado em 3 work items
-   - WI-001: Backend - API de cadastro
-   - WI-002: Frontend - Formulário
-   - WI-003: Testes integrados
+## 2. Limites de Trabalho em Andamento (WIP Limits)
 
-2. **TO DO**: WI-001 é priorizado para início (MUST)
+Os limites de WIP (Work in Progress Limits) são cruciais para a filosofia Kanban, pois evitam o acúmulo de trabalho e garantem o foco na conclusão.
 
-3. **IN PROGRESS**: 
-   - Dev 1 puxa WI-001
-   - Aplica TDD: escreve teste, depois implementa
-   - Duração: 2 dias
+- **IN PROGRESS:** Máximo de 3 itens. Este limite foi definido como 0.5 vezes o número de desenvolvedores na equipe, a fim de permitir o pareamento do time de desenvolvimento, quando possível.  
+- **REVIEW:** Máximo de 2 itens. Este limite é aplicado para evitar o gargalo no processo de validação, permitindo ao responsável por cada frente operacional consiga validar o produto de software, e produtos de documentação, no caso do responsável pelos requisitos.
 
-4. **REVIEW**:
-   - Code review por Dev 2
-   - Validação dos critérios de aceitação
-   - Testes automatizados executados
+---
 
-5. **DONE**:
-   - API funcionando
-   - Testes passando
-   - Documentação atualizada
-   - Dev 1 puxa próximo item (WI-002)
+## 3. Sistema Puxado (Pull System) e Priorização
 
+O sistema é baseado na capacidade da equipe (sistema puxado), garantindo a eficiência:
 
-### 4.3 Métricas de Acompanhamento
+- **Regra de Puxada:** Os desenvolvedores só podem puxar novos work items para a coluna **IN PROGRESS** quando concluem a tarefa anterior.  
+- **Prioridade:** O trabalho é priorizado rigidamente seguindo os critérios de valor de negócio, que são: **MUST > SHOULD**. Os itens MUST são absolutamente essenciais para resolver o problema central de visibilidade do fluxo de trabalho e atender aos requisitos críticos de segurança.
 
-**Métricas Kanban (do nosso desenvolvimento):**
+---
 
-- **Lead Time**: Tempo de Backlog até Done
-- **Cycle Time**: Tempo de To Do até Done
-- **Throughput**: Work items concluídos por semana
-- **Bloqueios**: Quantidade e tempo de itens bloqueados
+## 4. Definição de Pronto (Definition of Done - DoD)
 
+Uma funcionalidade só é considerada **DONE** se atender a todos os critérios de qualidade listados:
 
-### 4.4 Definição de Pronto (Definition of Done)
+1. O código está implementado conforme o requisito.  
+2. Testes unitários estão escritos e passando (com cobertura igual ou superior a 50%).  
+3. O Code review foi aprovado por outro desenvolvedor.  
+4. A funcionalidade foi testada manualmente.  
+5. Foi validada com o Product Owner.  
+6. A documentação técnica está atualizada e validada por, pelo menos, 2 analistas de requisitos.  
+7. Não há bugs críticos ou bloqueantes.  
+8. O código está integrado ao branch principal.  
 
--  Código implementado conforme requisito
--  Testes unitários escritos e passando (cobertura ≥ 80%)
--  Code review aprovado por outro desenvolvedor
--  Funcionalidade testada manualmente
--  Validada com Product Owner (quando aplicável)
--  Documentação técnica atualizada
--  Sem bugs críticos ou bloqueantes
--  Integrado ao branch principal
+---
+
+## 5. Métricas de Acompanhamento
+
+As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do processo:
+
+- **Lead Time:** Tempo total desde que um item entra na **WORK ITEM LIST** até ser considerado **Done**.  
+- **Cycle Time:** Tempo desde que um item entra na coluna **To Do** até ser concluído.  
+- **Throughput:** Quantidade de Work items que são concluídos por semana.  
+- **Bloqueios:** A quantidade e o tempo que os itens permanecem bloqueados.
