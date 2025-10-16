@@ -74,13 +74,12 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 
 ## 4. Framework de Desenvolvimento
 
-## Regras do Kanban para a Produção do MVP
+### Regras do Kanban para a Produção do MVP
 
 O Kanban é utilizado para garantir que o trabalho flua de forma contínua e previsível, alinhado com o ciclo de vida Iterativo e Incremental do OpenUP.
 
----
 
-## 1. Políticas do Board de Desenvolvimento
+### 1 - Políticas do Board de Desenvolvimento
 
 O quadro Kanban está estruturado com colunas que representam as etapas do fluxo de trabalho, desde a preparação até a conclusão.
 
@@ -92,27 +91,24 @@ O quadro Kanban está estruturado com colunas que representam as etapas do fluxo
 | **REVIEW** | Fase de Code review e testes de aceitação. | Sujeito ao Limite WIP (máximo 2) para evitar gargalos na validação. |
 | **DONE** | Funcionalidade que está completa, testada e validada. | Atende integralmente à Definição de Pronto (DoD). |
 
----
 
-## 2. Limites de Trabalho em Andamento (WIP Limits)
+### 2 - Limites de Trabalho em Andamento (WIP Limits)
 
 Os limites de WIP (Work in Progress Limits) são cruciais para a filosofia Kanban, pois evitam o acúmulo de trabalho e garantem o foco na conclusão.
 
 - **IN PROGRESS:** Máximo de 3 itens. Este limite foi definido como 0.5 vezes o número de desenvolvedores na equipe, a fim de permitir o pareamento do time de desenvolvimento, quando possível.  
 - **REVIEW:** Máximo de 2 itens. Este limite é aplicado para evitar o gargalo no processo de validação, permitindo ao responsável por cada frente operacional consiga validar o produto de software, e produtos de documentação, no caso do responsável pelos requisitos.
 
----
 
-## 3. Sistema Puxado (Pull System) e Priorização
+### 3 - Sistema Puxado (Pull System) e Priorização
 
 O sistema é baseado na capacidade da equipe (sistema puxado), garantindo a eficiência:
 
 - **Regra de Puxada:** Os desenvolvedores só podem puxar novos work items para a coluna **IN PROGRESS** quando concluem a tarefa anterior.  
 - **Prioridade:** O trabalho é priorizado rigidamente seguindo os critérios de valor de negócio, que são: **MUST > SHOULD**. Os itens MUST são absolutamente essenciais para resolver o problema central de visibilidade do fluxo de trabalho e atender aos requisitos críticos de segurança.
 
----
 
-## 4. Definição de Pronto (Definition of Done - DoD)
+### 4 - Definição de Pronto (Definition of Done - DoD)
 
 Uma funcionalidade só é considerada **DONE** se atender a todos os critérios de qualidade listados:
 
@@ -125,9 +121,8 @@ Uma funcionalidade só é considerada **DONE** se atender a todos os critérios 
 7. Não há bugs críticos ou bloqueantes.  
 8. O código está integrado ao branch principal.  
 
----
 
-## 5. Métricas de Acompanhamento
+### 5 - Métricas de Acompanhamento
 
 As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do processo:
 
@@ -136,7 +131,9 @@ As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do 
 - **Throughput:** Quantidade de Work items que são concluídos por semana.  
 - **Bloqueios:** A quantidade e o tempo que os itens permanecem bloqueados.
 
-## 6 Engenharia de Requisitos
+---
+
+## 6. Engenharia de Requisitos
 
 As atividades da ER, suas práticas e técnicas são mapeadas a partir das fases do processo OpenUP, considerando também a forma como o backlog está estruturado (Kanban).  
 
