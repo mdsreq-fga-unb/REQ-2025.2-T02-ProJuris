@@ -49,4 +49,4 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RNF-010** | Não-funcional | Qualidade e Manutenibilidade do Código | O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal. 
+| **RNF10** | Não-funcional | Qualidade e Manutenibilidade do Código | O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal. 
