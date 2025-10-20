@@ -4,12 +4,12 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF01** | Funcional | Cadastrar demandas com informações detalhadas | essas informações devem conter cliente, número do demandas, petição modelo, atividade, andamento, prazo e responsável. |
-| **RF02** | Funcional | Editar demandas | deve ser possível atualizar informações como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF01** | Funcional | Cadastrar demandas com informações detalhadas | essas informações devem conter cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF02** | Funcional | Editar demandas | Deve ser possível atualizar informações como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
 | **RF03** | Funcional | Atribuir atividades | o sistema deve ser possível atribuir atividades a pessoas específicas. |
 | **RF04** | Funcional | Transferir responsabilidade das atividades | o sistema deve ser possível transferir a responsabilidade de uma atividade para outra pessoa. |
 | **RF05** | Funcional | Exibir todas as atribuições do estagiário | o sistema deve ter as atribuições do estagiário, mostrando as atividades a serem feitas. |
-| **RF06** | Funcional | Mostrar detalhes das atividades | o sistema deve apresentar todos os detalhes do demandas como cliente, número do demandas, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF06** | Funcional | Mostrar detalhes das atividades | o sistema deve apresentar todos os detalhes de demandas como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
 
 ---
 
@@ -78,9 +78,9 @@
 | **RF30** | Funcional | Exibir painel de indicadores (Dashboard) | Apresentar a tela principal centralizada que serve como contêiner para todos os indicadores. |
 | **RF31** | Funcional | indicador - Demandas por Status | Calcular e exibir o volume total de demandas e a distribuição atual em cada Status do Kanban. |
 | **RF32** | Funcional | indicador - Desempenho de Prazos (% On-time) | Calcular e exibir o percentual de demandas concluídos no prazo para medir a eficiência. |
-| **RF33** | Funcional | indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que os demandas levam desde a sua data de criação até a sua conclusão. |
-| **RF34** | Funcional | indicador - Prazos Críticos |  Destacar o número de demandas ativos cujo prazo final se encerra nos próximos 4 dias. |
+| **RF33** | Funcional | indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que as demandas levam desde a sua data de criação até a sua conclusão. |
+| **RF34** | Funcional | indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
 | **RF35** | Funcional | indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que uma nova demanda leva para ter sua primeira atividade registrada. |
 | **RF36** | Funcional | indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
-| **RF37** | Funcional | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que os demandas finalizados ultrapassaram o prazo original. |
+| **RF37** | Funcional | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que as demandas finalizadas ultrapassaram o prazo original. |
 | **RF38** | Funcional | Gerar relatório filtrável e exportável | Permitir ao usuário gerar relatórios com filtros e funcionalidade de exportação para PDF ou CSV. |

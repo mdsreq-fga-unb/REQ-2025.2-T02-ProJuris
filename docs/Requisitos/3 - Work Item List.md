@@ -41,7 +41,7 @@
 | **RF11** | Funcional | Mover Demanda entre Colunas | O sistema deve permitir que o usuário mova um cartão entre as colunas do quadro para refletir o avanço da demanda no fluxo de trabalho (ex: "arrastar e soltar"). |
 | **RF12** | Funcional | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro.. |
 | **RF13** | Funcional | Could | Solicitar revisão de atividade | o sistema deve ser possível pedir para ter uma revisão de uma atividade. |
-| **RF14** | Funcional | Must | Exibir etapas dos demandas em quadro Kanban | o sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RF14** | Funcional | Must | Exibir etapas das demandas em quadro Kanban | o sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
 | **RF15** | Funcional | Could | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
 
 ---
@@ -88,8 +88,8 @@
 | **RF30** | Funcional | Should | Exibir painel de indicadores (Dashboard) | Apresentar a tela principal centralizada que serve como contêiner para todos os indicadores. |
 | **RF31** | Funcional | Should | indicador - Demandas por Status | Calcular e exibir o volume total de demandas e a distribuição atual em cada Status do Kanban. |
 | **RF32** | Funcional | Should | indicador - Desempenho de Prazos (% On-time) | Calcular e exibir o percentual de demandas concluídos no prazo para medir a eficiência. |
-| **RF33** | Funcional | Should | indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que os demandas levam desde a sua data de criação até a sua conclusão. |
-| **RF34** | Funcional | Should | indicador - Prazos Críticos |  Destacar o número de demandas ativos cujo prazo final se encerra nos próximos 4 dias. |
+| **RF33** | Funcional | Should | indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que as demandas levam desde a sua data de criação até a sua conclusão. |
+| **RF34** | Funcional | Should | indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
 | **RF35** | Funcional | Could | indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que um novo processo leva para ter sua primeira atividade registrada. |
 | **RF36** | Funcional | Could | indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
 | **RF37** | Funcional | Could | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que os demandas finalizados ultrapassaram o prazo original. |
