@@ -92,5 +92,5 @@
 | **RF34** | Funcional | Should | indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
 | **RF35** | Funcional | Could | indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que um novo processo leva para ter sua primeira atividade registrada. |
 | **RF36** | Funcional | Could | indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
-| **RF37** | Funcional | Could | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que os demandas finalizados ultrapassaram o prazo original. |
+| **RF37** | Funcional | Could | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que as demandas finalizadas ultrapassaram o prazo original. |
 | **RF38** | Funcional | Should | Gerar relatório filtrável e exportável | Permitir ao usuário gerar relatórios com filtros e funcionalidade de exportação para PDF ou CSV. |
