@@ -23,7 +23,7 @@
 
 ---
 
-## Cadastro e Login
+## Tarefa: Cadastro e Login
 
 | ID | Tipo | Priorização| Nome | Descrição |
 | :--- | :--- | :--- | :--- | :--- |
@@ -69,7 +69,7 @@
 
 ---
 
-## Mensagem automática
+## Tarefa: Mensagem automática
 
 | ID | Tipo | Priorização| Nome | Descrição |
 | :--- | :--- | :--- | :--- | :--- |
