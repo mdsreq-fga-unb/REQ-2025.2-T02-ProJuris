@@ -7,13 +7,13 @@ nav:
   - Home: index.md
   - Visão do Produto e Projeto:
     - 'Cenário Atual': 'Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md'
-    - Engenharia de Requisitos: 'Visão do produto e projeto/Engenharia de Requisitos.md'
-    - 'Solução Proposta': 'Visão do produto e projeto/2 SOLUÇÃO PROPOSTA.md'
-    - 'Estratégias de Engenharia': 'Visão do produto e projeto/3 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE.md'
-    - 'Cronograma e Entregas': 'Visão do produto e projeto/4 CRONOGRAMA E ENTREGAS.md'
-    - 'Interação Equipe e Cliente': 'Visão do produto e projeto/5 INTERAÇÃO ENTRE EQUIPE E CLIENTE.md'
-    - 'Lições Aprendidas': 'Visão do produto e projeto/6 LIÇÕES APRENDIDAS.md'
-    - 'Referências': 'Visão do produto e projeto/7 REFERÊNCIAS BIBLIOGRÁFICAS.md'
+    - Engenharia de Requisitos: 'Visão do produto e projeto/2 Engenharia de Requisitos.md'
+    - 'Solução Proposta': 'Visão do produto e projeto/3 SOLUÇÃO PROPOSTA.md'
+    - 'Estratégias de Engenharia': 'Visão do produto e projeto/4 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE.md'
+    - 'Cronograma e Entregas': 'Visão do produto e projeto/5 CRONOGRAMA E ENTREGAS.md'
+    - 'Interação Equipe e Cliente': 'Visão do produto e projeto/6 INTERAÇÃO ENTRE EQUIPE E CLIENTE.md'
+    - 'Lições Aprendidas': 'Visão do produto e projeto/7 LIÇÕES APRENDIDAS.md'
+    - 'Referências': 'Visão do produto e projeto/8 REFERÊNCIAS BIBLIOGRÁFICAS.md'
   - Requisitos:
     - 'Funcionais': 'Requisitos/1 - Funcionais.md'
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
