@@ -7,6 +7,7 @@ nav:
   - Home: index.md
   - Visão do Produto e Projeto:
     - 'Cenário Atual': 'Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md'
+    - Engenharia de Requisitos: 'Visão do produto e projeto/Engenharia de Requisitos.md'
     - 'Solução Proposta': 'Visão do produto e projeto/2 SOLUÇÃO PROPOSTA.md'
     - 'Estratégias de Engenharia': 'Visão do produto e projeto/3 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE.md'
     - 'Cronograma e Entregas': 'Visão do produto e projeto/4 CRONOGRAMA E ENTREGAS.md'
@@ -26,7 +27,6 @@ nav:
     - '06-10': 'Atas/6_06-10.md'
     - '13-10': 'Atas/8_13-10.md'
   - MVP: 'MVP.md'
-  - Engenharia de Requisitos: 'Engenharia de Requisitos.md'
 
 theme:
   name: material
