@@ -41,7 +41,7 @@
 | **RNF06** | Não-funcional | Sincronização de Status (Kanban, Atribuição) | Ao mover um card de processo para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' do processo deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão'). |
 | **RNF07** | Não-funcional | Auditoria Compulsória de Ações | O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir processo; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora. |
 | **RNF08** | Não-funcional | Sistema de Notificações por Evento | O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atra sada. |
-| **RNF04** | Funcional | Restriçao de acesso | o sistema deve ter restrições de acesso com relação ao cargo da pessoa. |
+| **RNF09** | Funcional | Restriçao de acesso | o sistema deve ter restrições de acesso com relação ao cargo da pessoa. |
 
 ---
 
@@ -49,4 +49,4 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RNF-010** | Não-funcional | Qualidade e Manutenibilidade do Código | O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal. 
+| **RNF10** | Não-funcional | Qualidade e Manutenibilidade do Código | O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal. 
