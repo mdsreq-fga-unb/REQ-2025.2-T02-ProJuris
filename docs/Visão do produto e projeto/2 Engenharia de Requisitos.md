@@ -1,4 +1,4 @@
-# 2 Engenahria de Requisitos
+# 2 Engenharia de Requisitos
 
 | Fase do OpenUP | Atividade de ER Principal | Atividade | Artefatos | Evidências |
 |----------------|----------------------------|------------|------------|-------------|

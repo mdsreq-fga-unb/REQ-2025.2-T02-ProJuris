@@ -7,7 +7,7 @@
 ## 1. Objetivos do MVP
 
 ### 1.1 - Objetivo Principal
-Validar que escritórios de advocacia conseguem gerenciar processos jurídicos de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.
+Validar que escritórios de advocacia conseguem gerenciar demandas jurídicas de forma colaborativa, com controle de prazos e responsabilidades, reduzindo em até 50% o tempo gasto na coordenação de atividades entre sócios e estagiários.
 
 ### 1.2 - Objetivos Específicos
 - OE1 (Facilitar a visualização das demandas internas, assegurando uma divisão clara entre pendentes, em andamento, enviadas para revisão e concluídas.)
@@ -15,10 +15,10 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 - OE3 (Minimizar riscos de falhas no cumprimento de prazos processuais, garantindo maior confiabilidade no acompanhamento.)
 
 ### 1.3 - Critérios de Sucesso
--  100% dos processos contêm todas as informações obrigatórias
+-  100% dos demandas contêm todas as informações obrigatórias
 -  Tempo de atribuição/transferência de atividade rápida
 -  Taxa de adoção pelos estagiários no 1ª mês
--  Zero processos sem responsável atribuído
+-  Zero demandas sem responsável atribuído
 -  Redução de perguntas sobre responsabilidades
 
 ---
