@@ -79,7 +79,7 @@ Validar que escritórios de advocacia conseguem gerenciar processos jurídicos d
 O Kanban é utilizado para garantir que o trabalho flua de forma contínua e previsível, alinhado com o ciclo de vida Iterativo e Incremental do OpenUP.
 
 
-### 1 - Políticas do Board de Desenvolvimento
+### 1 - Políticas do Board de Desenvolvimento do projeto no processo OpenUP
 
 O quadro Kanban está estruturado com colunas que representam as etapas do fluxo de trabalho, desde a preparação até a conclusão.
 
@@ -116,7 +116,6 @@ Uma funcionalidade só é considerada **DONE** se atender a todos os critérios 
 2. Testes unitários estão escritos e passando (com cobertura igual ou superior a 50%).  
 3. O Code review foi aprovado por outro desenvolvedor.  
 4. A funcionalidade foi testada manualmente.  
-5. Foi validada com o Product Owner.  
 6. A documentação técnica está atualizada e validada por, pelo menos, 2 analistas de requisitos.  
 7. Não há bugs críticos ou bloqueantes.  
 8. O código está integrado ao branch principal.  
@@ -130,20 +129,4 @@ As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do 
 - **Cycle Time:** Tempo desde que um item entra na coluna **To Do** até ser concluído.  
 - **Throughput:** Quantidade de Work items que são concluídos por semana.  
 - **Bloqueios:** A quantidade e o tempo que os itens permanecem bloqueados.
-
----
-
-## 6. Engenharia de Requisitos
-
-As atividades da ER, suas práticas e técnicas são mapeadas a partir das fases do processo OpenUP, considerando também a forma como o backlog está estruturado (Kanban).  
-
-| **Fases do Processo (OpenUP)** | **Atividades ER** | **Prática (Backlog)** | **Técnica Aplicada** | **Resultado Esperado** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Iniciação** | Elicitação e Descoberta | Levantamento de requisitos críticos (RF-01 a RF-12) | Entrevistas com e cliente e análise de fluxo de demandas | Lista inicial de requisitos priorizados (MUST, SHOULD, COULD, WONT) |
-|  | Análise e Consenso | Discussão e validação de objetivos (OE1–OE3) com o cliente | Reuniões e refinamento de backlog | Backlog inicial validado e ordenado por valor de negócio e complexidade |
-| **Elaboração** | Declaração e Representação | Modelagem de requisitos em formato Kanban (BACKLOG → TO DO → IN PROGRESS → REVIEW → DONE) | Definição de histórias de usuário e critérios de aceitação | Backlog estruturado e pronto para execução incremental |
-|  | Verificação e Validação | Revisão dos RFs e alinhamento com critérios de sucesso do MVP | Revisões técnicas e reuniões de validação com o PO | Itens do backlog validados tecnicamente e prontos para implementação |
-| **Construção** | Organização e Atualização | Implementação incremental via Kanban (RF-01 → RF-12) | Pull system com WIP limits (In Progress = 3, Review = 2) | Funcionalidades concluídas com DoD aplicado (testes, revisão e documentação) |
-|  | Verificação e Validação | Revisão contínua de código e testes automatizados | TDD e code review | Funcionalidades “Done” validadas e sem bugs críticos |
-| **Transição** | Organização e Atualização | Ajustes e priorização final de melhorias (SHOULD, COULD) | Métricas de acompanhamento (Lead Time, Cycle Time, Throughput) | MVP estável e pronto para avaliação com usuários reais |
 

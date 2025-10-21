@@ -26,6 +26,7 @@ nav:
     - '06-10': 'Atas/6_06-10.md'
     - '13-10': 'Atas/8_13-10.md'
   - MVP: 'MVP.md'
+  - Engenharia de Requisitos: 'Engenharia de Requisitos.md'
 
 theme:
   name: material
