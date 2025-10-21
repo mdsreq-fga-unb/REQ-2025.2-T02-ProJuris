@@ -68,19 +68,3 @@
 | **RF27** | Funcional | Configurar Gatilho de Notificação Automática | O sistema deve permitir ao Sócio definir eventos (gatilhos) que automaticamente disparam o envio das notificações. Exemplos de gatilhos: "Mudança de Status" (ex.: Sendo Revisado), "Proximidade de Prazo" ou "Nova Atribuição". |
 | **RF28** | Funcional | Enviar Notificação via WhatsApp na Conclusão | O sistema deve ser capaz de disparar a mensagem padronizada (usando o template e preenchendo as variáveis) para o contato do cliente ou responsável, utilizando a API oficial do WhatsApp Business, sendo acionado por um gatilho configurado no sistema. | 
 | **RF29** | Funcional | Gerar relatório filtrável e exportável | Gerar relatório de acompanhamento de clientes. |
-
----
-
-## Tarefa: Dashboard de Indicadores e Relatórios
-
-| ID | Tipo | Nome |Descrição |
-| :--- | :--- | :--- | :--- |
-| **RF30** | Funcional | Exibir painel de indicadores (Dashboard) | Apresentar a tela principal centralizada que serve como contêiner para todos os indicadores. |
-| **RF31** | Funcional | Indicador - Demandas por Status | Calcular e exibir o volume total de demandas e a distribuição atual em cada Status do Kanban. |
-| **RF32** | Funcional | Indicador - Desempenho de Prazos (% On-time) | Calcular e exibir o percentual de demandas concluídos no prazo para medir a eficiência. |
-| **RF33** | Funcional | Indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que as demandas levam desde a sua data de criação até a sua conclusão. |
-| **RF34** | Funcional | Indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
-| **RF35** | Funcional | Indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que uma nova demanda leva para ter sua primeira atividade registrada. |
-| **RF36** | Funcional | Indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
-| **RF37** | Funcional | Indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que as demandas finalizadas ultrapassaram o prazo original. |
-| **RF38** | Funcional | Gerar relatório filtrável e exportável | Permitir ao usuário gerar relatórios com filtros e funcionalidade de exportação para PDF ou CSV. |

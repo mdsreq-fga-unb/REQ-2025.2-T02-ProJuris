@@ -21,27 +21,3 @@ Construção |
 | Semana 12 | 24/11 | 02/12 | Ajustes Finais e Treinamento. | Ajustes pós-homologação e preparação para entrega. | Feedback do sócio e validação em uso real. | Transição |
 
 O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do projeto do LegisPro.
-
-
-
-## 4 CRONOGRAMA E ENTREGAS
-
-A partir da estratégia de desenvolvimento de software estabelecida, tem-se a seguinte proposta de cronograma, suas fases e resultados esperados:
-
-| Semanas | Data Início | Data Fim | Fase do OpenUP | Atividade Principal (OpenUP) | Requisitos Rastreados (MVP) | Objetivo do Ciclo | Entregas Previstas | Validação do Cliente |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Semana 0 | 01/09 | 07/09 | Concepção | Descoberta inicial de requisitos e entendimento do problema/oportunidade. | N/A | Definir problema | Ata de reunião com cliente | Aprovação do problema. |
-| Semana 1 | 08/09 | 14/09 | Elaboração | Priorização de requisitos, definição do escopo do MVP e planejamento do projeto. | OE1, OE2, OE3 | Definição dos Incrementos ; Alteração do problema de acordo com a revisão do professor | Estrutura inicial do projeto; Configuração da arquitetura (Arquitetura de Três Camadas (MVC)); | Detalhamento do problema e validação de objetivos do produto. |
-| Semana 2 | 15/09 | 21/09 | Elaboração | | N/A | Planejamento do Projeto; Levantamento de requisitos iniciais e principais regras de negócio; iniciar protótipo de baixa fidelidade; | Template inicial do sistema do website configurado; Backlog do produto; Cronograma detalhado. | Protótipo de baixa fidelidade; |
-| Semana 3 | 22/09 | 28/09 | Elaboração | | N/A | Definir líderes e responsáveis; finalizar protótipo de baixa fidelidade; | N/A | N/A |
-| Semana 4 | 29/09 | 05/10 | Elaboração | | N/A | Elaboração dos requisitos funcionais iniciais; Finalizar protótipo de baixa fidelidade; | Layout inicial do painel; Listagem básica de demandas; Protótipo navegável; | Feedback sobre requisitos funcionais com o cliente |
-| Semana 5 | 06/10 | 12/10 | Elaboração | | N/A | Elaboração de requisitos não funcionais; | Elaboração de requisitos não funcionais do sistema | Feedback com o cliente sobre os requisitos não funcionais do projeto |
-| Semana 6 | 13/10 | 19/10 | Elaboração | | N/A | Finalização da elaboração do MVP completo;  | Tratamento final da documentação do MVP, preparações para iniciar construção. | Validação da estrutura do MVP com professor e cliente. |
-| Semana 7 | 20/10 | 26/10 | Construção | Implementar Fundação e Controle de Acesso | RF-08, RF-04, RF-12 | Estabelecer a base de usuários, permissões e a visualização principal do Kanban. | Sistema de cadastro de usuários (Sócio/Estagiário) (RF-08); Login funcional com restrição de acesso (RF-04); Estrutura visual do Kanban com colunas (RF-12). | N/A |
-| Semana 8 | 27/10 | 02/11 | Construção | Implementar Gerenciamento de Processos (Core) | RF-01, RF-02, RF-07 | Permitir a criação e gerenciamento do objeto de dados principal (o processo). | Formulários para cadastrar (RF-01) e editar (RF-02) processos; Os processos criados aparecem no Kanban (RF-12); Visualização de detalhes (RF-07). | N/A |
-| Semana 9 | 03/11 | 09/11 | Construção | Implementar Fluxo de Trabalho e Colaboração | RF-03, RF-05, RF-09 | Habilitar o fluxo de trabalho colaborativo e a movimentação de tarefas (OE1, OE2). | Funcionalidade para atribuir (RF-03) e transferir (RF-05) um responsável; Interação de arrastar e soltar (drag-and-drop) para atualizar o status no Kanban (RF-09). | N/A |
-| Semana 10 | 10/11 | 16/11 | Construção | Implementar Refinamentos (Should Haves) e Estabilização | RF-06, RF-10 | Refinar a usabilidade e a experiência do estagiário (OE1); Estabilizar "Must Haves". | Implementação do "Dashboard do estagiário" (RF-06); Adicionar processo diretamente pelo quadro Kanban (RF-10); Correção de bugs e aumento da cobertura de testes. | Feedback sobre a utilidade do dashboard do estagiário (RF-06) e a agilidade de criar processos pelo Kanban (RF-10). |
-| Semana 11 | 17/11 | 23/11 | Transição | Homologação do MVP com o cliente. | Todos (MVP) | Homologação do MVP (Must + Should). | Sistema integrado (painel, fluxo, dashboard); Feedback final da equipe de desenvolvimento; Sistema preparado para testes de aceitação. | Homologação do MVP com casos de uso reais (Cliente testa o fluxo completo de ponta a ponta). |
-| Semana 12 | 24/11 | 02/12 | Transição | Ajustes Finais e Treinamento. | N/A | Ajustes pós-homologação e preparação para entrega. | Correções finais baseadas no feedback da homologação (Semana 11); Treinamento da equipe do cliente. | Feedback do sócio e validação final em uso real. Aprovação para Go-live. |
-
-O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do projeto do LegisPro.
