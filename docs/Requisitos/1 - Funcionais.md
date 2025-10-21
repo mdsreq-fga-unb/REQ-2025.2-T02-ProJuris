@@ -4,12 +4,12 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF01** | Funcional | Cadastrar demandas com informações detalhadas | essas informações devem conter cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
-| **RF02** | Funcional | Editar demandas | Deve ser possível atualizar informações como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
-| **RF03** | Funcional | Atribuir atividades | o sistema deve ser possível atribuir atividades a pessoas específicas. |
-| **RF04** | Funcional | Transferir responsabilidade das atividades | o sistema deve ser possível transferir a responsabilidade de uma atividade para outra pessoa. |
-| **RF05** | Funcional | Exibir todas as atribuições do estagiário | o sistema deve ter as atribuições do estagiário, mostrando as atividades a serem feitas. |
-| **RF06** | Funcional | Mostrar detalhes das atividades | o sistema deve apresentar todos os detalhes de demandas como cliente, número de demandas, petição modelo, atividade, andamento, prazo e responsável. |
+| **RF01** | Funcional | Cadastrar demandas com informações detalhadas | Essas informações devem conter atividade, andamento, prazo e responsável. |
+| **RF02** | Funcional | Editar demandas | Deve ser possível atualizar informações como atividade, andamento, prazo e responsável. |
+| **RF03** | Funcional | Atribuir atividades | O sistema deve ser possível atribuir demandas a pessoas específicas. |
+| **RF04** | Funcional | Transferir responsabilidade das demandas | O sistema deve ser possível transferir a responsabilidade de uma demanda para outra pessoa. |
+| **RF05** | Funcional | Exibir todas as atribuições do estagiário | O sistema deve ter as atribuições do estagiário, mostrando as demandas a serem feitas. |
+| **RF06** | Funcional | Mostrar detalhes das demandas | O sistema deve apresentar todos os detalhes de demandas como atividade, andamento, prazo e responsável. |
 
 ---
 
@@ -17,7 +17,7 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF07** | Funcional | cadastrar novos estagiários e sócios | O usuário de nível “Sócio” deve ser capaz de clicar em um botão para cadastrar novos estagiários e sócios.
+| **RF07** | Funcional | Cadastrar novos estagiários e sócios | O usuário de nível “Sócio” deve ser capaz de clicar em um botão para cadastrar novos estagiários e sócios.
 
 ---
 
@@ -25,14 +25,14 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RF08** | Funcional | Atualizar demandas kanban | o sistema deve permitir alterar detalhes das demandas. |
+| **RF08** | Funcional | Atualizar processo kanban | O sistema deve permitir alterar detalhes do processo. |
 | **RF09** | Funcional | Criar/Adicionar Demanda | O sistema deve permitir a criação de um novo cartão (demanda) no quadro Kanban, informando no mínimo um título e a coluna inicial. |
-| **RF10** | Funcional | Editar Detalhes da Demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável, data de entrega, etc. |
+| **RF10** | Funcional | Editar Detalhes da Demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável e data de entrega. |
 | **RF11** | Funcional | Mover Demanda entre Colunas | O sistema deve permitir que o usuário mova um cartão entre as colunas do quadro para refletir o avanço da demanda no fluxo de trabalho (ex: "arrastar e soltar"). |
-| **RF12** | Funcional | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro.. |
-| **RF13** | Funcional | Solicitar revisão de atividade | o sistema deve ser possível pedir para ter uma revisão de uma atividade. |
-| **RF14** | Funcional | Exibir etapas dos demandas em quadro Kanban | o sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
-| **RF15** | Funcional | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
+| **RF12** | Funcional | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro. |
+| **RF13** | Funcional | Could | Solicitar revisão de demanda | O sistema deve ser possível pedir para ter uma revisão de uma demanda. |
+| **RF14** | Funcional | Must | Exibir etapas das demandas em quadro Kanban | O sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RF15** | Funcional | Could | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
 
 ---
 
@@ -76,11 +76,11 @@
 | ID | Tipo | Nome |Descrição |
 | :--- | :--- | :--- | :--- |
 | **RF30** | Funcional | Exibir painel de indicadores (Dashboard) | Apresentar a tela principal centralizada que serve como contêiner para todos os indicadores. |
-| **RF31** | Funcional | indicador - Demandas por Status | Calcular e exibir o volume total de demandas e a distribuição atual em cada Status do Kanban. |
-| **RF32** | Funcional | indicador - Desempenho de Prazos (% On-time) | Calcular e exibir o percentual de demandas concluídos no prazo para medir a eficiência. |
-| **RF33** | Funcional | indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que as demandas levam desde a sua data de criação até a sua conclusão. |
-| **RF34** | Funcional | indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
-| **RF35** | Funcional | indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que uma nova demanda leva para ter sua primeira atividade registrada. |
-| **RF36** | Funcional | indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
-| **RF37** | Funcional | indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que as demandas finalizadas ultrapassaram o prazo original. |
+| **RF31** | Funcional | Indicador - Demandas por Status | Calcular e exibir o volume total de demandas e a distribuição atual em cada Status do Kanban. |
+| **RF32** | Funcional | Indicador - Desempenho de Prazos (% On-time) | Calcular e exibir o percentual de demandas concluídos no prazo para medir a eficiência. |
+| **RF33** | Funcional | Indicador - Tempo Médio de Resolução (TMR) | Calcular e exibir o tempo médio total (em dias) que as demandas levam desde a sua data de criação até a sua conclusão. |
+| **RF34** | Funcional | Indicador - Prazos Críticos |  Destacar o número de demandas cujo prazo final se encerra nos próximos 4 dias. |
+| **RF35** | Funcional | Indicador - Tempo até Primeira Ação (TTA) | Calcular e exibir o tempo médio que uma nova demanda leva para ter sua primeira atividade registrada. |
+| **RF36** | Funcional | Indicador - Taxa de Retrabalho | Calcular e exibir a porcentagem de demandas que retornam para uma etapa anterior no fluxo. |
+| **RF37** | Funcional | Indicador - Tempo Médio de Atraso | Calcular e exibir a média (em dias) que as demandas finalizadas ultrapassaram o prazo original. |
 | **RF38** | Funcional | Gerar relatório filtrável e exportável | Permitir ao usuário gerar relatórios com filtros e funcionalidade de exportação para PDF ou CSV. |

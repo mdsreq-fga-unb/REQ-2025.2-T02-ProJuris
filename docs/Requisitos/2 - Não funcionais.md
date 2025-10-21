@@ -37,11 +37,11 @@
 
 | ID | Tipo | Nome | Descrição |
 | :--- | :--- | :--- | :--- |
-| **RNF05** | Não-funcional | Prevenção de Duplicidade na Importação | Durante a importação, o sistema deve usar a coluna "Número do Processo" como chave única. Se o número não existir, um novo processo é criado. Se já existir, os dados do processo existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número. |
-| **RNF06** | Não-funcional | Sincronização de Status (Kanban, Atribuição) | Ao mover um card de processo para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' do processo deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão'). |
-| **RNF07** | Não-funcional | Auditoria Compulsória de Ações | O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir processo; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora. |
+| **RNF05** | Não-funcional | Prevenção de Duplicidade na Importação | Durante a importação, o sistema deve usar a coluna "Número da Demanda" como chave única. Se o número não existir, uma nova demanda é criada. Se já existir, os dados da demanda existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número. |
+| **RNF06** | Não-funcional | Sincronização de Status (Kanban, Atribuição) | Ao mover um card de demanda para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' da demanda deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão'). |
+| **RNF07** | Não-funcional | Auditoria Compulsória de Ações | O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir demanda; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora. |
 | **RNF08** | Não-funcional | Sistema de Notificações por Evento | O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atra sada. |
-| **RNF09** | Funcional | Restriçao de acesso | o sistema deve ter restrições de acesso com relação ao cargo da pessoa. |
+| **RNF09** | Funcional | Restriçao de acesso | O sistema deve ter restrições de acesso com relação ao cargo da pessoa. |
 
 ---
 

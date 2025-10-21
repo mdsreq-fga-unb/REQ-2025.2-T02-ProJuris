@@ -108,20 +108,7 @@ O sistema é baseado na capacidade da equipe (sistema puxado), garantindo a efic
 - **Prioridade:** O trabalho é priorizado rigidamente seguindo os critérios de valor de negócio, que são: **MUST > SHOULD**. Os itens MUST são absolutamente essenciais para resolver o problema central de visibilidade do fluxo de trabalho e atender aos requisitos críticos de segurança.
 
 
-### 4 - Definição de Pronto (Definition of Done - DoD)
-
-Uma funcionalidade só é considerada **DONE** se atender a todos os critérios de qualidade listados:
-
-1. O código está implementado conforme o requisito.  
-2. Testes unitários estão escritos e passando (com cobertura igual ou superior a 50%).  
-3. O Code review foi aprovado por outro desenvolvedor.  
-4. A funcionalidade foi testada manualmente.  
-6. A documentação técnica está atualizada e validada por, pelo menos, 2 analistas de requisitos.  
-7. Não há bugs críticos ou bloqueantes.  
-8. O código está integrado ao branch principal.  
-
-
-### 5 - Métricas de Acompanhamento
+### 4 - Métricas de Acompanhamento
 
 As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do processo:
 
