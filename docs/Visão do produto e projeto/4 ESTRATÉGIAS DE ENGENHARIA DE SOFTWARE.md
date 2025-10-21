@@ -1,8 +1,8 @@
-## 3 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE
+## 4 ESTRATÉGIAS DE ENGENHARIA DE SOFTWARE
 
 Tendo em vista as informações apresentadas no documento, a decisão sobre as estratégias de engenharia de software a serem utilizadas prioriza a adaptação constante e a entrega de valor de forma ágil para um cliente que precisa de resultados rápidos e visíveis, considerando feedbacks.
 
-### 3.1 Estratégia Priorizada
+### 4.1 Estratégia Priorizada
 
 Abordagem de Desenvolvimento de Software: Ágil
 
@@ -12,7 +12,7 @@ Processo de Engenharia de Software: Open Unified Process (Open UP)
 
 FrameWork: Kanban
 
-### 3.2 Quadro Comparativo
+### 4.2 Quadro Comparativo
 
 | Características | Open UP | Feature-Driven Development (FDD) |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ FrameWork: Kanban
 | Documentação | Prioriza uma documentação mínima e essencial, focada em alinhar o entendimento com a visão do produto. Nesse sentido, a colaboração e a comunicação são incentivadas para evitar excesso de artefatos. | Embora seja ágil, é mais proativo na documentação. A modelagem de domínio é um ponto crucial, e a documentação é feita para cada funcionalidade. |
 | Controle de Mudanças | Gerencia mudanças através de um processo iterativo e estruturado, com foco em mitigar riscos e manter a arquitetura, permitindo maior controle e previsibilidade sobre o impacto das alterações no projeto | Lida com mudanças de forma mais granular e reativa, focando na entrega de funcionalidades em ciclos curtos, novas solicitações são adicionadas à lista de funcionalidades, o que pode fragmentar a visão arquitetônica global. |
 
-### 3.3 Justificativa
+### 4.3 Justificativa
 
 Para o desenvolvimento do LegisPro, que exige um processo leve, adaptável e eficiente, avaliamos abordagens ágeis que privilegiasse flexibilidade e entregas frequentes. Nesse contexto, o OpenUP destaca-se como alternativa adequada, por sua natureza interativa, que favorece ciclos curtos de desenvolvimento e feedback contínuo, além de reduzir a burocracia sem comprometer a qualidade
 
