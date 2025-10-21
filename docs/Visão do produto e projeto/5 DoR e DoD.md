@@ -1,6 +1,6 @@
 ## 5 DEFINITION OF READY (DoR) E DEFINITION OF DONE (DoD)
 
-### 1 - Definição de Pronto (Definition of Done - DoD)
+### 5.1 - Definição de Pronto (Definition of Done - DoD)
 Uma funcionalidade só é considerada **READY** se atender a todos os critérios de qualidade listados:
 
 1. O requisito deve ser especificado em um caso de uso;
@@ -13,7 +13,7 @@ Uma funcionalidade só é considerada **READY** se atender a todos os critérios
 8. O ambiente deve estar disponível/configurado;
 
 
-### 2 - Definição de Feito (Definition of Done - DoD)
+### 5.2 - Definição de Feito (Definition of Done - DoD)
 
 Uma funcionalidade só é considerada **DONE** se atender a todos os critérios de qualidade listados:
 

@@ -1,6 +1,6 @@
-## 2 SOLUÇÃO PROPOSTA
+## 3 SOLUÇÃO PROPOSTA
 
-### 2.1 Objetivos do Produto
+### 3.1 Objetivos do Produto
 
 #### Objetivos Geral
 
@@ -16,7 +16,7 @@ Superar as limitações do controle manual de demandas no escritório Cortes, Sa
 | OE4 | Melhorar a comunicação com clientes por meio de atualizações proativas sobre o andamento de suas demandas. |
 | OE5 | Fornecer indicadores de desempenho que apoiem a tomada de decisão estratégica e o controle das operações. |
 
-### 2.2 Características da Solução
+### 3.2 Características da Solução
 
 O produto deverá contemplar as seguintes funcionalidades principais:
 
@@ -29,7 +29,7 @@ O produto deverá contemplar as seguintes funcionalidades principais:
 * Segurança da Informação (OE3): serão implementados mecanismos de autenticação e controle de acesso, assegurando a proteção dos dados armazenados e a confidencialidade das informações.
 * Repositório e Pesquisa de Cláusulas (OE2): Um módulo que poderá ser implementado posteriormente para armazenamento de cláusulas contratuais, de honorários e outros textos jurídicos reutilizáveis. Contará com um mecanismo de pesquisa por palavras-chave que permitirá à equipe localizar e copiar rapidamente o conteúdo necessário, agilizando a elaboração de novos documentos.
 
-### 2.3 Tecnologias a Serem Utilizadas
+### 3.3 Tecnologias a Serem Utilizadas
 
 A solução será desenvolvida em uma arquitetura web moderna a fim de garantir a segurança e escalabilidade do produto de software. Construído em modelo MVC, as tecnologias foram escolhidas baseado na experiência da equipe e em como poderíamos adequar ao domínio jurídico que exige controle rígido de segurança e dados bem estruturado, por isso aderimos ao ecossistema JavaScript.
 
@@ -38,7 +38,7 @@ A solução será desenvolvida em uma arquitetura web moderna a fim de garantir 
 * Banco de dados: Para o armazenamento estruturado das informações jurídicas, será utilizado o MySQL, banco de dados relacional conhecido por sua confiabilidade, segurança e robustez. Essa escolha é estratégica para lidar com prazos, demandas, usuários e controles de acesso de forma consistente, além de facilitar a migração das planilhas Excel utilizadas atualmente pelo cliente.
 * Chatbot: O chatbot do LegisPro será responsável por notificar clientes sobre o andamento de suas demandas e responder dúvidas simples. A solução utilizará a API oficial do WhatsApp Business, integrada ao backend em Node.js por meio de um provedor BSP (como Blip ou Twilio), garantindo envio seguro e escalável de mensagens. O backend será responsável por disparar notificações automáticas sempre que houver eventos relevantes no sistema (como mudança de status ou anexação de documentos), preencher modelos de mensagem pré-aprovados com dados do MySQL e disponibilizar respostas a perguntas frequentes. Essa abordagem centraliza a lógica no backend e mantém uniformidade tecnológica, permitindo comunicação eficiente, padronizada e alinhada às necessidades de transparência do escritório.
 
-### 2.4 Pesquisa de Mercado e Análise Competitiva
+### 3.4 Pesquisa de Mercado e Análise Competitiva
 
 O mercado brasileiro de softwares jurídicos oferece diversas plataformas maduras voltadas ao controle de prazos, gerenciamento documental e painéis de controle (como Projuris, Astrea, ADVBOX e entre outros). Apesar da robustez funcional dessas soluções, observam-se lacunas relevantes para escritórios conservadores e enxutos como o Cortes, Santos Advogados: rigidez de fluxos, dificuldades na migração de dados vindos de Excel, e automações que, quando impostas de forma genérica, podem comprometer o atendimento personalizado.
 
@@ -66,7 +66,7 @@ Para diferenciar e alinhar a solução às prioridades do Cortes, Santos Advogad
 
 Diferenciar o produto por meio de um workflow visual, importador assistido, controles de acesso granulares e automações configuráveis permitirá atender às necessidades centrais do Cortes, Santos Advogados: visibilidade do fluxo, redução de retrabalho e manutenção do caráter pessoal do atendimento. Esses diferenciais tornam a solução mais apropriada para escritórios conservadores e enxutos do que plataformas genéricas e "tudo em um" que, apesar de ricas em funcionalidades, nem sempre resolvem problemas operacionais cotidianos.
 
-### 2.5 Análise de Viabilidade
+### 3.5 Análise de Viabilidade
 
 A solução proposta é tecnicamente viável e adequada ao problema do escritório: uma aplicação web responsiva com backend estruturado, banco relacional, armazenamento de documentos e controles de acesso granular permitindo implementar o workflow visual, importador planilhas do Excel, status e progresso das demandas e repositório pesquisável de cláusulas.
 
@@ -84,7 +84,7 @@ Os principais riscos e soluções identificados pelo grupo são:
 
 Portanto, o projeto é adequado e sustentável, entregando um MVP enxuto que resolva o problema central (visibilidade do fluxo e diminuição do uso de planilhas), usando ferramentas gratuitas e um cronograma bem dividido em 2--3 meses. Assim, conseguiremos uma solução útil para o cliente e um bom produto para avaliação.
 
-### 2.6 Impacto da Solução
+### 3.6 Impacto da Solução
 
 A solução proposta trará benefícios práticos e imediatos para o escritório, substituindo planilhas por um painel visual, fazendo com que todos vejam de forma clara em que etapa cada processo está, reduzindo conferências diárias e confusões sobre responsabilidade. Com isso, o sócio passa a gastar menos tempo em tarefas de triagem e delegação, os funcionários e estagiários trabalham com instruções mais claras e há menos retrabalho por erros de organização. Notificações automáticas e relatórios padronizados melhoram a comunicação com os clientes, que passam a receber atualizações regulares e ficam mais tranquilos sobre o andamento dos casos. O repositório de cláusulas e modelos agiliza a preparação de peças e propostas, trazendo mais consistência nas entregas.
 

@@ -1,6 +1,6 @@
-## 5 INTERAÇÃO ENTRE EQUIPE E CLIENTE
+## 7 INTERAÇÃO ENTRE EQUIPE E CLIENTE
 
-### 5.1 Composição da Equipe
+### 7.1 Composição da Equipe
 
 | Papel | Atribuições | Responsável | Participantes |
 | --- | --- | --- | --- |
@@ -9,7 +9,7 @@
 | Analista de Requisitos | Atribuir, explicar e analisar Requisitos de forma a deixá-los o mais condizentes com as necessidades do projeto o possível. | Caio Soares | Caio Rocha Gustavo Oki Lucas Machado Davi Nunes Marcos Filho |
 | Desenvolvimento | Realizar o produto propriamente dito, de forma a deixá-lo completo com todos os requisitos necessários e tratar do produto de forma correta. | Davi Nunes | Caio Rocha Caio Soares Lucas Machado Gustavo Oki Marcos Filho |
 
-### 5.2 Comunicação
+### 7.2 Comunicação
 
 As ferramentas de comunicação são essenciais para que não só o grupo se comuniquem entre si, mas também para que a equipe e o cliente tenham uma boa interação.
 Tendo isso em mente, as ferramentas selecionadas foram:
@@ -18,7 +18,7 @@ Tendo isso em mente, as ferramentas selecionadas foram:
 * Whatsapp: para comunicação menos formal e avisos rápidos entre os membros do grupo, além de comunicação rápida e facilitada entre o gestor do projeto e o cliente.
 * Github: enquanto não necessáriamente o Github seja apenas uma ferramenta de comunicação, com suas ferramentas de Issues, Pull Requests e até mesmo o Github Projects, ele será utilizado como uma ferramenta de comunicação no sentido de comunicar as atribuições da equipe de forma fácil de se rastrear e versionada.
 
-### 5.3 Processo de Validação
+### 7.3 Processo de Validação
 
 O processo de validação será contínuo e iterativo, integrado ao desenvolvimento ágil. A equipe utilizará um quadro Kanban para gerenciar o fluxo de tarefas, garantindo que o trabalho esteja sempre visível e que os feedbacks sejam incorporados de forma fluida. O processo ocorrerá nos seguintes estágios:
 
