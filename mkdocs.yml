@@ -16,7 +16,7 @@ nav:
   - Requisitos:
     - 'Funcionais': 'Requisitos/1 - Funcionais.md'
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
-    - 'Backlog': 'Requisitos/3 - Work Item List.md'
+    - 'Work Item List': 'Requisitos/3 - Work Item List.md'
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
     - 'Reuniões com o cliente': 'Entregas/Reuniao Cliente.md'
