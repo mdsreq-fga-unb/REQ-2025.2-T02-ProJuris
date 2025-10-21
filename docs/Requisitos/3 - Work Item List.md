@@ -35,11 +35,11 @@
 
 | ID | Tipo | Priorização| Nome | Descrição |
 | :--- | :--- | :--- | :--- | :--- |
-| **RF08** | Funcional | Must | Atualizar processo kanban | o sistema deve permitir alterar detalhes do processo. |
-| **RF09** | Funcional | Criar/Adicionar Demanda | O sistema deve permitir a criação de um novo cartão (demanda) no quadro Kanban, informando no mínimo um título e a coluna inicial. |
-| **RF10** | Funcional | Editar Detalhes da Demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável, data de entrega, etc. |
-| **RF11** | Funcional | Mover Demanda entre Colunas | O sistema deve permitir que o usuário mova um cartão entre as colunas do quadro para refletir o avanço da demanda no fluxo de trabalho (ex: "arrastar e soltar"). |
-| **RF12** | Funcional | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro.. |
+| **RF08** | Funcional | Must | Atualizar processo kanban | O sistema deve permitir alterar detalhes do processo. |
+| **RF09** | Funcional | Must | Criar/Adicionar Demanda | O sistema deve permitir a criação de um novo cartão (demanda) no quadro Kanban, informando no mínimo um título e a coluna inicial. |
+| **RF10** | Funcional | Must | Editar Detalhes da Demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável e data de entrega. |
+| **RF11** | Funcional | Must | Mover Demanda entre Colunas | O sistema deve permitir que o usuário mova um cartão entre as colunas do quadro para refletir o avanço da demanda no fluxo de trabalho (ex: "arrastar e soltar"). |
+| **RF12** | Funcional | Must | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro. |
 | **RF13** | Funcional | Could | Solicitar revisão de atividade | o sistema deve ser possível pedir para ter uma revisão de uma atividade. |
 | **RF14** | Funcional | Must | Exibir etapas das demandas em quadro Kanban | o sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
 | **RF15** | Funcional | Could | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
