@@ -20,13 +20,15 @@ nav:
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
     - 'Work Item List': 'Requisitos/3 - Work Item List.md'
   - Entregas:
-    - 'Unidade 1': 'Entregas/Unidade 1.md'
+    - 'Atas':
+      - '15-09': 'Entregas/Atas/3_15-09.md'
+      - '22-09': 'Entregas/Atas/4_22-09.md'
+      - '06-10': 'Entregas/Atas/6_06-10.md'
+      - '13-10': 'Entregas/Atas/8_13-10.md'
+    - 'Prints Protótipo': 'Entregas/Prints Prototipo.md'
     - 'Reuniões com o cliente': 'Entregas/Reuniao Cliente.md'
-  - Atas:
-    - '15-09': 'Atas/3_15-09.md'
-    - '22-09': 'Atas/4_22-09.md'
-    - '06-10': 'Atas/6_06-10.md'
-    - '13-10': 'Atas/8_13-10.md'
+    - 'Unidade 1': 'Entregas/Unidade 1.md'
+    - 'Unidade 2': 'Entregas/Unidade 2.md'
   - MVP: 'MVP.md'
 
 theme:
