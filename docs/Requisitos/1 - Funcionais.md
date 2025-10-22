@@ -6,7 +6,7 @@
 | :--- | :--- | :--- | :--- |
 | **RF01** | Funcional | Cadastrar demandas com informações detalhadas | Essas informações devem conter atividade, andamento, prazo e responsável. |
 | **RF02** | Funcional | Editar demandas | Deve ser possível atualizar informações como atividade, andamento, prazo e responsável. |
-| **RF03** | Funcional | Atribuir atividades | O sistema deve ser possível atribuir demandas a pessoas específicas. |
+| **RF03** | Funcional | Atribuir demandas | O sistema deve ser possível atribuir demandas a pessoas específicas. |
 | **RF04** | Funcional | Transferir responsabilidade das demandas | O sistema deve ser possível transferir a responsabilidade de uma demanda para outra pessoa. |
 | **RF05** | Funcional | Exibir todas as atribuições do estagiário | O sistema deve ter as atribuições do estagiário, mostrando as demandas a serem feitas. |
 | **RF06** | Funcional | Mostrar detalhes das demandas | O sistema deve apresentar todos os detalhes de demandas como atividade, andamento, prazo e responsável. |
@@ -30,9 +30,9 @@
 | **RF10** | Funcional | Editar Detalhes da Demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável e data de entrega. |
 | **RF11** | Funcional | Mover Demanda entre Colunas | O sistema deve permitir que o usuário mova um cartão entre as colunas do quadro para refletir o avanço da demanda no fluxo de trabalho (ex: "arrastar e soltar"). |
 | **RF12** | Funcional | Retirar Demanda | O sistema deve permitir excluir um cartão que não é mais necessário ou foi concluído há muito tempo, removendo-o da visualização principal do quadro. |
-| **RF13** | Funcional | Could | Solicitar revisão de demanda | O sistema deve ser possível pedir para ter uma revisão de uma demanda. |
-| **RF14** | Funcional | Must | Exibir etapas das demandas em quadro Kanban | O sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
-| **RF15** | Funcional | Could | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
+| **RF13** | Funcional | Solicitar revisão de demanda | O sistema deve ser possível pedir para ter uma revisão de uma demanda. |
+| **RF14** | Funcional | Exibir etapas das demandas em quadro Kanban | O sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. |
+| **RF15** | Funcional | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. |
 
 ---
 
