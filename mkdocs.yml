@@ -16,6 +16,7 @@ nav:
     - 'Lições Aprendidas': 'Visão do produto e projeto/8 LIÇÕES APRENDIDAS.md'
     - 'Referências': 'Visão do produto e projeto/9 REFERÊNCIAS BIBLIOGRÁFICAS.md'
   - Requisitos:
+    - 'Casos de Uso': 'Requisitos/Casos de Uso.md'
     - 'Funcionais': 'Requisitos/1 - Funcionais.md'
     - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
     - 'Work Item List': 'Requisitos/3 - Work Item List.md'
