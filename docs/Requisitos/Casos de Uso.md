@@ -214,7 +214,7 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 - **Objetivo**: Permitir que o Sócio ou Estagiário altere o status de uma demanda arrastando-a (drag-and-drop) de uma coluna para outra.
 - **Requisitos Especiais**: Registrar log (RNF07), enviar notificação (RNF08), e verificar permissão de acesso (RNF09/RF04).
 
-## Fluxo Principal:
+### Fluxo Principal:
 
 1.  O Ator (Sócio ou Estagiário) acessa o quadro Kanban.
 2.  O Ator localiza o card da demanda que deseja mover.
@@ -228,7 +228,7 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 10. (Se aplicável) O Sistema aciona o disparo de notificação (RNF08) ao responsável pela nova etapa (ex: Sócio, para revisar).
 11. O Sistema atualiza a interface, movendo visualmente o card para a nova coluna, e exibe uma mensagem de sucesso.
 
-## Fluxos Alternativos Críticos:
+### Fluxos Alternativos Críticos:
 
 **A1 — Movimentação Cancelada pelo Ator (RF11-E1)**
 * A1.1 No passo 6, o Ator solta o card fora de uma coluna de destino válida (ex: de volta na coluna original ou fora do quadro).
@@ -244,20 +244,20 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 * A3.2 O Sistema exibe uma mensagem de erro genérica (ex: "Erro ao mover a demanda. Tente novamente.").
 * A3.3 O Sistema reverte a mudança visual, retornando o card à sua coluna original para manter a consistência.
 
-## Pré-condições:
+### Pré-condições:
 
 * O Ator (Sócio ou Estagiário) deve estar autenticado.
 * A demanda (card) existe e está visível no quadro.
 * O Ator deve ter permissão para mover o card (Sócio: permissão total; Estagiário: apenas se for o responsável pela demanda, conforme RF04).
 
-## Pós-condições:
+### Pós-condições:
 
 * O status/coluna da demanda é atualizado e persistido no banco de dados.
 * A demanda é exibida visualmente na nova coluna.
 * Log de movimentação gravado (RNF07).
 * Notificação enviada (RNF08), se aplicável.
 
-## Critérios de Aceitação:
+### Critérios de Aceitação:
 
 * Um Sócio deve conseguir mover qualquer card entre quaisquer colunas válidas.
 * Um Estagiário deve conseguir mover um card **que esteja atribuído a ele**.
