@@ -837,9 +837,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RF10 - Criar Demanda no Kanban:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fluxo-principal_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxo Principal:
@@ -847,8 +848,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fluxos-alternativos-criticos_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxos Alternativos Críticos:
@@ -856,8 +857,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pre-condicoes_2" class="md-nav__link">
     <span class="md-ellipsis">
       Pré-condições:
@@ -865,8 +866,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pos-condicoes_2" class="md-nav__link">
     <span class="md-ellipsis">
       Pós-condições:
@@ -874,16 +875,15 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#criterios-de-aceitacao_1" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios de Aceitação:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Critérios de Aceitação:">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#diagrama-de-caso-de-uso_2" class="md-nav__link">
@@ -1458,9 +1458,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RF10 - Criar Demanda no Kanban:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fluxo-principal_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxo Principal:
@@ -1468,8 +1469,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fluxos-alternativos-criticos_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxos Alternativos Críticos:
@@ -1477,8 +1478,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pre-condicoes_2" class="md-nav__link">
     <span class="md-ellipsis">
       Pré-condições:
@@ -1486,8 +1487,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pos-condicoes_2" class="md-nav__link">
     <span class="md-ellipsis">
       Pós-condições:
@@ -1495,16 +1496,15 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#criterios-de-aceitacao_1" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios de Aceitação:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Critérios de Aceitação:">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#diagrama-de-caso-de-uso_2" class="md-nav__link">
@@ -1804,7 +1804,7 @@
 <li><strong>Objetivo</strong>: Permitir que o Sócio crie uma nova demanda (card) diretamente em uma coluna específica do quadro Kanban.</li>
 <li><strong>Requisitos Especiais</strong>: Registrar log (RNF07) e enviar notificação (RNF08).</li>
 </ul>
-<h2 id="fluxo-principal_1">Fluxo Principal:</h2>
+<h3 id="fluxo-principal_1">Fluxo Principal:</h3>
 <ol>
 <li>O Ator (Sócio) acessa o quadro Kanban desejado.</li>
 <li>O Ator aciona o comando "Adicionar Card" ou "+" na coluna de destino (ex: "Elaboração").</li>
@@ -1818,7 +1818,7 @@
 <li>(Se um responsável foi definido no passo 5) O Sistema aciona o disparo de notificação (RNF08) para o usuário atribuído.</li>
 <li>O Sistema exibe o novo card na coluna do Kanban e exibe uma mensagem de sucesso (ex: "Demanda criada.").</li>
 </ol>
-<h2 id="fluxos-alternativos-criticos_1">Fluxos Alternativos Críticos:</h2>
+<h3 id="fluxos-alternativos-criticos_1">Fluxos Alternativos Críticos:</h3>
 <p><strong>A1 — Criação Cancelada pelo Ator (RF10-E1)</strong>
 * A1.1 No passo 3 ou 4, o Ator clica em "Cancelar" ou fora do formulário.
 * A1.2 O Sistema descarta as informações inseridas e fecha o formulário. Nenhuma demanda é criada.</p>
@@ -1832,20 +1832,20 @@
 <p><strong>A4 — Falha de Sistema (RF10-E3)</strong>
 * A4.1 No passo 8, o Sistema falha ao tentar salvar no banco de dados (ex: falha de conexão).
 * A4.2 O Sistema exibe uma mensagem de erro genérica (ex: "Não foi possível salvar a demanda. Tente novamente.") e registra o erro técnico.</p>
-<h2 id="pre-condicoes_2">Pré-condições:</h2>
+<h3 id="pre-condicoes_2">Pré-condições:</h3>
 <ul>
 <li>O Ator (Sócio) deve estar autenticado no sistema.</li>
 <li>O Sócio possui permissão de escrita (criação) no quadro Kanban.</li>
 <li>O quadro Kanban existe e está carregado.</li>
 </ul>
-<h2 id="pos-condicoes_2">Pós-condições:</h2>
+<h3 id="pos-condicoes_2">Pós-condições:</h3>
 <ul>
 <li>Uma nova demanda (card) é criada e persistida no sistema.</li>
 <li>A nova demanda é exibida visualmente na coluna designada do Kanban.</li>
 <li>Log de criação gravado (RNF07).</li>
 <li>Notificação enviada (RNF08), se aplicável.</li>
 </ul>
-<h2 id="criterios-de-aceitacao_1">Critérios de Aceitação:</h2>
+<h3 id="criterios-de-aceitacao_1">Critérios de Aceitação:</h3>
 <ul>
 <li>Um Sócio deve conseguir criar um card no Kanban informando apenas o título.</li>
 <li>Um Estagiário <strong>não</strong> deve ver ou conseguir usar a opção de criar um card no Kanban.</li>
