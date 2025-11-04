@@ -906,9 +906,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RF11 - Mover Demanda entre Colunas:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fluxo-principal_2" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxo Principal:
@@ -916,8 +917,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fluxos-alternativos-criticos_2" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxos Alternativos Críticos:
@@ -925,8 +926,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pre-condicoes_3" class="md-nav__link">
     <span class="md-ellipsis">
       Pré-condições:
@@ -934,8 +935,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pos-condicoes_3" class="md-nav__link">
     <span class="md-ellipsis">
       Pós-condições:
@@ -943,16 +944,15 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#criterios-de-aceitacao_2" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios de Aceitação:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Critérios de Aceitação:">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#diagrama-de-caso-de-uso_3" class="md-nav__link">
@@ -1527,9 +1527,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RF11 - Mover Demanda entre Colunas:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fluxo-principal_2" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxo Principal:
@@ -1537,8 +1538,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fluxos-alternativos-criticos_2" class="md-nav__link">
     <span class="md-ellipsis">
       Fluxos Alternativos Críticos:
@@ -1546,8 +1547,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pre-condicoes_3" class="md-nav__link">
     <span class="md-ellipsis">
       Pré-condições:
@@ -1555,8 +1556,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pos-condicoes_3" class="md-nav__link">
     <span class="md-ellipsis">
       Pós-condições:
@@ -1564,16 +1565,15 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#criterios-de-aceitacao_2" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios de Aceitação:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Critérios de Aceitação:">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#diagrama-de-caso-de-uso_3" class="md-nav__link">
@@ -1864,7 +1864,7 @@
 <li><strong>Objetivo</strong>: Permitir que o Sócio ou Estagiário altere o status de uma demanda arrastando-a (drag-and-drop) de uma coluna para outra.</li>
 <li><strong>Requisitos Especiais</strong>: Registrar log (RNF07), enviar notificação (RNF08), e verificar permissão de acesso (RNF09/RF04).</li>
 </ul>
-<h2 id="fluxo-principal_2">Fluxo Principal:</h2>
+<h3 id="fluxo-principal_2">Fluxo Principal:</h3>
 <ol>
 <li>O Ator (Sócio ou Estagiário) acessa o quadro Kanban.</li>
 <li>O Ator localiza o card da demanda que deseja mover.</li>
@@ -1878,7 +1878,7 @@
 <li>(Se aplicável) O Sistema aciona o disparo de notificação (RNF08) ao responsável pela nova etapa (ex: Sócio, para revisar).</li>
 <li>O Sistema atualiza a interface, movendo visualmente o card para a nova coluna, e exibe uma mensagem de sucesso.</li>
 </ol>
-<h2 id="fluxos-alternativos-criticos_2">Fluxos Alternativos Críticos:</h2>
+<h3 id="fluxos-alternativos-criticos_2">Fluxos Alternativos Críticos:</h3>
 <p><strong>A1 — Movimentação Cancelada pelo Ator (RF11-E1)</strong>
 * A1.1 No passo 6, o Ator solta o card fora de uma coluna de destino válida (ex: de volta na coluna original ou fora do quadro).
 * A1.2 O Sistema cancela a operação e retorna o card visualmente à sua posição original. Nenhuma alteração é salva.</p>
@@ -1890,20 +1890,20 @@
 * A3.1 No passo 8, o Sistema falha ao salvar a mudança no banco de dados (ex: falha de conexão).
 * A3.2 O Sistema exibe uma mensagem de erro genérica (ex: "Erro ao mover a demanda. Tente novamente.").
 * A3.3 O Sistema reverte a mudança visual, retornando o card à sua coluna original para manter a consistência.</p>
-<h2 id="pre-condicoes_3">Pré-condições:</h2>
+<h3 id="pre-condicoes_3">Pré-condições:</h3>
 <ul>
 <li>O Ator (Sócio ou Estagiário) deve estar autenticado.</li>
 <li>A demanda (card) existe e está visível no quadro.</li>
 <li>O Ator deve ter permissão para mover o card (Sócio: permissão total; Estagiário: apenas se for o responsável pela demanda, conforme RF04).</li>
 </ul>
-<h2 id="pos-condicoes_3">Pós-condições:</h2>
+<h3 id="pos-condicoes_3">Pós-condições:</h3>
 <ul>
 <li>O status/coluna da demanda é atualizado e persistido no banco de dados.</li>
 <li>A demanda é exibida visualmente na nova coluna.</li>
 <li>Log de movimentação gravado (RNF07).</li>
 <li>Notificação enviada (RNF08), se aplicável.</li>
 </ul>
-<h2 id="criterios-de-aceitacao_2">Critérios de Aceitação:</h2>
+<h3 id="criterios-de-aceitacao_2">Critérios de Aceitação:</h3>
 <ul>
 <li>Um Sócio deve conseguir mover qualquer card entre quaisquer colunas válidas.</li>
 <li>Um Estagiário deve conseguir mover um card <strong>que esteja atribuído a ele</strong>.</li>
