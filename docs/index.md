@@ -8,7 +8,7 @@ Bem-vindo à documentação do projeto LegisPro.
 - **[MVP](MVP.md)** - Definição do Produto Mínimo Viável
 - **[Requisitos Funcionais](Requisitos/1 - Funcionais.md)** - Requisitos funcionais do sistema
  - **[Requisitos Não Funcionais](Requisitos/2 - Não funcionais.md)** - Requisitos não funcionais do sistema
-- **[Entregas](Entregas/Unidade 1.md)** - Documentação das entregas do projeto
+- **[Evidências](Evidências/Unidade 1.md)** - Documentação das entregas do projeto
 
 ## Sobre o Projeto
 

@@ -5,6 +5,24 @@ site_dir: site
 
 nav:
   - Home: index.md
+  - Evidências:
+    - 'Atas':
+      - '15-09': 'Evidências/Atas/3_15-09.md'
+      - '22-09': 'Evidências/Atas/4_22-09.md'
+      - '06-10': 'Evidências/Atas/6_06-10.md'
+      - '13-10': 'Evidências/Atas/8_13-10.md'
+      - '03-11': 'Evidências/Atas/11_03-11.md'
+    - 'Diagrama Caso de Uso': 'Evidências/Diagrama Caso de Uso.md'
+    - 'Prints Protótipo': 'Evidências/Prints Prototipo.md'
+    - 'Reuniões com o cliente': 'Evidências/Reuniao Cliente.md'
+    - 'Unidade 1': 'Evidências/Unidade 1.md'
+    - 'Unidade 2': 'Evidências/Unidade 2.md'
+  - MVP: 'MVP.md'
+  - Requisitos:
+    - 'Casos de Uso': 'Requisitos/Casos de Uso.md'
+    - 'Funcionais': 'Requisitos/1 - Funcionais.md'
+    - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
+    - 'Work Item List': 'Requisitos/3 - Work Item List.md'
   - Visão do Produto e Projeto:
     - 'Cenário Atual': 'Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md'
     - Engenharia de Requisitos: 'Visão do produto e projeto/2 Engenharia de Requisitos.md'
@@ -15,23 +33,6 @@ nav:
     - 'Interação Equipe e Cliente': 'Visão do produto e projeto/7 INTERAÇÃO ENTRE EQUIPE E CLIENTE.md'
     - 'Lições Aprendidas': 'Visão do produto e projeto/8 LIÇÕES APRENDIDAS.md'
     - 'Referências': 'Visão do produto e projeto/9 REFERÊNCIAS BIBLIOGRÁFICAS.md'
-  - Requisitos:
-    - 'Casos de Uso': 'Requisitos/Casos de Uso.md'
-    - 'Funcionais': 'Requisitos/1 - Funcionais.md'
-    - 'Não Funcionais': 'Requisitos/2 - Não funcionais.md'
-    - 'Work Item List': 'Requisitos/3 - Work Item List.md'
-  - Entregas:
-    - 'Atas':
-      - '15-09': 'Entregas/Atas/3_15-09.md'
-      - '22-09': 'Entregas/Atas/4_22-09.md'
-      - '06-10': 'Entregas/Atas/6_06-10.md'
-      - '13-10': 'Entregas/Atas/8_13-10.md'
-      - '03-11': 'Entregas/Atas/11_03-11.md'
-    - 'Prints Protótipo': 'Entregas/Prints Prototipo.md'
-    - 'Reuniões com o cliente': 'Entregas/Reuniao Cliente.md'
-    - 'Unidade 1': 'Entregas/Unidade 1.md'
-    - 'Unidade 2': 'Entregas/Unidade 2.md'
-  - MVP: 'MVP.md'
 
 theme:
   name: material
