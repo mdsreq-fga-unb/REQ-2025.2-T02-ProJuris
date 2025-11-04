@@ -148,7 +148,7 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 - **Objetivo**: Permitir que o Sócio crie uma nova demanda (card) diretamente em uma coluna específica do quadro Kanban.
 - **Requisitos Especiais**: Registrar log (RNF07) e enviar notificação (RNF08).
 
-## Fluxo Principal:
+### Fluxo Principal:
 
 1.  O Ator (Sócio) acessa o quadro Kanban desejado.
 2.  O Ator aciona o comando "Adicionar Card" ou "+" na coluna de destino (ex: "Elaboração").
@@ -162,7 +162,7 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 10. (Se um responsável foi definido no passo 5) O Sistema aciona o disparo de notificação (RNF08) para o usuário atribuído.
 11. O Sistema exibe o novo card na coluna do Kanban e exibe uma mensagem de sucesso (ex: "Demanda criada.").
 
-## Fluxos Alternativos Críticos:
+### Fluxos Alternativos Críticos:
 
 **A1 — Criação Cancelada pelo Ator (RF10-E1)**
 * A1.1 No passo 3 ou 4, o Ator clica em "Cancelar" ou fora do formulário.
@@ -181,20 +181,20 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 * A4.1 No passo 8, o Sistema falha ao tentar salvar no banco de dados (ex: falha de conexão).
 * A4.2 O Sistema exibe uma mensagem de erro genérica (ex: "Não foi possível salvar a demanda. Tente novamente.") e registra o erro técnico.
 
-## Pré-condições:
+### Pré-condições:
 
 * O Ator (Sócio) deve estar autenticado no sistema.
 * O Sócio possui permissão de escrita (criação) no quadro Kanban.
 * O quadro Kanban existe e está carregado.
 
-## Pós-condições:
+### Pós-condições:
 
 * Uma nova demanda (card) é criada e persistida no sistema.
 * A nova demanda é exibida visualmente na coluna designada do Kanban.
 * Log de criação gravado (RNF07).
 * Notificação enviada (RNF08), se aplicável.
 
-## Critérios de Aceitação:
+### Critérios de Aceitação:
 
 * Um Sócio deve conseguir criar um card no Kanban informando apenas o título.
 * Um Estagiário **não** deve ver ou conseguir usar a opção de criar um card no Kanban.
