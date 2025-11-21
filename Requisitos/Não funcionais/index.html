@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mdsreq-fga-unb.github.io/REQ-2025.2-T02-ProJuris/Requisitos/2%20-%20N%C3%A3o%20funcionais/">
+        <link rel="canonical" href="https://mdsreq-fga-unb.github.io/REQ-2025.2-T02-ProJuris/Requisitos/N%C3%A3o%20funcionais/">
       
       
-        <link rel="prev" href="../1%20-%20Funcionais/">
+        <link rel="prev" href="../Casos%20de%20Uso/">
       
       
-        <link rel="next" href="../3%20-%20Work%20Item%20List/">
+        <link rel="next" href="../Work%20Item%20List/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -704,29 +704,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../1%20-%20Funcionais/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Funcionais
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -849,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%20-%20Work%20Item%20List/" class="md-nav__link">
+      <a href="../Work%20Item%20List/" class="md-nav__link">
         
   
   
@@ -1236,7 +1213,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF01</strong></td>
+<td style="text-align: left;"><em>RNF01</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Controle de Acesso por Perfil (RBAC)</td>
 <td style="text-align: left;">O acesso a dados e funcionalidades deve ser validado no back-end a cada requisição, com base nos perfis definidos (estagiário, advogado, sócio).</td>
@@ -1256,10 +1233,10 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF02</strong></td>
+<td style="text-align: left;"><em>RNF02</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Experiência de Carregamento Ágil</td>
-<td style="text-align: left;">Interface: O carregamento das telas principais (Dashboard, Kanban) deve ser percebido pelo usuário como ágil, sem esperas frustrantes, utilizando indicadores visuais de carregamento ("spinners"). Processamento : A importação de planilhas de volume considerável deve ocorrer em segundo plano, e sistema deve notificar o usuário quando o processo for concluído.</td>
+<td style="text-align: left;">Interface: O carregamento das telas principais (Dashboard, Kanban) deve ser percebido pelo usuário como ativo, como se estivessem processando, utilizando indicadores visuais de carregamento ("spinners"). Processamento : A importação de planilhas de volume considerável deve ocorrer em segundo plano, e sistema deve notificar o usuário quando o processo for concluído.</td>
 </tr>
 </tbody>
 </table>
@@ -1276,10 +1253,10 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF03</strong></td>
+<td style="text-align: left;"><em>RNF03</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Especificações da Interface e Fluxo</td>
-<td style="text-align: left;">As interfaces devem seguir especificações funcionais claras para garantir consistência. Exemplos: O formulário de processo deve conter os campos definidos em Kanban  eve ter colunas configuráveis (DR 02). O importador deve ter mapeamento e pré-visualizaçã o (DR 03, DR 04).</td>
+<td style="text-align: left;">As interfaces devem seguir especificações funcionais claras para garantir consistência. Exemplos: O formulário de processo deve conter os campos definidos em Kanban deve ter colunas configuráveis (DR 02). O importador deve ter mapeamento e pré-visualização (DR 03, DR 04).</td>
 </tr>
 </tbody>
 </table>
@@ -1296,10 +1273,10 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF04</strong></td>
+<td style="text-align: left;"><em>RNF04</em></td>
 <td style="text-align: left;">Não-funcional — Confiabilidade</td>
 <td style="text-align: left;">Prevenção de Perda de Dados em Formulários</td>
-<td style="text-align: left;">Em formulários longos ou de preenchimento complexo (ex: cadastro de processo), o conteúdo deve ser salvo periodicamente , permitindo a recuperação em  aso de fechamento acidental da aba.</td>
+<td style="text-align: left;">Em formulários longos ou de preenchimento complexo (ex: cadastro de processo), o conteúdo deve ser salvo periodicamente, permitindo a recuperação em caso de fechamento acidental da aba.</td>
 </tr>
 </tbody>
 </table>
@@ -1316,31 +1293,31 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF05</strong></td>
+<td style="text-align: left;"><em>RNF05</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Prevenção de Duplicidade na Importação</td>
 <td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número da Demanda" como chave única. Se o número não existir, uma nova demanda é criada. Se já existir, os dados da demanda existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>RNF06</strong></td>
+<td style="text-align: left;"><em>RNF06</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Sincronização de Status (Kanban, Atribuição)</td>
 <td style="text-align: left;">Ao mover um card de demanda para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' da demanda deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão').</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>RNF07</strong></td>
+<td style="text-align: left;"><em>RNF07</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Auditoria Compulsória de Ações</td>
 <td style="text-align: left;">O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir demanda; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>RNF08</strong></td>
+<td style="text-align: left;"><em>RNF08</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Sistema de Notificações por Evento</td>
-<td style="text-align: left;">O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atra sada.</td>
+<td style="text-align: left;">O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atrasada.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>RNF09</strong></td>
+<td style="text-align: left;"><em>RNF09</em></td>
 <td style="text-align: left;">Funcional</td>
 <td style="text-align: left;">Restriçao de acesso</td>
 <td style="text-align: left;">O sistema deve ter restrições de acesso com relação ao cargo da pessoa.</td>
@@ -1360,10 +1337,10 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>RNF10</strong></td>
+<td style="text-align: left;"><em>RNF10</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Qualidade e Manutenibilidade do Código</td>
-<td style="text-align: left;">O código deve ser limpo e organizado, passando em uma ferramenta de análise estática (lint) sem erros. Todo novo código deve ser revisado por pelo menos um outro membro da de  equipe antes de ser integrado à versão principal.</td>
+<td style="text-align: left;">Todo novo código deve ser revisado por pelo menos um outro membro da equipe antes de ser integrado à versão principal.</td>
 </tr>
 </tbody>
 </table>
