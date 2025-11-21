@@ -13,5 +13,3 @@
 |  | **Declaração** | Definição do escopo final do MVP e critérios de qualidade. | Work Item List; Documento DoD | Work Item List organizada e Definition of Done definida. |
 |  | **Verificação e Validação** | Avaliação e feedback do protótipo pelo cliente. | Feedback subjetivo (Validação) | Cliente avaliou o protótipo como excelente. |
 |  | **Elicitação e Descoberta** | Conclusão da descoberta dos requisitos de alto nível do produto. | — | — |
-| **3. Pêndulo (Elaboração)** | **Declaração (Em construção)** | Especificação de requisitos funcionais complexos em formato estruturado (UML/UP). | Especificação de Caso de Uso | Casos de uso estruturados no modelo UML. |
-|  | **Representação (Em construção)** | Criação de diagramas formais (UML) para visualização dos requisitos. | Diagrama de Caso de Uso/UML | Diagrama representando as interações principais. |
