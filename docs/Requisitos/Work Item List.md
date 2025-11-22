@@ -51,10 +51,6 @@
 | ID | Tipo | Priorização| Nome | Descrição | Objetivos Específicos | MVP |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **RF16** | Funcional | Should | Iniciar importação e fazer upload de arquivo | O sistema deve ser capaz de fazer upload dos arquivos de planilhas (csv, xlsx) e importar a planilha. | 
-| **RF17** | Funcional | Should | Mapear colunas da planilha (De-Para) | O sistema deve apresentar como os quadros ficaram dispostos a partir da planilha, nomodelo “De-Para”. |
-| **RF18** | Funcional | Should | Destacar erros na pré-visualização | Durante a pré-visualização dos quadros Kanban, o sistema deve apresentar quais erros são indicados prestar maior atenção. |
-| **RF19** | Funcional | Should | Validar dados e exibir pré-visualização | O sistema deve conseguir apresentar quais dados estão válidos para importação, e apresentar como eles ficaram dispostos nos quadros Kanban. |
-| **RF20** | Funcional | Should | Executar importação em lote | O usuário pode escolher quantas planilhas quer importar por vez, desde que atenda aos requisitos de importação. |
 | **RF21** | Funcional | Should | Apresentar relatório de conclusão da importação | Apóes concluir a importação de planilha, deve apresentar quantas fora importadas com sucesso, quais tiveram erros e quais erros foram enfrentados durante a importação. | 
 
 ---
