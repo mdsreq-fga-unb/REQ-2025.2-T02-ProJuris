@@ -23,7 +23,7 @@ nav:
   - Requisitos:
     - 'Casos de Uso': 'Requisitos/Casos de Uso.md'
     - 'Não Funcionais': 'Requisitos/Não funcionais.md'
-    - 'Work Item List': 'Requisitos/Work Item List.md'
+    - 'Funcionais': 'Requisitos/Work Item List.md'
   - Visão do Produto e Projeto:
     - 'Cenário Atual': 'Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md'
     - Engenharia de Requisitos: 'Visão do produto e projeto/2 Engenharia de Requisitos.md'
