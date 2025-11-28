@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LegisPro - Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+    <div class="login-card">
+        <h1>LegisPro</h1>
+
+<img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+
+        <h2>Bem-vindo</h2>
+        <p class="subtitle">Entre com suas credenciais para acessar o sistema</p>
+
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" name="password" placeholder="******" required>
+            </div>
+
+            <div class="forgot"><a href="#">Esqueceu a senha?</a></div>
+
+            <button class="btn" type="submit">Acessar Sistema</button>
+        </form>
+
+        <div class="register">Ainda não tem uma conta? <a href="/register">Cadastre-se</a></div>
+    </div>
+</body>
+</html>

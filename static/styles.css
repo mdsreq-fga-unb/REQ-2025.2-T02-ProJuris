@@ -1,0 +1,168 @@
+/* styles.css - Responsivo */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #0d2a5c;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topbar h1 {
+    margin: 0;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card .value {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.green { border-left: 6px solid #4caf50; }
+.blue { border-left: 6px solid #2196f3; }
+.red { border-left: 6px solid #ff5252; }
+.yellow { border-left: 6px solid #ffb300; }
+
+/* KANBAN */
+.kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.kanban-column {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.kanban-card {
+    background: #eef2f7;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background: #fff1cc;
+}
+
+/* BOTTOM PANELS */
+.bottom-panels {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.notifications, .quick-actions {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.quick-actions button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #0d2a5c;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        transition: 0.3s;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: #0d2a5c;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .bottom-panels {
+        grid-template-columns: 1fr;
+    }
+}

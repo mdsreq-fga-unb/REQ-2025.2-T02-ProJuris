@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - LegisPro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/cadastro.css">
+</head>
+
+<body class="bg-main">
+
+    <div class="form-container">
+        
+        <div class="form-card">
+
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt="logo">
+            <h1>LegisPro</h1>
+            <h2>Cadastro</h2>
+            <p class="subtitle">Preencha seus dados para criar sua conta</p>
+
+            <form action="/cadastro" method="POST">
+
+                <label>Nome Completo</label>
+                <input type="text" name="nome" placeholder="Seu nome completo" required>
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="seu@email.com" required>
+
+                <div class="row">
+                    <div class="col">
+                        <label>CPF</label>
+                        <input type="text" name="cpf" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="col">
+                        <label>Telefone</label>
+                        <input type="text" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+
+                <label>Tipo de Vínculo</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="vinculo" value="socio" required> Sócio</label>
+                    <label><input type="radio" name="vinculo" value="funcionario"> Funcionário/Estagiário</label>
+                </div>
+
+                <label>Senha</label>
+                <input type="password" name="senha" required>
+
+                <label>Confirmar Senha</label>
+                <input type="password" name="confirmar_senha" required>
+
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+
+            <p class="center-text">Já tem conta? 
+                <a href="/login">Fazer login</a>
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
