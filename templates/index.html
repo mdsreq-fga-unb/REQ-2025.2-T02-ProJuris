@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegisPRO - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>LegisPRO</h2>
+                 <button class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <i class="fas fa-home"></i>
+                        <span>Processos</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-folder"></i>
+                        <span>Tarefas</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <span>Atribuições</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <span>Métricas e Gráficos</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-alt"></i>
+                        <span>Relatórios</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                        <span>Adicionar</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="header-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Fausto+Correia&background=1e3a8a&color=fff" alt="User">
+                        <span>Fausto Correia</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Processos Ativos</h3>
+                        <p class="stat-value">{{ dados.stats.processos_ativos.value }}</p>
+                        <p class="stat-change positive">{{ dados.stats.processos_ativos.change }}</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Prazos no Prazo</h3>
+                        <p class="stat-value">{{ dados.stats.prazos_prazo.value }}</p>
+                        <p class="stat-change positive">{{ dados.stats.prazos_prazo.change }}</p>
+                    </div>
+                </div>
+
+                <div class="stat-card critical">
+                    <div class="stat-icon red">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Prazos Críticos</h3>
+                        <p class="stat-value">{{ dados.stats.prazos_criticos.value }}</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon yellow">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Tempo Médio Resolução</h3>
+                        <p class="stat-value">{{ dados.stats.tempo_medio.value }}</p>
+                        <p class="stat-change negative">{{ dados.stats.tempo_medio.change }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanban Board -->
+            <div class="kanban-section">
+                <div class="section-header">
+                    <h2>Visão Geral - Kanban</h2>
+                    <button class="btn-link">Ver Quadro Completo <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="kanban-board">
+                    <!-- Novos -->
+                    <div class="kanban-column">
+                        <div class="column-header">
+                            <h3>Novos</h3>
+                            <span class="count">{{ dados.kanban.novos|length }}</span>
+                        </div>
+                        <div class="column-content">
+                            {% for processo in dados.kanban.novos %}
+                            <div class="kanban-card">
+                                <p class="processo-id">Processo {{ processo.id }}</p>
+                                <p class="processo-prazo"><i class="far fa-calendar"></i> Prazo: {{ processo.prazo }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Em Andamento -->
+                    <div class="kanban-column">
+                        <div class="column-header">
+                            <h3>Em Andamento</h3>
+                            <span class="count">{{ dados.kanban.em_andamento|length }}</span>
+                        </div>
+                        <div class="column-content">
+                            {% for processo in dados.kanban.em_andamento %}
+                            <div class="kanban-card">
+                                <p class="processo-id">Processo {{ processo.id }}</p>
+                                <p class="processo-prazo"><i class="far fa-calendar"></i> Prazo: {{ processo.prazo }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Aguardando -->
+                    <div class="kanban-column">
+                        <div class="column-header">
+                            <h3>Aguardando</h3>
+                            <span class="count">{{ dados.kanban.aguardando|length }}</span>
+                        </div>
+                        <div class="column-content">
+                            {% for processo in dados.kanban.aguardando %}
+                            <div class="kanban-card">
+                                <p class="processo-id">Processo {{ processo.id }}</p>
+                                <p class="processo-prazo"><i class="far fa-calendar"></i> Prazo: {{ processo.prazo }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Concluídos -->
+                    <div class="kanban-column">
+                        <div class="column-header">
+                            <h3>Concluídos</h3>
+                            <span class="count">{{ dados.kanban.concluidos|length }}</span>
+                        </div>
+                        <div class="column-content">
+                            {% for processo in dados.kanban.concluidos %}
+                            <div class="kanban-card">
+                                <p class="processo-id">Processo {{ processo.id }}</p>
+                                <p class="processo-prazo"><i class="far fa-calendar"></i> Prazo: {{ processo.prazo }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="bottom-section">
+                <!-- Recent Notifications -->
+                <div class="notifications-panel">
+                    <h2>Notificações Recentes</h2>
+                    <div class="notifications-list">
+                        {% for notificacao in dados.notificacoes %}
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="notification-content">
+                                <h4>{{ notificacao.tipo }}
+                                    {% if notificacao.urgente %}
+                                    <span class="badge-urgente">Urgente</span>
+                                    {% endif %}
+                                </h4>
+                                <p>{{ notificacao.mensagem }}</p>
+                                <span class="time">{{ notificacao.tempo }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>Ações Rápidas</h2>
+                    <div class="actions-list">
+                        <button class="action-btn primary">
+                            <i class="fas fa-plus"></i>
+                            <div>
+                                <strong>Novo Processo</strong>
+                                <span>Criar processo instantemente</span>
+                            </div>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-file-excel"></i>
+                            <div>
+                                <strong>Importar Excel</strong>
+                                <span>Importar planilha de processos</span>
+                            </div>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            <div>
+                                <strong>Gerar Relatório</strong>
+                                <span>Criar relatório customizado</span>
+                            </div>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-search"></i>
+                            <div>
+                                <strong>Buscar Modelo</strong>
+                                <span>Pesquisar cláusulas e modelos</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
