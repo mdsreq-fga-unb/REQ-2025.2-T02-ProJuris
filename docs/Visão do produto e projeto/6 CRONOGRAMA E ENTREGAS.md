@@ -1,5 +1,7 @@
 ## 6 CRONOGRAMA E ENTREGAS
 
+## 6.1 Cronograma 
+
 A partir da estratégia de desenvolvimento de software estabelecida, tem-se a seguinte proposta de cronograma, suas fases e resultados esperados:
 
 | Semanas | Data Início | Data Fim | Fase do OpenUP | Objetivo do Ciclo | Entregas Previstas | Validação do Cliente |
@@ -19,3 +21,48 @@ A partir da estratégia de desenvolvimento de software estabelecida, tem-se a se
 | Semana 12 | 24/11 | 02/12 | Transição | Ajustes Finais e Treinamento. | Ajustes pós-homologação e preparação para entrega. | Feedback do sócio e validação em uso real. |
 
 O cronograma acima poderá sofrer alterações ao longo do desenvolvimento do projeto do LegisPro.
+
+## 6.2 Framework de Desenvolvimento
+
+### 6.2.1 - Regras do Kanban para a Produção do MVP
+
+O Kanban é utilizado para garantir que o trabalho flua de forma contínua e previsível, alinhado com o ciclo de vida Iterativo e Incremental do OpenUP.
+
+
+### 6.2.2 - Políticas do Board de Desenvolvimento do projeto no processo OpenUP
+
+O quadro Kanban está estruturado com colunas que representam as etapas do fluxo de trabalho, desde a preparação até a conclusão.
+
+| **Coluna** | **Descrição** | **Regras e Propósito** |
+|-------------|----------------|-------------------------|
+| **WORK ITEM LIST** | Contém os requisitos (RF-01 a RF-12) que foram refinados e estão prontos para implementação. | É a fonte de trabalho priorizada para o time. |
+| **TO DO** | Lista de Work items priorizados especificamente para a sprint atual. | O trabalho é puxado desta coluna para a implementação. |
+| **IN PROGRESS** | Fase de desenvolvimento ativo. | Sujeito ao Limite WIP (máximo 3). |
+| **REVIEW** | Fase de Code review e testes de aceitação. | Sujeito ao Limite WIP (máximo 2) para evitar gargalos na validação. |
+| **DONE** | Funcionalidade que está completa, testada e validada. | Atende integralmente à Definição de Pronto (DoD). |
+
+
+### 6.2.3 - Limites de Trabalho em Andamento (WIP Limits)
+
+Os limites de WIP (Work in Progress Limits) são cruciais para a filosofia Kanban, pois evitam o acúmulo de trabalho e garantem o foco na conclusão.
+
+- **IN PROGRESS:** Máximo de 3 itens. Este limite foi definido como 0.5 vezes o número de desenvolvedores na equipe, a fim de permitir o pareamento do time de desenvolvimento, quando possível.  
+- **REVIEW:** Máximo de 2 itens. Este limite é aplicado para evitar o gargalo no processo de validação, permitindo ao responsável por cada frente operacional consiga validar o produto de software, e produtos de documentação, no caso do responsável pelos requisitos.
+
+
+### 6.2.4 - Sistema Puxado (Pull System) e Priorização
+
+O sistema é baseado na capacidade da equipe (sistema puxado), garantindo a eficiência:
+
+- **Regra de Puxada:** Os desenvolvedores só podem puxar novos work items para a coluna **IN PROGRESS** quando concluem a tarefa anterior.  
+- **Prioridade:** O trabalho é priorizado rigidamente seguindo os critérios de valor de negócio, que são: **MUST > SHOULD**. Os itens MUST são absolutamente essenciais para resolver o problema central de visibilidade do fluxo de trabalho e atender aos requisitos críticos de segurança.
+
+
+### 6.2.5 - Métricas de Acompanhamento
+
+As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do processo:
+
+- **Lead Time:** Tempo total desde que um item entra na **WORK ITEM LIST** até ser considerado **Done**.  
+- **Cycle Time:** Tempo desde que um item entra na coluna **To Do** até ser concluído.  
+- **Throughput:** Quantidade de Work items que são concluídos por semana.  
+- **Bloqueios:** A quantidade e o tempo que os itens permanecem bloqueados.

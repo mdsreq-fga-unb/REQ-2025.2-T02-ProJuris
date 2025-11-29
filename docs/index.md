@@ -6,8 +6,8 @@ Bem-vindo à documentação do projeto LegisPro.
 
 - **[Visão do Produto e Projeto](Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md)** - Informações sobre o cenário atual, solução proposta e estratégias
 - **[MVP](MVP.md)** - Definição do Produto Mínimo Viável
-- **[Requisitos Funcionais](Requisitos/Funcionais.md)** - Requisitos funcionais do sistema
- - **[Requisitos Não Funcionais](Requisitos/Não funcionais.md)** - Requisitos não funcionais do sistema
+- **[Work Item List](Requisitos/Work Item List.md)** - Casos de uso do sistema
+- **[Requisitos Não Funcionais](Requisitos/Não funcionais.md)** - Requisitos não funcionais do sistema
 - **[Evidências](Evidências/Unidade 1.md)** - Documentação das entregas do projeto
 
 ## Sobre o Projeto

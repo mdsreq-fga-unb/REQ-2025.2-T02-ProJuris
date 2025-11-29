@@ -22,30 +22,9 @@ Validar que escritórios de advocacia conseguem gerenciar demandas de forma cola
 
 ---
 
-## 2. Critérios de priorização (e sua aplicação): Valor de Negócio x Avaliação Técnica
-
-- **MUST**: são absolutamente essenciais para que o produto funcione minimamente, resolva o problema central de visibilidade do fluxo de trabalho e atenda aos requisitos críticos de segurança e confiabilidade de um ambiente jurídico.
-
-- **SHOULD**: são muito importantes, trazem alto valor agregado ao usuário e melhoram drasticamente a eficiência e a qualidade dos dados, mas existe um contorno (workaround) manual e temporário que o usuário pode executar no MVP.
-
-- **COULD**: são desejáveis (nice-to-have), melhoram a experiência do usuário e a governança a longo prazo, mas não são cruciais para resolver o problema central do fluxo de trabalho. Sua ausência não impede o uso do MVP.
-
-- **WONT**: estão fora do escopo do MVP por enquanto, porque seu custo de implementação é proibitivo em relação ao valor que entregam nesta primeira versão, ou porque a funcionalidade já está coberta por um requisito Must Have mais simples.
-
-### 2.1 - Níveis de Complexidade
-
-| **Nível de Complexidade** | **Descrição (Custo de Trabalho)** |
-|----------------------------|----------------------------------|
-| **1 - Baixa** | O esforço de trabalho é mínimo. A implementação é direta e não requer decisões complexas ou coordenação externa. |
-| **2 - Média** | O esforço de trabalho é padrão para uma funcionalidade (alguns dias, dentro de um micro-incremento ou parte de um Work Item). O caminho de implementação é bem compreendido. |
-| **3 - Alta** | O esforço é significativo (vários dias ou mais de uma semana). Requer coordenação entre diferentes desenvolvedores ou papéis (como Analista e Arquiteto). Pode envolver integração com sistemas legados ou de terceiros (Requisitos de Interface). |
-| **4 - Proibitiva** | O esforço é extremamente grande, podendo consumir a maior parte de uma iteração. Envolve alta incerteza técnica, exige mudanças arquiteturais significativas, ou requer aquisição de novo conhecimento/tecnologia. |
-
----
-
 ## 3. Escopo do MVP
 
-### 3.1 - Funcionalidades Incluídas
+### 3.1 - Funcionalidades Incluídas 
 
 | Objetivos Específicos | Prioridade | ID | Funcionalidade | Descrição |
 |----------------------|-----------|----|----------------|-----------|
@@ -72,51 +51,3 @@ Validar que escritórios de advocacia conseguem gerenciar demandas de forma cola
 - Repositório de cláusulas
 
 ![Tabela MVP](./imagens/Esforco_Impacto.png)
-
----
-
-## 4. Framework de Desenvolvimento
-
-### 4.1 - Regras do Kanban para a Produção do MVP
-
-O Kanban é utilizado para garantir que o trabalho flua de forma contínua e previsível, alinhado com o ciclo de vida Iterativo e Incremental do OpenUP.
-
-
-### 4.2 - Políticas do Board de Desenvolvimento do projeto no processo OpenUP
-
-O quadro Kanban está estruturado com colunas que representam as etapas do fluxo de trabalho, desde a preparação até a conclusão.
-
-| **Coluna** | **Descrição** | **Regras e Propósito** |
-|-------------|----------------|-------------------------|
-| **WORK ITEM LIST** | Contém os requisitos (RF-01 a RF-12) que foram refinados e estão prontos para implementação. | É a fonte de trabalho priorizada para o time. |
-| **TO DO** | Lista de Work items priorizados especificamente para a sprint atual. | O trabalho é puxado desta coluna para a implementação. |
-| **IN PROGRESS** | Fase de desenvolvimento ativo. | Sujeito ao Limite WIP (máximo 3). |
-| **REVIEW** | Fase de Code review e testes de aceitação. | Sujeito ao Limite WIP (máximo 2) para evitar gargalos na validação. |
-| **DONE** | Funcionalidade que está completa, testada e validada. | Atende integralmente à Definição de Pronto (DoD). |
-
-
-### 4.3 - Limites de Trabalho em Andamento (WIP Limits)
-
-Os limites de WIP (Work in Progress Limits) são cruciais para a filosofia Kanban, pois evitam o acúmulo de trabalho e garantem o foco na conclusão.
-
-- **IN PROGRESS:** Máximo de 3 itens. Este limite foi definido como 0.5 vezes o número de desenvolvedores na equipe, a fim de permitir o pareamento do time de desenvolvimento, quando possível.  
-- **REVIEW:** Máximo de 2 itens. Este limite é aplicado para evitar o gargalo no processo de validação, permitindo ao responsável por cada frente operacional consiga validar o produto de software, e produtos de documentação, no caso do responsável pelos requisitos.
-
-
-### 4.4 - Sistema Puxado (Pull System) e Priorização
-
-O sistema é baseado na capacidade da equipe (sistema puxado), garantindo a eficiência:
-
-- **Regra de Puxada:** Os desenvolvedores só podem puxar novos work items para a coluna **IN PROGRESS** quando concluem a tarefa anterior.  
-- **Prioridade:** O trabalho é priorizado rigidamente seguindo os critérios de valor de negócio, que são: **MUST > SHOULD**. Os itens MUST são absolutamente essenciais para resolver o problema central de visibilidade do fluxo de trabalho e atender aos requisitos críticos de segurança.
-
-
-### 4.5 - Métricas de Acompanhamento
-
-As seguintes métricas Kanban serão utilizadas para monitorar a eficiência do processo:
-
-- **Lead Time:** Tempo total desde que um item entra na **WORK ITEM LIST** até ser considerado **Done**.  
-- **Cycle Time:** Tempo desde que um item entra na coluna **To Do** até ser concluído.  
-- **Throughput:** Quantidade de Work items que são concluídos por semana.  
-- **Bloqueios:** A quantidade e o tempo que os itens permanecem bloqueados.
-

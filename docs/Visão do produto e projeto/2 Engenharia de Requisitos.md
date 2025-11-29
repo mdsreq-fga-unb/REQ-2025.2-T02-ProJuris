@@ -13,3 +13,11 @@
 |  | **Declaração** | Definição do escopo final do MVP e critérios de qualidade. | Work Item List; Documento DoD | Work Item List organizada e Definition of Done definida. |
 |  | **Verificação e Validação** | Avaliação e feedback do protótipo pelo cliente. | Feedback subjetivo (Validação) | Cliente avaliou o protótipo como excelente. |
 |  | **Elicitação e Descoberta** | Conclusão da descoberta dos requisitos de alto nível do produto. | — | — |
+| **3. Construção** | **Organização e Atualização** | Revisão da lista de requisitos. Prioriza-se o que entra na iteração atual | Work Item List atualizada e reordenada por prioridade. | Histórico de alterações no Work Item List e Definition of Done |
+|  | **Declaração** | Detalhamento "Just-in-Time". Escreve-se o detalhe técnico do requisito pouco antes dele ser desenvolvido. | Casos de Uso, com fluxos alternativos e de exceção completamente escritos | Especificações de caso de uso documentadas |
+|  | **Representação** | Criação de modelos visuais para guiar a codificação de funcionalidades complexas. | Diagrama de casos de uso em UML, mostrando sequência ou atividades para lógica complexa. | Arquivos de modelos visuais dos diagramas de caso de uso |
+|  | **Verificação e Validação** | Garantir que o requisito foi implementado conforme declarado. | Requisito implementado corretamente | Relatório de execução de casos de teste |
+| **4. Transição** | **Verificação e Validação** | O cliente usa o sistema para confirmar se atende às necessidades. | Feedback positivo ou negativo do cliente | Checklist de validação, preenchido se passou ou não para cada requisito crítico |
+|  | **Análise e consenso** | Decisão sobre o que fazer com os pedidos de mudança de última hora. | Mudança implementada ou não no projeto | Atas de reunião de consenso ou registros de decisão sobre as mudanças |
+|  | **Declaração** | Garantir de o documento final reflete o sistema entregue. | Documentação final publicada e acessível aos usuários | Notas de versão, resumo dos requisitos entregues na versão |
+|  | **Organização e Atualização** | Limpeza do Work Item List para encerrar o projeto. | Work Item List atualizado | Versão final do repositório de requisitos |
