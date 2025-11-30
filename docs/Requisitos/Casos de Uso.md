@@ -92,9 +92,6 @@
 
 - Teste de integração com importador/kanban: criação via formulário e criação via API/importação resultam em comportamento consistente (mesmos logs e notificações).
 
-### Diagrama de Caso de Uso:
-![Diagrama Caso de Uso RF01 - Cadastrar demanda](../imagens/diagramaUC-RF01.png)
-
 ---
 
 ## RF04 - Transferir Responsabilidade:
@@ -203,8 +200,6 @@ O ator seleciona uma demanda e escolhe um novo responsável; o sistema valida pe
 * Toda criação bem-sucedida deve gerar um log (RNF07).
 * Se um responsável for adicionado no momento da criação, ele deve ser notificado (RNF08).
 
-### Diagrama de Caso de Uso:
-![Diagrama Caso de Uso RF04 - Transferir Responsabilidade](../imagens/diagrama_uc_rf10.png)
 
 ---
 

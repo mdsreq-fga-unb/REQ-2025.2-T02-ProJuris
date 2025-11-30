@@ -1,43 +1,20 @@
 # Work Item List
 
-## 1 Critérios de priorização (e sua aplicação): valor de negócio x avaliação técnica
-
-### 1.1 - Níveis de valor de negócio
-
-- **MUST**: são absolutamente essenciais para que o produto funcione minimamente, resolva o problema central de visibilidade do fluxo de trabalho e atenda aos requisitos críticos de segurança e confiabilidade de um ambiente jurídico.
-
-- **SHOULD**: são muito importantes, trazem alto valor agregado ao usuário e melhoram drasticamente a eficiência e a qualidade dos dados, mas existe um contorno (workaround) manual e temporário que o usuário pode executar no MVP.
-
-- **COULD**: são desejáveis (nice-to-have), melhoram a experiência do usuário e a governança a longo prazo, mas não são cruciais para resolver o problema central do fluxo de trabalho. Sua ausência não impede o uso do MVP.
-
-- **WONT**: estão fora do escopo do MVP por enquanto, porque seu custo de implementação é proibitivo em relação ao valor que entregam nesta primeira versão, ou porque a funcionalidade já está coberta por um requisito Must Have mais simples.
-
-### 1.2 - Níveis de Complexidade
-
-| **Nível de Complexidade** | **Descrição (Custo de Trabalho)** |
-|----------------------------|----------------------------------|
-| **1 - Baixa** | O esforço de trabalho é mínimo. A implementação é direta e não requer decisões complexas ou coordenação externa. |
-| **2 - Média** | O esforço de trabalho é padrão para uma funcionalidade (alguns dias, dentro de um micro-incremento ou parte de um Work Item). O caminho de implementação é bem compreendido. |
-| **3 - Alta** | O esforço é significativo (vários dias ou mais de uma semana). Requer coordenação entre diferentes desenvolvedores ou papéis (como Analista e Arquiteto). Pode envolver integração com sistemas legados ou de terceiros (Requisitos de Interface). |
-| **4 - Proibitiva** | O esforço é extremamente grande, podendo consumir a maior parte de uma iteração. Envolve alta incerteza técnica, exige mudanças arquiteturais significativas, ou requer aquisição de novo conhecimento/tecnologia. |
-
-## 2 Work Item List
-
-| Cód | Nome (Caso de Uso) | Prio | Descrição (Objetivo, Ator, Objeto Gerado) | Rastreio (RF) | Ator Primário |
-| :--- | :--- | :---: | :--- | :--- | :--- |
-| **UC-01** | Autenticar Usuário | MUST | **Objetivo:** Validar credenciais e liberar acesso.<br>**Ator:** Qualquer Usuário.<br>**Objeto Gerado:** Token de sessão (JWT) + Contexto de Segurança. | | Todos |
-| **UC-02** | Cadastrar Usuário | MUST | **Objetivo:** Registrar novo colaborador.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Registro de Usuário com Role. | | Sócio |
-| **UC-03** | Registrar Demanda | MUST | **Objetivo:** Criar nova solicitação no sistema.<br>**Ator:** Sócio/Estagiário.<br>**Objeto Gerado:** Registro da Demanda com ID único e status “Backlog”. | | Sócio, Estagiário |
-| **UC-04** | Atribuir Responsável | MUST | **Objetivo:** Delegar a demanda a um colaborador.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Associação Demanda → Usuário. | | Sócio |
-| **UC-05** | Consultar Fila de Trabalho | MUST | **Objetivo:** Recuperar tarefas para execução imediata.<br>**Ator:** Estagiário.<br>**Objeto Gerado:** Lista de Pendências filtrada pelo usuário logado. | | Estagiário |
-| **UC-06** | Editar Dados da Demanda | MUST | **Objetivo:** Atualizar descrição, prazo e demais atributos.<br>**Ator:** Responsável.<br>**Objeto Gerado:** Histórico atualizado (Log de Alterações). | | Estagiário |
-| **UC-07** | Mapear Status do Fluxo | MUST | **Objetivo:** Consolidar visão geral para o Kanban.<br>**Ator:** Sócio/Estagiário.<br>**Objeto Gerado:** Matriz de Demandas agrupadas por etapas. | | Todos |
-| **UC-08** | Tramitar Demanda (Mover) | MUST | **Objetivo:** Avançar demanda para próxima etapa lógica.<br>**Ator:** Todos.<br>**Objeto Gerado:** Novo Status + Registro de Movimentação. | | Todos |
-| **UC-09** | Configurar Etapas do Fluxo | MUST | **Objetivo:** Definir estrutura do processo jurídico.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Metadados de Colunas do Kanban. | | Sócio |
-| **UC-10** | Cadastrar Modelo Jurídico | COULD | **Objetivo:** Preservar conhecimento para reuso.<br>**Ator:** Todos.<br>**Objeto Gerado:** Template/Cláusula indexada. | | Todos |
-| **UC-11** | Recuperar Modelo de Cláusula | COULD | **Objetivo:** Obter texto padrão para documento.<br>**Ator:** Todos.<br>**Objeto Gerado:** Texto do Template carregado no editor/clipboard. | | Todos |
-| **UC-12** | Efetuar Upload de Planilha | SHOULD | **Objetivo:** Transferir dados legados para servidor.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Arquivo armazenado e validado. | | Sócio |
-| **UC-13** | Processar Carga de Dados | SHOULD | **Objetivo:** Converter planilha em registros.<br>**Ator:** Sistema.<br>**Objeto Gerado:** Lote de Demandas inseridas. | | Sistema |
-| **UC-14** | Definir Template de Mensagem | SHOULD | **Objetivo:** Padronizar comunicação.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Modelo com variáveis dinâmicas. | | Sócio |
-| **UC-15** | Disparar Notificação | SHOULD | **Objetivo:** Realizar comunicação automática.<br>**Ator:** Sistema.<br>**Objeto Gerado:** Mensagem enviada + Log de Envio. | | Sistema |
-| **UC-16** | Gerar Relatório Gerencial | SHOULD | **Objetivo:** Extrair métricas.<br>**Ator:** Sócio.<br>**Objeto Gerado:** Dataset/Arquivo de Indicadores. | | Sócio |
+| Cód | Nome (Caso de Uso) | Descrição do Fluxo (Ator + Objetivo + Objeto) | Ator Primário | MVP? | Objetivo | Rastreio (RF Origem) |
+| :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| **UC-01** | Criar Demanda | "O Sócio/Estagiário insere dados para registrar novo caso, gerando uma Demanda criada." | Sócio, Estagiário | Sim | OE1 | "RF01, RF09" |
+| **UC-02** | Tramitar Demanda (Kanban) | "O Responsável move o card para avançar etapa, atualizando o Novo Status." | Estagiário, Sócio | Sim | OE1 | "RF11, RF13" |
+| **UC-03** | Cadastrar Usuário | "O Sócio insere credenciais para criar acesso, gerando um Registro de Usuário." | Sócio | Sim | OE2 | RF07 |
+| **UC-04** | Atribuir Responsável | "O Sócio indica um colaborador para delegar tarefa, criando o Vínculo Demanda-Usuário." | Sócio | Sim | OE2 | "RF03, RF04" |
+| **UC-05** | Editar Detalhes da Demanda | "O Responsável altera dados para atualizar informações, salvando o Registro atualizado." | Estagiário, Sócio | Sim | OE3 | "RF02, RF06, RF10" |
+| **UC-06** | Configurar Colunas do Kanban | "O Sócio define etapas para estruturar fluxo, atualizando os Metadados do Quadro." | Sócio | Não | OE1 | "RF08, RF14, RF15" |
+| **UC-07** | Consultar Tarefas | "O Estagiário acessa o painel para ver pendências, gerando a Lista de Pendências." | Estagiário | Não | OE1 | RF05 |
+| **UC-08** | Retirar Demanda do Quadro | "O Sócio arquiva itens para limpar visualização, resultando em uma Demanda arquivada." | Sócio | Não | OE1 | RF12 |
+| **UC-09** | Inativar Usuário | "O Sócio bloqueia acesso para revogar permissões, gerando um Registro Inativo." | Sócio | Não | OE2 | "Novo (Implícito em RF07)" |
+| **UC-10** | Importar Planilhas | "O Sócio envia arquivo para carga em lote, criando um Lote de Demandas." | Sócio | Não | OE2 | "RF16, RF21" |
+| **UC-11** | Cadastrar Modelo de Cláusula | "O Sócio/Estagiário salva texto para padronizar documentos, gerando um Novo Template." | Sócio, Estagiário | Não | OE2 | "RF22, RF23" |
+| **UC-12** | Pesquisar Cláusula | "O Estagiário/Sócio busca termos para copiar padrão, obtendo o Texto recuperado." | Estagiário, Sócio | Não | OE2 | "RF22, RF24" |
+| **UC-13** | Excluir Modelo de Cláusula | "O Sócio remove item para limpar biblioteca, resultando em um Registro removido." | Sócio | Não | OE2 | "Novo (Gestão de RF22)" |
+| **UC-14** | Anexar Arquivos | "O Responsável faz upload para vincular documentos, salvando o Arquivo armazenado." | Estagiário, Sócio | Não | OE3 | "Implícito em RF02/10" |
+| **UC-15** | Configurar Mensagens Automáticas | "O Sócio edita textos para padronizar avisos, gerando um Template salvo." | Sócio | Não | OE4 | RF26 |
+| **UC-16** | Configurar Gatilhos de Envio | "O Sócio define regras para automatizar envio, ativando uma Regra de Automação." | Sócio | Não | OE4 | "RF25, RF27, RF28" |
