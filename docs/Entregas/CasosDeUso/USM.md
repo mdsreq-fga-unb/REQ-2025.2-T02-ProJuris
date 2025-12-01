@@ -2,7 +2,7 @@
 
 > Atividade de User Story Mapping (USM)
 
-- [Acessar o board no Miro](https://miro.com/app/board/uXjVJhiTp_c=/)
+- [Acessar o USM no Miro](https://miro.com/app/board/uXjVJhiTp_c=/)
 ---
 
 ## O que é User Story Mapping (USM)
