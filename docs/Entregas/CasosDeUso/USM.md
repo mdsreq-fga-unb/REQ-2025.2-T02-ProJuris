@@ -2,6 +2,7 @@
 
 > Atividade de User Story Mapping (USM)
 
+- [Acessar o board no Miro](https://miro.com/app/board/uXjVJhiTp_c=/)
 ---
 
 ## O que é User Story Mapping (USM)
@@ -38,8 +39,5 @@ A EcoMove é uma startup fictícia focada em mobilidade urbana sustentável (bic
   Necessidades: rotas otimizadas, prioridades de atendimento, comprovação de recolhimento e checklist digital de segurança. 
 
 ---
-
-## Acessar USM Miro
-- [Acessar o board no Miro](https://miro.com/app/board/uXjVJhiTp_c=/){target="_blank"}
 
 
