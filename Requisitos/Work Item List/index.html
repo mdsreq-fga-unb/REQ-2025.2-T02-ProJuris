@@ -1365,159 +1365,158 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Cód</th>
-<th style="text-align: left;">Nome (Caso de Uso)</th>
-<th style="text-align: left;">Descrição do Fluxo (Ator + Objetivo + Objeto)</th>
-<th style="text-align: left;">Ator Primário</th>
-<th style="text-align: center;">MVP?</th>
-<th style="text-align: left;">Objetivo</th>
-<th style="text-align: left;">Rastreio (RF Origem)</th>
+<th>Cód</th>
+<th>Nome (Caso de Uso)</th>
+<th>Descrição do Fluxo (Ator + Objetivo + Objeto)</th>
+<th>Ator Primário</th>
+<th>MVP?</th>
+<th>Rastreio (RF)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>UC-01</strong></td>
-<td style="text-align: left;">Criar Demanda</td>
-<td style="text-align: left;">"O Sócio/Estagiário insere dados para registrar novo caso, gerando uma Demanda criada."</td>
-<td style="text-align: left;">Sócio, Estagiário</td>
-<td style="text-align: center;">Sim</td>
-<td style="text-align: left;">OE1</td>
-<td style="text-align: left;">"RF01, RF09"</td>
+<td>UC-01</td>
+<td>Criar Demanda</td>
+<td>O Sócio registra o caso e define o responsável, gerando a Demanda criada.</td>
+<td>Sócio</td>
+<td>Sim</td>
+<td>RF01, RF10</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-02</strong></td>
-<td style="text-align: left;">Tramitar Demanda (Kanban)</td>
-<td style="text-align: left;">"O Responsável move o card para avançar etapa, atualizando o Novo Status."</td>
-<td style="text-align: left;">Estagiário, Sócio</td>
-<td style="text-align: center;">Sim</td>
-<td style="text-align: left;">OE1</td>
-<td style="text-align: left;">"RF11, RF13"</td>
+<td>UC-02</td>
+<td>Tramitar Demanda (Kanban)</td>
+<td>O Responsável move o card para avançar etapa, atualizando o Novo Status.</td>
+<td>Estagiário, Sócio</td>
+<td>Sim</td>
+<td>RF09, RF11, RF13, RF14</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-03</strong></td>
-<td style="text-align: left;">Cadastrar Usuário</td>
-<td style="text-align: left;">"O Sócio insere credenciais para criar acesso, gerando um Registro de Usuário."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Sim</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">RF07</td>
+<td>UC-03</td>
+<td>Cadastrar Usuário</td>
+<td>O Sócio insere credenciais para criar acesso, gerando um Registro de Usuário.</td>
+<td>Sócio</td>
+<td>Sim</td>
+<td>RF08</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-04</strong></td>
-<td style="text-align: left;">Atribuir Responsável</td>
-<td style="text-align: left;">"O Sócio indica um colaborador para delegar tarefa, criando o Vínculo Demanda-Usuário."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Sim</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"RF03, RF04"</td>
+<td>UC-04</td>
+<td>Atribuir Responsável</td>
+<td>O Sócio delega ou transfere a tarefa, atualizando o Vínculo Demanda-Usuário.</td>
+<td>Sócio</td>
+<td>Sim</td>
+<td>RF03, RF05</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-05</strong></td>
-<td style="text-align: left;">Editar Detalhes da Demanda</td>
-<td style="text-align: left;">"O Responsável altera dados para atualizar informações, salvando o Registro atualizado."</td>
-<td style="text-align: left;">Estagiário, Sócio</td>
-<td style="text-align: center;">Sim</td>
-<td style="text-align: left;">OE3</td>
-<td style="text-align: left;">"RF02, RF06, RF10"</td>
+<td>UC-05</td>
+<td>Editar Detalhes da Demanda</td>
+<td>O Responsável altera dados do processo, salvando o Registro atualizado.</td>
+<td>Estagiário, Sócio</td>
+<td>Sim</td>
+<td>RF02, RF07</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-06</strong></td>
-<td style="text-align: left;">Configurar Colunas do Kanban</td>
-<td style="text-align: left;">"O Sócio define etapas para estruturar fluxo, atualizando os Metadados do Quadro."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE1</td>
-<td style="text-align: left;">"RF08, RF14, RF15"</td>
+<td>UC-06</td>
+<td>Configurar Colunas do Kanban</td>
+<td>O Sócio define as etapas do fluxo, atualizando os Metadados do Quadro.</td>
+<td>Sócio</td>
+<td>Sim</td>
+<td>RF12, RF14</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-07</strong></td>
-<td style="text-align: left;">Consultar Tarefas</td>
-<td style="text-align: left;">"O Estagiário acessa o painel para ver pendências, gerando a Lista de Pendências."</td>
-<td style="text-align: left;">Estagiário</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE1</td>
-<td style="text-align: left;">RF05</td>
+<td>UC-07</td>
+<td>Consultar Tarefas</td>
+<td>O Estagiário acessa lista filtrada, gerando a Lista de Pendências.</td>
+<td>Estagiário</td>
+<td>Não</td>
+<td>RF06 (Should)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-08</strong></td>
-<td style="text-align: left;">Retirar Demanda do Quadro</td>
-<td style="text-align: left;">"O Sócio arquiva itens para limpar visualização, resultando em uma Demanda arquivada."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE1</td>
-<td style="text-align: left;">RF12</td>
+<td>UC-08</td>
+<td>Retirar Demanda do Quadro</td>
+<td>O Sócio arquiva itens, resultando em uma Demanda arquivada.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>RF12 (Implícito)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-09</strong></td>
-<td style="text-align: left;">Inativar Usuário</td>
-<td style="text-align: left;">"O Sócio bloqueia acesso para revogar permissões, gerando um Registro Inativo."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"Novo (Implícito em RF07)"</td>
+<td>UC-09</td>
+<td>Inativar Usuário</td>
+<td>O Sócio revoga acesso, gerando um Registro Inativo.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>(Gestão)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-10</strong></td>
-<td style="text-align: left;">Importar Planilhas</td>
-<td style="text-align: left;">"O Sócio envia arquivo para carga em lote, criando um Lote de Demandas."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"RF16, RF21"</td>
+<td>UC-10</td>
+<td>Importar Planilhas</td>
+<td>O Sócio carrega arquivo legado, criando um Lote de Demandas.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>RF16, RF21</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-11</strong></td>
-<td style="text-align: left;">Cadastrar Modelo de Cláusula</td>
-<td style="text-align: left;">"O Sócio/Estagiário salva texto para padronizar documentos, gerando um Novo Template."</td>
-<td style="text-align: left;">Sócio, Estagiário</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"RF22, RF23"</td>
+<td>UC-11</td>
+<td>Cadastrar Modelo de Cláusula</td>
+<td>O Sócio/Estagiário salva texto padrão, gerando um Novo Template.</td>
+<td>Sócio, Estagiário</td>
+<td>Não</td>
+<td>RF22</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-12</strong></td>
-<td style="text-align: left;">Pesquisar Cláusula</td>
-<td style="text-align: left;">"O Estagiário/Sócio busca termos para copiar padrão, obtendo o Texto recuperado."</td>
-<td style="text-align: left;">Estagiário, Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"RF22, RF24"</td>
+<td>UC-12</td>
+<td>Pesquisar Cláusula</td>
+<td>O Estagiário/Sócio busca termos, obtendo o Texto recuperado.</td>
+<td>Estagiário, Sócio</td>
+<td>Não</td>
+<td>RF22, RF24</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-13</strong></td>
-<td style="text-align: left;">Excluir Modelo de Cláusula</td>
-<td style="text-align: left;">"O Sócio remove item para limpar biblioteca, resultando em um Registro removido."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE2</td>
-<td style="text-align: left;">"Novo (Gestão de RF22)"</td>
+<td>UC-13</td>
+<td>Excluir Modelo de Cláusula</td>
+<td>O Sócio remove item, resultando em um Registro removido.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>(Gestão)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-14</strong></td>
-<td style="text-align: left;">Anexar Arquivos</td>
-<td style="text-align: left;">"O Responsável faz upload para vincular documentos, salvando o Arquivo armazenado."</td>
-<td style="text-align: left;">Estagiário, Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE3</td>
-<td style="text-align: left;">"Implícito em RF02/10"</td>
+<td>UC-14</td>
+<td>Anexar Arquivos</td>
+<td>O Responsável faz upload de documentos, salvando o Arquivo armazenado.</td>
+<td>Estagiário, Sócio</td>
+<td>Não</td>
+<td>(Suporte)</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-15</strong></td>
-<td style="text-align: left;">Configurar Mensagens Automáticas</td>
-<td style="text-align: left;">"O Sócio edita textos para padronizar avisos, gerando um Template salvo."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE4</td>
-<td style="text-align: left;">RF26</td>
+<td>UC-15</td>
+<td>Configurar Mensagens Automáticas</td>
+<td>O Sócio edita textos de aviso, gerando um Template salvo.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>RF26</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>UC-16</strong></td>
-<td style="text-align: left;">Configurar Gatilhos de Envio</td>
-<td style="text-align: left;">"O Sócio define regras para automatizar envio, ativando uma Regra de Automação."</td>
-<td style="text-align: left;">Sócio</td>
-<td style="text-align: center;">Não</td>
-<td style="text-align: left;">OE4</td>
-<td style="text-align: left;">"RF25, RF27, RF28"</td>
+<td>UC-16</td>
+<td>Configurar Gatilhos de Envio</td>
+<td>O Sócio define regras de envio, ativando uma Regra de Automação.</td>
+<td>Sócio</td>
+<td>Não</td>
+<td>RF27</td>
+</tr>
+<tr>
+<td>UC-17</td>
+<td>Processar Envio de Mensagem</td>
+<td>O Sistema entrega a notificação, gerando um Log de Disparo.</td>
+<td>Sistema</td>
+<td>Não</td>
+<td>RF28</td>
+</tr>
+<tr>
+<td>UC-18</td>
+<td>Processar Retorno (Webhook)</td>
+<td>A API WhatsApp confirma a entrega, atualizando o Status da Mensagem.</td>
+<td>API WhatsApp</td>
+<td>Não</td>
+<td>RF28</td>
 </tr>
 </tbody>
 </table>
