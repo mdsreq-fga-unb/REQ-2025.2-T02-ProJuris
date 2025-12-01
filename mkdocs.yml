@@ -21,16 +21,16 @@ nav:
     - 'Unidade 2': 'Evidências/Unidade 2.md'
   - MVP: 'MVP.md'
   - Requisitos:
+    - 'Funcionais': 'Requisitos/Funcionais.md'
+    - 'Não Funcionais': 'Requisitos/Não funcionais.md'
+    - 'Work Item List': 'Requisitos/Work Item List.md'
+  - Caso de Uso:
+    - 'Diagrama Caso de Uso': 'Requisitos/Diagrama Caso de Uso.md'
     - Especificações de Caso de Uso:
       - 'UC-01 — Criar Demanda': 'Requisitos/Especificações de Caso de Uso/Criar Demandas.md'
       - 'UC-02 — Tramitar Demanda': 'Requisitos/Especificações de Caso de Uso/Tramitar Demanda.md'
       - 'UC-03 — Cadastrar Usuário': 'Requisitos/Especificações de Caso de Uso/Cadastrar Usuário.md'
       - 'UC-04 — Editar Detalhe das Demandas': 'Requisitos/Especificações de Caso de Uso/Editar detalhe das demandas.md'
-    - 'Funcionais': 'Requisitos/Funcionais.md'
-    - 'Não Funcionais': 'Requisitos/Não funcionais.md'
-    - 'Work Item List': 'Requisitos/Work Item List.md'
-    - 'Casos de Uso': 'Requisitos/Casos de Uso.md'
-    - 'Diagrama Caso de Uso': 'Requisitos/Diagrama Caso de Uso.md'
   - Visão do Produto e Projeto:
     - 'Cenário Atual': 'Visão do produto e projeto/1 CENÁRIO ATUAL DO CLIENTE E DO NEGÓCIO.md'
     - Engenharia de Requisitos: 'Visão do produto e projeto/2 Engenharia de Requisitos.md'

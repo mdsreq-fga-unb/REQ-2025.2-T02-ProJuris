@@ -1,6 +1,6 @@
 # Funcionais
 
-## Critérios de priorização (e sua aplicação): valor de negócio x avaliação técnica
+## Critérios de priorização: valor de negócio x avaliação técnica
 
 ### 2.1 - Níveis de valor de negócio
 
@@ -27,9 +27,9 @@
 | **RF02** | Funcional | Must | Editar demanda | Deve ser possível atualizar informações como atividade, andamento, prazo e responsável. | OE1 | Contém |
 | **RF03** | Funcional | Must | Atribuir demandas | O sistema deve ser possível atribuir demandas a pessoas específicas. | OE2 | Contém |
 | **RF04** | Funcional | Must | Transferir responsabilidade das demandas | O sistema deve ser possível transferir a responsabilidade de uma demanda para outra pessoa. | OE2 | Contém |
-| **RF05** | Funcional | Should | Exibir todas as atribuições do estagiário | O sistema deve ter as atribuições do estagiário, mostrando as demandas a serem feitas. |
-| **RF06** | Funcional | Must | Mostrar detalhes das demandas | O sistema deve apresentar todos os detalhes da demanda como atividade, andamento, prazo e responsável. |
-| **RF07** | Funcional | Must | Cadastrar novos estagiários e sócios | O usuário de nível “Sócio” deve ser capaz de clicar em um botão para cadastrar novos estagiários e sócios.
+| **RF05** | Funcional | Should | Exibir todas as atribuições do estagiário | O sistema deve ter as atribuições do estagiário, mostrando as demandas a serem feitas. | OE1 | Contém |
+| **RF06** | Funcional | Must | Mostrar detalhes das demandas | O sistema deve apresentar todos os detalhes da demanda como atividade, andamento, prazo e responsável. | OE1 | Contém |
+| **RF07** | Funcional | Must | Cadastrar novos estagiários e sócios | O usuário de nível "Sócio" deve ser capaz de clicar em um botão para cadastrar novos estagiários e sócios. | OE2 | Contém |
 | **RF08** | Funcional | Must | Atualizar processo kanban | O sistema deve permitir alterar detalhes do processo. |
 | **RF09** | Funcional | Must | Criar/Adicionar demanda | O sistema deve permitir a criação de um novo cartão (demanda) no quadro Kanban, informando no mínimo um título e a coluna inicial. |
 | **RF10** | Funcional | Must | Editar Detalhes da demanda | O sistema deve permitir a edição dos detalhes de um cartão existente, como título, descrição, responsável e data de entrega. |
@@ -39,7 +39,7 @@
 | **RF14** | Funcional | Must | Exibir etapas das demandas em quadro Kanban | O sistema deve conter etapas configuráveis (Ex.: Elaboração → Revisão → Pendente Cliente → Concluída) e permitir alteração de etapa com atualização automática do responsável. | OE1 | Contém |
 | **RF15** | Funcional | Could | Criar quadros kanban | O usuário deve ser capaz de construir novos quadros de atividades kanban. | OE1 | Contém |
 | **RF16** | Funcional | Should | Iniciar importação e fazer upload de arquivo | O sistema deve ser capaz de fazer upload dos arquivos de planilhas (csv, xlsx) e importar a planilha. | 
-| **RF21** | Funcional | Should | Apresentar relatório de conclusão da importação | Apóes concluir a importação de planilha, deve apresentar quantas fora importadas com sucesso, quais tiveram erros e quais erros foram enfrentados durante a importação. |
+| **RF21** | Funcional | Should | Apresentar relatório de conclusão da importação | Após concluir a importação de planilha, deve apresentar quantas foram importadas com sucesso, quais tiveram erros e quais erros foram enfrentados durante a importação. |
 | **RF22** | Funcional | Could | Armazenar e pesquisar templates e cláusulas | O sistema deve permitir ao usuário salvar, categorizar e pesquisar modelos e cláusulas por tags ou palavras-chave, criando uma base de conhecimento unificada. |
 | **RF23** | Funcional | Could | Versionar templates/cláusulas | O sistema deve registrar o histórico de alterações, incluindo o autor e a data de cada modificação na cláusula ou template, permitindo restaurar versões anteriores. |
 | **RF24** | Funcional | Could | Inserir trechos de templates/cláusulas em minutas. | O sistema deve permitir ao usuário selecionar e injetar automaticamente o texto de uma cláusula pesquisada em um editor de texto ou campo de documento. |

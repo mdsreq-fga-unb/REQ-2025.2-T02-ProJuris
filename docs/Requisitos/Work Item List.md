@@ -1,5 +1,13 @@
 # Work Item List
 
+## Priorização
+
+A priorização dos casos de uso foi concebida com base nos critérios dos requisitos funcionais rastreiados, que você pode encontrar [aqui](Funcionais.md#criterios-priorizacao).
+
+---
+
+## Casos de Uso
+
 | Cód | Nome (Caso de Uso) | Descrição do Fluxo (Ator + Objetivo + Objeto) | Ator Primário | MVP? | Objetivo | Rastreio (RF Origem) |
 | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
 | **UC-01** | Criar Demanda | "O Sócio/Estagiário insere dados para registrar novo caso, gerando uma Demanda criada." | Sócio, Estagiário | Sim | OE1 | "RF01, RF09" |
