@@ -5,6 +5,12 @@ site_dir: site
 
 nav:
   - Home: index.md
+  - Entregas:
+    - 'Unidade 1': 'Entregas/Unidade 1.md'
+    - 'Unidade 2': 'Entregas/Unidade 2.md'
+    - 'Atividades de Casos de Uso':
+      - 'PBB': 'Entregas/Casos de Uso/ PBB.md'
+      - 'USM': 'Entregas/Casos de Uso/ USM.md'
   - Evidências:
     - 'Atas':
       - '15-09': 'Evidências/Atas/3_15-09.md'
@@ -17,8 +23,6 @@ nav:
     - 'Diagrama Caso de Uso': 'Evidências/Diagrama Caso de Uso.md'
     - 'Prints Protótipo': 'Evidências/Prints Prototipo.md'
     - 'Reuniões com o cliente': 'Evidências/Reuniao Cliente.md'
-    - 'Unidade 1': 'Evidências/Unidade 1.md'
-    - 'Unidade 2': 'Evidências/Unidade 2.md'
   - MVP: 'MVP.md'
   - Requisitos:
     - 'Funcionais': 'Requisitos/Funcionais.md'
