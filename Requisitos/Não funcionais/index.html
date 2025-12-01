@@ -816,18 +816,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#regras-de-negocio" class="md-nav__link">
+  <a href="#codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Regras de negócio
+      Código
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigo" class="md-nav__link">
+  <a href="#relatorios-e-dashboards" class="md-nav__link">
     <span class="md-ellipsis">
-      Código
+      Relatórios e Dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de negócio
     </span>
   </a>
   
@@ -1393,18 +1402,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#regras-de-negocio" class="md-nav__link">
+  <a href="#codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Regras de negócio
+      Código
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigo" class="md-nav__link">
+  <a href="#relatorios-e-dashboards" class="md-nav__link">
     <span class="md-ellipsis">
-      Código
+      Relatórios e Dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de negócio
     </span>
   </a>
   
@@ -1430,6 +1448,15 @@
 
 
 <h1 id="nao-funcionais">Não funcionais</h1>
+<ul>
+<li><a href="#segurança">Segurança</a></li>
+<li><a href="#desempenho">Desempenho</a></li>
+<li><a href="#usabilidade">Usabilidade</a></li>
+<li><a href="#confiabilidade">Confiabilidade</a></li>
+<li><a href="#c%C3%B3digo">Código</a></li>
+<li><a href="#relat%C3%B3rios-e-dashboards">Relatórios e Dashboards</a></li>
+<li><a href="#regras-de-neg%C3%B3cio">Regras de negócio</a></li>
+</ul>
 <h2 id="seguranca">Segurança</h2>
 <table>
 <thead>
@@ -1445,11 +1472,10 @@
 <td style="text-align: left;"><em>RNF01</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Controle de Acesso por Perfil (RBAC)</td>
-<td style="text-align: left;">O acesso a dados e funcionalidades deve ser validado no back-end a cada requisição, com base nos perfis definidos (estagiário, advogado, sócio).</td>
+<td style="text-align: left;">O acesso a dados e funcionalidades deve ser validado no back-end a cada requisição, com base nos perfis definidos (estagiário, advogado, sócio). Exemplo: estagiários não podem excluir demandas. O sistema deve retornar código HTTP 403 para acessos não autorizados.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="desempenho">Desempenho</h2>
 <table>
 <thead>
@@ -1465,11 +1491,10 @@
 <td style="text-align: left;"><em>RNF02</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Experiência de Carregamento Ágil</td>
-<td style="text-align: left;">Interface: O carregamento das telas principais (Dashboard, Kanban) devem indicar visualmente que a ação do usuário está sendo processada, utilizando indicadores visuais de carregamento ("spinners").</td>
+<td style="text-align: left;">As telas principais (Dashboard, Kanban) devem exibir um indicador visual de carregamento (spinner) para ações que levam mais de 500ms.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="usabilidade">Usabilidade</h2>
 <table>
 <thead>
@@ -1485,11 +1510,10 @@
 <td style="text-align: left;"><em>RNF03</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Especificações da Interface e Fluxo</td>
-<td style="text-align: left;">As interfaces devem seguir especificações funcionais claras para garantir consistência. Exemplos: O formulário de processo deve conter os campos definidos em Kanban deve ter colunas configuráveis (DR 02). O importador deve ter mapeamento e pré-visualização (DR 03, DR 04).</td>
+<td style="text-align: left;">As interfaces devem seguir especificações funcionais claras para garantir consistência. O formulário de cadastro de demanda deve conter os campos obrigatórios: número da demanda, cliente, tipo de ação, prazo e responsável. O Kanban deve ter colunas configuráveis (ex: Pendente, Em Elaboração, Em Revisão, Concluída). O importador deve permitir mapeamento De-Para de colunas e exibir pré-visualização dos dados antes da importação.</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="confiabilidade">Confiabilidade</h2>
 <table>
 <thead>
@@ -1505,90 +1529,10 @@
 <td style="text-align: left;"><em>RNF04</em></td>
 <td style="text-align: left;">Não-funcional — Confiabilidade</td>
 <td style="text-align: left;">Prevenção de Perda de Dados em Formulários</td>
-<td style="text-align: left;">Em formulários longos ou de preenchimento complexo (ex: cadastro de processo), o conteúdo deve ser salvo periodicamente, permitindo a recuperação em caso de fechamento acidental da aba.</td>
+<td style="text-align: left;">Em formulários longos ou de preenchimento complexo (ex: cadastro de demanda), o conteúdo deve ser salvo automaticamente a cada 2 minutos usando LocalStorage, permitindo a recuperação em caso de fechamento acidental da aba.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="regras-de-negocio">Regras de negócio</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">Tipo</th>
-<th style="text-align: left;">Nome</th>
-<th style="text-align: left;">Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><em>RN01</em></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">Prevenção de Duplicidade na Importação</td>
-<td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número da Demanda" como chave única. Se o número não existir, uma nova demanda é criada. Se já existir, os dados da demanda existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN02</em></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">Sincronização de Status (Kanban, Atribuição)</td>
-<td style="text-align: left;">Ao mover um card de demanda para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Andamento' ou 'Status' da demanda deve ser automaticamente atualizado para refletir o nome da nova coluna (ex: o status mudaria para 'Revisão').</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN03</em></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">Auditoria Compulsória de Ações</td>
-<td style="text-align: left;">O sistema deve registrar automaticamente um log para todas as ações críticas  (criar, editar, excluir demanda; mudar de etapa no Kanban). O log deve conter o usuário, a ação e a data/hora.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN04</em></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">Sistema de Notificações por Evento</td>
-<td style="text-align: left;">O sistema deve enviar notificações automáticas para os responsáveis quando importantes ocorrerem, como: 1) Nova Atribuição. 2) Prazo Crítico (ex: notificar alguns dias antes do vencimento; este valor deve ser facilmente configurável no código). 3) Tarefa Concluída/Atrasada.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN05</em></td>
-<td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Restriçao de acesso</td>
-<td style="text-align: left;">O sistema deve ter restrições de acesso com relação ao cargo da pessoa.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN06</em></td>
-<td style="text-align: left;">Não-funcional</td>
-<td style="text-align: left;">Processamento</td>
-<td style="text-align: left;">A importação de planilhas de volume considerável deve ocorrer em segundo plano, e o sistema deve notificar o usuário quando o processo for concluído.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN07</em></td>
-<td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Mapear colunas da planilha (De-Para)</td>
-<td style="text-align: left;">O sistema deve apresentar como os quadros ficaram dispostos a partir da planilha, nomodelo “De-Para”.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN08</em></td>
-<td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Destacar erros na pré-visualização</td>
-<td style="text-align: left;">Durante a pré-visualização dos quadros Kanban, o sistema deve apresentar quais erros são indicados prestar maior atenção.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN09</em></td>
-<td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Validar dados e exibir pré-visualização</td>
-<td style="text-align: left;">O sistema deve conseguir apresentar quais dados estão válidos para importação, e apresentar como eles ficaram dispostos nos quadros Kanban.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><em>RN10</em></td>
-<td style="text-align: left;">Funcional</td>
-<td style="text-align: left;">Executar importação em lote</td>
-<td style="text-align: left;">O usuário pode escolher quantas planilhas quer importar por vez, desde que atenda aos requisitos de importação.</td>
-</tr>
-</tbody>
-</table>
-<p>push:
-RN10 ~&gt; RF01
-RNF99 ~&gt; RF01</p>
-<p>pull:
-RF01 ~&gt; [RN10, RNF99]</p>
-<hr />
 <h2 id="codigo">Código</h2>
 <table>
 <thead>
@@ -1604,7 +1548,111 @@ RF01 ~&gt; [RN10, RNF99]</p>
 <td style="text-align: left;"><em>RNF05</em></td>
 <td style="text-align: left;">Não-funcional</td>
 <td style="text-align: left;">Qualidade e Manutenibilidade do Código</td>
-<td style="text-align: left;">Todo novo código deve ser revisado por pelo menos um outro membro da equipe antes de ser integrado à versão principal.</td>
+<td style="text-align: left;">Todo novo código deve ser revisado por pelo menos um outro membro da equipe antes de ser integrado à versão principal. Funcionalidades críticas (cadastro de usuário, autenticação, importação de planilhas) devem ter testes automatizados.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relatorios-e-dashboards">Relatórios e Dashboards</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nome</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>RNF06</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Dashboard de Indicadores</td>
+<td style="text-align: left;">O sistema deve fornecer dashboard visual com KPIs: volume de tarefas (concluídas vs. pendentes), tempo médio de conclusão, taxa de cumprimento de prazos. Deve carregar em até 2 s e permitir filtros por período (7 dias, 30 dias, personalizado).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RNF07</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Geração de Relatórios</td>
+<td style="text-align: left;">O sistema deve permitir gerar relatórios em PDF (resumido ou detalhado) contendo número da demanda, cliente, status, prazo, última atualização e responsável. Geração deve levar no máximo 5 s para até 100 registros de histórico.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RNF08</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Visualização de Métricas por Responsável</td>
+<td style="text-align: left;">O dashboard deve permitir visualizar métricas individuais por responsável (número de demandas, taxa de conclusão no prazo, demandas atrasadas). Sócios veem métricas de todos; estagiários/advogados veem apenas as próprias.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regras-de-negocio">Regras de negócio</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nome</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>RN01</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Prevenção de Duplicidade na Importação</td>
+<td style="text-align: left;">Durante a importação, o sistema deve usar a coluna "Número da Demanda" como chave única. Se o número não existir, uma nova demanda é criada. Se já existir, os dados da demanda existente são atualizados. O sistema não deve permitir a criação de duas demandas com o mesmo número e deve exibir mensagem de erro específica ao usuário.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN02</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Sincronização de Status (Kanban, Atribuição)</td>
+<td style="text-align: left;">Ao mover um card de demanda para uma nova coluna no Kanban (ex: da coluna 'Em Elaboração' para 'Revisão'), o campo 'Status' da demanda deve ser automaticamente atualizado para refletir o nome da nova coluna. A atualização deve refletir imediatamente na interface, sem delay perceptível para o usuário.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN03</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Auditoria Compulsória de Ações</td>
+<td style="text-align: left;">O sistema deve registrar automaticamente um log para todas as ações críticas (criar, editar, excluir demanda; mudar de etapa no Kanban). O log deve conter: usuário, ação, data/hora e ID da demanda. Os logs devem ser armazenados em tabela MySQL dedicada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN04</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Sistema de Notificações por Evento</td>
+<td style="text-align: left;">O sistema deve exibir notificações no painel do usuário (in-app) em tempo real quando eventos importantes ocorrerem: 1) Nova Atribuição de demanda; 2) Prazo Crítico (notificar 3 dias antes do vencimento; este valor deve ser facilmente configurável no código); 3) Mudança de Status da demanda. Opcionalmente, o sistema pode enviar notificações por e-mail.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN05</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Restrição de Acesso</td>
+<td style="text-align: left;">O sistema deve ter restrições de acesso com relação ao cargo da pessoa. Exemplo: sócios podem criar, editar e excluir demandas; estagiários e advogados podem criar e editar, mas não excluir demandas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN06</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Processamento em Segundo Plano</td>
+<td style="text-align: left;">A importação de planilhas com mais de 50 registros deve ocorrer em segundo plano, com barra de progresso visível ao usuário. O sistema deve notificar o usuário quando o processo for concluído.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN07</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Mapear Colunas da Planilha (De-Para)</td>
+<td style="text-align: left;">O sistema deve apresentar interface que permita ao usuário mapear as colunas da planilha Excel aos campos do sistema antes de realizar a importação. O mapeamento deve ser salvo para reutilização em importações futuras.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN08</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Destacar Erros na Pré-visualização</td>
+<td style="text-align: left;">Durante a pré-visualização da importação, o sistema deve destacar em vermelho as linhas com erros de validação e exibir tooltip explicativo ao passar o mouse sobre o erro.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN09</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Validar Dados e Exibir Pré-visualização</td>
+<td style="text-align: left;">O sistema deve validar os dados da planilha e exibir pré-visualização em formato de tabela, destacando dados válidos em verde e inválidos em vermelho. O usuário deve poder corrigir dados antes de confirmar a importação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RN10</em></td>
+<td style="text-align: left;">Não-funcional</td>
+<td style="text-align: left;">Executar Importação em Lote</td>
+<td style="text-align: left;">O usuário pode importar até 3 planilhas simultaneamente, desde que cada planilha não exceda 5 MB.</td>
 </tr>
 </tbody>
 </table>
