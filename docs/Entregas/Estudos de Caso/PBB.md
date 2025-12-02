@@ -93,4 +93,8 @@ A documentação visual do PBB Canvas (Miro) detalha o mapeamento e priorizaçã
 
 ### 4. Detalhamento do Backlog (PBIs)
 
+<<<<<<< HEAD
 * **Exemplo Detalhado de PBIs (Inscrição/Seleção):** ![Exemplo PBI](../imagens/PBI1_PBB.png)
+=======
+* **Exemplo Detalhado de PBIs (Inscrição/Seleção):** ![Exemplo PBI](../imagens/PBI1_PBB.png)
+>>>>>>> 0736a36d1854d5474fe7fd6a5189777ff05bf362
