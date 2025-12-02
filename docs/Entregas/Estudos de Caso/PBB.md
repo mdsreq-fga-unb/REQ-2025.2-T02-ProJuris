@@ -72,25 +72,25 @@ Abaixo estão exemplos de Itens de Backlog (PBIs) detalhados, que serão desenvo
 
 A documentação visual do PBB Canvas (Miro) detalha o mapeamento e priorização das funcionalidades.
 
-* **PBB Canvas Completo (Miro):** **https://miro.com/app/board/uXjVJx4QRWw=/**
+* **PBB Canvas Completo (Miro):** [Acessar o board no Miro](https://miro.com/app/board/uXjVJx4QRWw=/)
 
 ### 1. Visão Geral (Problemas e Expectativas)
 
-* **Problemas:** ![Visão dos Problemas](/imagens/Problemas_PBB.png)
-* **Expectativas:** ![Visão das Expectativas](/imagens/Expectativas_PBB.png)
+* **Problemas:** ![Visão dos Problemas](../imagens/Problemas_PBB.png)
+* **Expectativas:** ![Visão das Expectativas](../imagens/Expectativas_PBB.png)
 
 ### 2. Personas e Atividades
 
-* **Personas (Lucas, Marina):** ![Personas Grupo 1](/imagens/personas1_PBB.png)
-* **Personas (Patrícia, Sérgio):** ![Personas Grupo 2](/imagens/personas2_PBB.png)
-* **Personas (Renato, Cláudia):** ![Personas Grupo 3](/imagens/personas3_PBB.png)
+* **Personas (Lucas, Marina):** ![Personas Grupo 1](../imagens/personas1_PBB.png)
+* **Personas (Patrícia, Sérgio):** ![Personas Grupo 2](../imagens/personas2_PBB.png)
+* **Personas (Renato, Cláudia):** ![Personas Grupo 3](../imagens/personas3_PBB.png)
 
 ### 3. Módulos e Features Detalhadas
 
-* **Features (Inscrição, Seleção):** ![Módulos de Programas](/imagens/features1_PBB.png)
-* **Features (Mentorias, Vitrine):** ![Módulos de Gestão](/imagens/features2_PBB.png)
-* **Features (Vitrine, Ecossistema):** ![Módulos de Indicadores](/imagens/features3_PBB.png)
+* **Features (Inscrição, Seleção):** ![Módulos de Programas](../imagens/features1_PBB.png)
+* **Features (Mentorias, Vitrine):** ![Módulos de Gestão](../imagens/features2_PBB.png)
+* **Features (Vitrine, Ecossistema):** ![Módulos de Indicadores](../imagens/features3_PBB.png)
 
 ### 4. Detalhamento do Backlog (PBIs)
 
-* **Exemplo Detalhado de PBIs (Inscrição/Seleção):** ![Exemplo PBI](/imagens/PBI1_PBB.png)
+* **Exemplo Detalhado de PBIs (Inscrição/Seleção):** ![Exemplo PBI](../imagens/PBI1_PBB.png)
