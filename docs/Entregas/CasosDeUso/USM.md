@@ -1,6 +1,6 @@
 # User Story Mapping — EcoMove
 
-> Atividade de User Story Mapping (USM)
+ Atividade de User Story Mapping (USM)
 
 - [Acessar o USM no Miro](https://miro.com/app/board/uXjVJhiTp_c=/)
 ---

@@ -9,6 +9,7 @@ nav:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
     - 'Unidade 2': 'Entregas/Unidade 2.md'
     - 'Atividades de Casos de Uso':
+      - 'Estudo de Caso': 'Entregas/CasosDeUso/PBB.md'
       - 'PBB': 'Entregas/CasosDeUso/PBB.md'
       - 'USM': 'Entregas/CasosDeUso/USM.md'
   - Evidências:
