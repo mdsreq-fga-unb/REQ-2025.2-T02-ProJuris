@@ -78,20 +78,30 @@ armazena o documento com o registro de estoque. O fluxo continua em
 2.1.5.
 
 #### 3.1.5 Fluxos de Exceção
-- FE01: Tentativa de estoque negativo.  
-- FE02: Campos obrigatórios não preenchidos.
+
+[FE01] Falha na Validação de Dados:
+
+- Passo de Origem: 2.1.5.
+- O Sistema identifica um campo obrigatório faltando (ex: Quantidade) ou dados em formato inválido. O Sistema interrompe a atualização, realça o(s) campo(s) com erro e exibe a mensagem: "Falha na validação. Corrija os campos em destaque." O fluxo retorna ao Passo 2.1.4.
+
+[FE02] Tentativa de Estoque Negativo:
+
+- Passo de Origem: 2.1.6.
+- O ator tenta atualizar um item de estoque com uma saída que resultaria em quantidade menor que zero (estoque negativo). O Sistema rejeita a operação e exibe a mensagem de erro: "Operação negada. A quantidade de saída excede o estoque disponível." O fluxo retorna ao Passo 2.1.3.
 
 #### 3.1.6 Requisitos Especiais
-- Suporte offline com sincronização posterior.  
-- Interface responsiva.
+- RS01: O gerenciamento de estoque deve permitir o registro temporário de entradas/saídas em modo offline (localmente no dispositivo), com sincronização automática e em background assim que a conectividade for restabelecida.
+- RS02: A interface de entrada de dados (formulário) deve ser compatível e responsiva para uso em tablets e smartphones.
 
 #### 3.1.7 Regras de Negócio
-- RN01: Toda alteração deve gerar log de auditoria.  
-- RN02: Itens com validade <60 dias devem ter alerta.  
-- RN03: Quantidade influencia disponibilidade de serviços.
+- [RN01] Toda alteração na quantidade do estoque (entrada, saída/distribuição, remoção) deve gerar um log de auditoria contendo timestamp, o ID do ator e a razão da mudança.
+- [RN02] O Sistema deve gerar um alerta visual se um item de estoque possuir uma data de validade inferior a 60 dias.
+- [RN03] Cada tipo de recurso deve ter um Nível Mínimo de Alerta configurável pelo Gestor de Estoque.
+- [RN04] A quantidade de estoque disponível deve ser o dado primário para determinar a disponibilidade de serviços relacionados nos UCs de busca dos Refugiados.
 
 #### 3.1.8 Pré-condições
-- Ator autenticado e autorizado.
+- O ator deve estar autenticado no sistema com acesso a funcionalidades de Gestão de Recursos (permissão de Gestor de Recursos).
+- O banco de dados de inventário deve estar acessível.
 
 #### 3.1.9 Pós-condições
 - Estoque atualizado e log registrado.
