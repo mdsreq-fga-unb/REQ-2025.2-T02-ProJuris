@@ -761,7 +761,7 @@
           <li class="md-nav__item">
   <a href="#fa01-remover-usuarios" class="md-nav__link">
     <span class="md-ellipsis">
-      [FA01] Remover usuários
+      FA01 — Remover usuários
     </span>
   </a>
   
@@ -783,9 +783,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fe01-falha-em-modo-offline" class="md-nav__link">
+  <a href="#fe01-falta-de-cache-para-uso-offline" class="md-nav__link">
     <span class="md-ellipsis">
-      [FE01] Falha em modo offline
+      FE01 — Falta de cache para uso offline
     </span>
   </a>
   
@@ -820,9 +820,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-condicoes" class="md-nav__link">
+  <a href="#precondicoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Pré-condições
+      Precondições
     </span>
   </a>
   
@@ -1931,7 +1931,7 @@
           <li class="md-nav__item">
   <a href="#fa01-remover-usuarios" class="md-nav__link">
     <span class="md-ellipsis">
-      [FA01] Remover usuários
+      FA01 — Remover usuários
     </span>
   </a>
   
@@ -1953,9 +1953,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fe01-falha-em-modo-offline" class="md-nav__link">
+  <a href="#fe01-falta-de-cache-para-uso-offline" class="md-nav__link">
     <span class="md-ellipsis">
-      [FE01] Falha em modo offline
+      FE01 — Falta de cache para uso offline
     </span>
   </a>
   
@@ -1990,9 +1990,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-condicoes" class="md-nav__link">
+  <a href="#precondicoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Pré-condições
+      Precondições
     </span>
   </a>
   
@@ -2040,36 +2040,32 @@
 <p>Este caso de uso aborda um requisito funcional do ator "administrador", que visa permitir que ele consulte usuários no sistema do HopeBridge, para que dessa forma, possa tomar decisões informadas com esse dado.</p>
 <h2 id="atores">Atores</h2>
 <ul>
-<li><strong>Ator principal</strong>: Administrador</li>
+<li><strong>Ator principal</strong>: administrador</li>
 <li><strong>Atores secundários</strong>:<ul>
-<li>Sistema de gerenciamento do ambiente</li>
+<li>Sistema de gerenciamento de do ambiente</li>
 <li>Sistema de gerenciamento de usuários</li>
 </ul>
 </li>
 </ul>
 <h2 id="fluxo-de-eventos">Fluxo de Eventos</h2>
 <h3 id="fluxo-principal">Fluxo Principal</h3>
-<ol>
-<li>O administrador acessa a plataforma e realiza autenticação.</li>
-<li>O sistema exibe a tela inicial com as opções de gerenciamento geral do sistema.</li>
-<li>O Administrador seleciona a opção "gerenciar usuários" e é direcionado para a página referente.</li>
-<li>O sistema apresenta as categorias de gerenciamento de usuários, incluindo um contador referente aos usuários totais do sistema.</li>
-<li>Ao pressionar no contador, ele se expande e apresenta a quantidade de usuários totais e a quantidade de usuários ativos do sistema lado a lado.</li>
-<li>Abaixo dos contadores, o sistema disponibiliza uma página de gerenciamento de usuários inativos.</li>
-<li>O fluxo se encerra.</li>
-</ol>
+<p>2.1.1 O administrador acessa a plataforma e realiza autenticação.</p>
+<p>2.1.2 O sistema exibe a tela inicial com as opções de gerenciamento geral do sistema.</p>
+<p>2.1.3 O Administrador seleciona a opção "gerenciar usuários" e é direcionado para a página referente.</p>
+<p>2.1.4 O sistema apresenta as categorias de gerenciamento de usuários, incluindo um contador referente aos usuários totais do sistema.</p>
+<p>2.1.5 Ao pressionar no contador, ele se expande e apresenta a quantidade de usuários totais e a quantidade de usuários ativos do sistema lado a lado.</p>
+<p>2.1.6 Abaixo dos contadores, o sistema disponibiliza uma página de gerenciamento de usuários inativos.</p>
+<p>2.1.7 O fluxo se encerra.</p>
 <h3 id="fluxos-alternativos">Fluxos Alternativos</h3>
-<h4 id="fa01-remover-usuarios">[FA01] Remover usuários</h4>
-<ul>
-<li><strong>Passo de Origem</strong>: 2.1.3 (Passo 3 do Fluxo Principal)</li>
-<li>Iniciando em 3, o Administrador agora seleciona a página "remover usuários".</li>
-<li>O sistema agora apresenta as categorias referentes à página, e obrigatoriamente, o contador de usuários totais, ativos e a diferença entre os dois, representando usuários inativos.</li>
-<li>Fluxo retorna a 5.</li>
-</ul>
+<h4 id="fa01-remover-usuarios">FA01 — Remover usuários</h4>
+<p><strong>Passo de origem</strong>: 2.1.3</p>
+<p>O Administrador agora seleciona a página "remover usuários".</p>
+<p>O sistema apresenta as categorias referentes à página, e obrigatoriamente, o contador de usuários totais, ativos e a diferença entre os dois, representando usuários inativos.</p>
+<p>O fluxo retorna ao passo 2.1.5.</p>
 <h3 id="fluxos-de-excecao">Fluxos de Exceção</h3>
-<h4 id="fe01-falha-em-modo-offline">[FE01] Falha em modo offline</h4>
+<h4 id="fe01-falta-de-cache-para-uso-offline">FE01 — Falta de cache para uso offline</h4>
 <ul>
-<li>Em caso de uso offline e falta de cache, o sistema acusa "Impossível realizar contagem em modo offline".</li>
+<li>Em caso de uso offline e falta de cache, o sistema acusa: "Impossível realizar contagem em modo offline".</li>
 </ul>
 <h2 id="requisitos-especiais">Requisitos Especiais</h2>
 <ul>
@@ -2082,7 +2078,7 @@
 <li><strong>[RN02]</strong>: O contador deve contar a quantidade de usuários apenas uma vez durante o uso da aplicação, apenas fazendo uma recontagem ao reiniciar a página.</li>
 <li><strong>[RN03]</strong>: O cache deve ser salvo em formato JSON.</li>
 </ul>
-<h2 id="pre-condicoes">Pré-condições</h2>
+<h2 id="precondicoes">Precondições</h2>
 <ul>
 <li><strong>[PRE01]</strong>: O administrador deve estar autenticado.</li>
 <li><strong>[PRE02]</strong>: O administrador deve estar registrado na plataforma.</li>
@@ -2090,11 +2086,11 @@
 </ul>
 <h2 id="pos-condicoes">Pós-condições</h2>
 <ul>
-<li><strong>[POS01]</strong>: O contador e lista de usuários inativos deve ser mantido em cache.</li>
+<li><strong>[POS01]</strong>: O contador e lista de usuários inativos devem ser mantidos em cache.</li>
 </ul>
 <h2 id="pontos-de-extensao">Pontos de Extensão</h2>
 <ul>
-<li>Nos passos 3 e 6 este caso pode ser estendido por remover usuários.</li>
+<li>Nos passos 2.1.3 e 2.1.6, este caso pode ser estendido por remover usuários.</li>
 </ul>
 
 

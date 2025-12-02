@@ -653,6 +653,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fluxos Alternativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fa01-autenticacao-em-modo-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FA01] Autenticação em Modo Offline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fa02-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FA02] Recuperação de Senha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -661,6 +685,39 @@
       Fluxos de Exceção
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Fluxos de Exceção">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fe01-credenciais-invalidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE01] Credenciais Inválidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fe02-conta-bloqueada-ou-inativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE02] Conta Bloqueada ou Inativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fe03-token-local-invalido-ou-expirado" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE03] Token Local Inválido ou Expirado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -695,6 +752,15 @@
   <a href="#pos-condicoes" class="md-nav__link">
     <span class="md-ellipsis">
       Pós-condições
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pontos-de-extensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Extensão
     </span>
   </a>
   
@@ -1861,6 +1927,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fluxos Alternativos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fa01-autenticacao-em-modo-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FA01] Autenticação em Modo Offline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fa02-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FA02] Recuperação de Senha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1869,6 +1959,39 @@
       Fluxos de Exceção
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Fluxos de Exceção">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fe01-credenciais-invalidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE01] Credenciais Inválidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fe02-conta-bloqueada-ou-inativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE02] Conta Bloqueada ou Inativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fe03-token-local-invalido-ou-expirado" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FE03] Token Local Inválido ou Expirado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1908,6 +2031,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pontos-de-extensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pontos de Extensão
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1929,7 +2061,7 @@
 
 <h1 id="autenticar-usuario">Autenticar Usuário</h1>
 <h2 id="breve-descricao">Breve descrição</h2>
-<p>Permite login com autenticação online/offline e direcionamento conforme perfil.</p>
+<p>Este caso de uso permite que um usuário previamente cadastrado realize login na plataforma HopeBridge. O sistema valida as credenciais fornecidas e concede acesso às funcionalidades compatíveis com o perfil do usuário. O caso de uso contempla autenticação online e offline, garantindo continuidade operacional em ambientes com conectividade limitada.</p>
 <h2 id="atores">Atores</h2>
 <ul>
 <li>Refugiado  </li>
@@ -1939,40 +2071,67 @@
 </ul>
 <h2 id="fluxo-principal">Fluxo Principal</h2>
 <ol>
-<li>Usuário acessa o formulário de login.  </li>
-<li>Sistema verifica conectividade.  </li>
-<li>Valida credenciais.  </li>
-<li>Identifica perfil e carrega permissões.  </li>
-<li>Direciona ao dashboard.</li>
+<li>O sistema apresenta o formulário de autenticação solicitando E-mail ou Telefone e Senha.  </li>
+<li>O usuário insere as credenciais e confirma o envio.</li>
+<li>O sistema verifica a existência de conexão com a rede de dados [RN01][FA01]</li>
+<li>O sistema valida as credenciais fornecidas [RN02][FE01]. </li>
+<li>O sistema verifica o status da conta [FE02].</li>
+<li>O sistema identifica o perfil do usuário e carrega as permissões correspondentes [RN03].</li>
+<li>O sistema registra a tentativa de acesso bem-sucedida no log de auditoria [RN04].</li>
+<li>O sistema redireciona o usuário ao Dashboard específico do seu perfil.</li>
+<li>O caso de uso é encerrado.</li>
 </ol>
 <h2 id="fluxos-alternativos">Fluxos Alternativos</h2>
-<ul>
-<li>FA01: Autenticação offline com token local (validade 30 dias).  </li>
-<li>FA02: Recuperação de senha.</li>
-</ul>
+<h4 id="fa01-autenticacao-em-modo-offline">[FA01] Autenticação em Modo Offline</h4>
+<p>Inicia-se no passo 3 o sistema identifica ausência de conectividade com a internet.
+1. O sistema verifica a existência de token de sessão local válido [RN05][FE03].
+2. O sistema valida a integridade e prazo de validade do token local [RN05].
+3. O sistema autentica o usuário em Modo Restrito, permitindo acesso apenas a funcionalidades e dados em cache.
+4. O sistema exibe mensagem: "Você está offline. Alguns recursos podem estar indisponíveis."
+5. Retorna ao passo 6.</p>
+<h4 id="fa02-recuperacao-de-senha">[FA02] Recuperação de Senha</h4>
+<p>Inicia-se no passo 1 o usuário seleciona a opção "Esqueci minha senha".
+1. O sistema direciona o usuário para o caso de uso "Recuperar Credenciais de Acesso".</p>
 <h2 id="fluxos-de-excecao">Fluxos de Exceção</h2>
-<ul>
-<li>FE01: Credenciais inválidas.  </li>
-<li>FE02: Conta inativa/bloqueada.  </li>
-<li>FE03: Token offline expirado.</li>
-</ul>
+<h4 id="fe01-credenciais-invalidas">[FE01] Credenciais Inválidas</h4>
+<p>Inicia-se no passo 4 o sistema identifica que as credenciais não correspondem aos dados armazenados.
+1. O sistema incrementa o contador de tentativas falhas.
+2. O sistema apresenta mensagem: "Usuário ou senha inválidos."
+3. O sistema retorna ao passo 1.</p>
+<h4 id="fe02-conta-bloqueada-ou-inativa">[FE02] Conta Bloqueada ou Inativa</h4>
+<p>Inicia-se no passo 5 o sistema identifica que a conta está bloqueada ou inativa.
+1. O sistema apresenta mensagem: "Sua conta encontra-se bloqueada. Entre em contato com o suporte."
+2. O caso de uso é encerrado.</p>
+<h4 id="fe03-token-local-invalido-ou-expirado">[FE03] Token Local Inválido ou Expirado</h4>
+<p>Inicia-se no passo 1 do [FA01] o sistema identifica que não existe token válido ou o token está expirado.
+1. O sistema apresenta mensagem: "Não é possível acessar o sistema offline. Conecte-se à internet para autenticar."
+2. O sistema retorna ao passo 1.</p>
 <h2 id="requisitos-especiais">Requisitos Especiais</h2>
 <ul>
-<li>Criptografia de senhas.  </li>
-<li>Log de tentativas.</li>
+<li><strong>RE01</strong>: Toda comunicação entre cliente e servidor deve ocorrer por meio de protocolo HTTPS/TLS.</li>
+<li><strong>RE02</strong>: A interface de autenticação deve ser responsiva e otimizada para dispositivos móveis de baixo desempenho.</li>
 </ul>
 <h2 id="regras-de-negocio">Regras de Negócio</h2>
 <ul>
-<li>RN01: Todas as tentativas são auditadas.  </li>
-<li>RN02: Tokens offline têm validade definida.  </li>
+<li><strong>[RN01]</strong>: O sistema deve verificar a conectividade com a rede antes de enviar as credenciais. Em caso de falha, acionar [FA01].</li>
+<li><strong>[RN02]</strong>: Senhas devem ser validadas por meio de comparação entre hash fornecido e hash armazenado na base central. Algoritmos seguros como bcrypt ou Argon2 devem ser utilizados. Armazenamento ou tráfego em texto plano é proibido.</li>
+<li><strong>[RN03]</strong>: Após autenticação bem-sucedida, o sistema deve redirecionar automaticamente o usuário ao Dashboard correspondente ao seu perfil: Refugiado, Agência Humanitária, Empregador Parceiro ou Administrador.</li>
+<li><strong>[RN04]</strong>: Todas as tentativas de login devem ser registradas em log contendo: timestamp, identificador informado, endereço IP (quando online), ID do dispositivo e resultado da tentativa.</li>
+<li><strong>[RN05]</strong>: Tokens de acesso para operação offline devem possuir validade máxima de 30 dias. Renovação exige autenticação online.</li>
 </ul>
 <h2 id="pre-condicoes">Pré-condições</h2>
 <ul>
-<li>Usuário cadastrado.</li>
+<li><strong>PRE01</strong>: O usuário deve possuir cadastro ativo na plataforma HopeBridge.</li>
 </ul>
 <h2 id="pos-condicoes">Pós-condições</h2>
 <ul>
-<li>Sessão iniciada e permissões aplicadas.</li>
+<li><strong>POS01</strong>: Uma sessão autenticada é estabelecida no dispositivo.</li>
+<li><strong>POS02</strong>: As permissões de acesso são carregadas na camada de aplicação.</li>
+<li><strong>POS03</strong>: Todas as operações são registradas em log para fins de auditoria.</li>
+</ul>
+<h2 id="pontos-de-extensao">Pontos de Extensão</h2>
+<ul>
+<li><strong>PE01</strong>: No passo 1 este caso de uso pode ser estendido por "Recuperar Credenciais de Acesso".</li>
 </ul>
 
 
