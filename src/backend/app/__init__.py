@@ -17,7 +17,7 @@ def unauthorized():
 
 
 def create_app(config_class=Config):
-    app = Flask(__name__, static_folder='../../frontend/build', static_url_path='/')
+    app = Flask(__name__, static_folder='../../../frontend/build', static_url_path='/')
     app.config.from_object(config_class)
 
     # Configuração do CORS
