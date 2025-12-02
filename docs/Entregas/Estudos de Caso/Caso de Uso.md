@@ -31,229 +31,251 @@ Os casos de uso documentados oferecem suporte a acessibilidade, operação em ba
 
 ---
 
-# 3. Casos de Uso
+## 3. Casos de Uso
 
-## 3.1 Gerenciar Estoque de Recursos
+### 3.1 Gerenciar Estoque de Recursos
 
-### Breve descrição
-Permite que a Agência Humanitária registre, atualize e monitore itens do estoque (alimentos, kits, medicamentos etc.), mantendo o inventário confiável.
+#### 3.1.1 Breve descrição
+Permite que a Agência Humanitária registre a entrada, monitore e atualize a contagem de recursos físicos (alimentos, medicamentos, água, kits de higiene, entre outros) em diferentes locais de armazenamento. O controle de estoque é fundamental para garantir que os dados de disponibilidade de serviços no sistema estejam sempre atualizados para os refugiados e para informar as estratégias de distribuição.
 
-### Atores
-- Agência Humanitária (principal)  
-- Sistema HopeBridge (secundário)
+#### 3.1.2 Atores
+- Agência Humanitária (Primário): O ator que inicia e executa as ações de gestão;
+- Sistema HopeBridge (Secundário): Responde, valida dados e atualiza o inventário.
 
-### Fluxo Principal
-1. Ator acessa o painel e seleciona *Gerenciar Estoque*.  
-2. Sistema exibe itens, quantidade, local e nível mínimo configurado.  
-3. Ator seleciona *Adicionar*, *Atualizar* ou *Remover*.  
-4. Preenche formulário (tipo, quantidade, validade, localização).  
-5. Sistema valida e salva ajuste no inventário.  
-6. Se níveis estiverem críticos, exibem-se alertas.
+#### 3.1.3 Fluxo Principal
+O fluxo principal descreve o caminho de sucesso para adicionar estoque. O fluxo pressupõe que o ator já realizou o login.
 
-### Fluxos Alternativos
-- FA01: Atualizar item sem alterar quantidade.  
-- FA02: Remover item por dano ou vencimento.  
-- FA03: Anexar documentos como notas fiscais ou comprovantes.
+1. O Sistema exibe o painel de controle e o ator seleciona a opção "Gestão de Estoque".  
+2. O Sistema apresenta a tabela de inventário atual com filtros e o Nível Mínimo de Alerta configurado para cada item.  
+3. O ator seleciona a ação: Adicionar Estoque, Atualizar Item ([FA01]) ou Remover Item ([FA02]).
+4. Se Adicionar Estoque: O ator preenche o formulário com o tipo de recurso, a quantidade de entrada, o local de armazenamento e, opcionalmente, a data de validade. 
+5. O Sistema valida os dados do formulário (Exceção: [FE01]). 
+6. O Sistema registra a entrada do estoque (aumento da quantidade) e atualiza o inventário com timestamp e ID do ator. (Referência: [RN01]).
+7. O Sistema verifica o novo nível de estoque. Se o nível cair abaixo do limite, dispara uma notificação. (Referência: [PE01]).
+8. O Sistema exibe uma mensagem de sucesso ("Estoque atualizado com sucesso").
+9. O fluxo termina.
 
-### Fluxos de Exceção
+#### 3.1.4 Fluxos Alternativos
+[FA01] Atualizar Detalhes do Item (Não Quantidade): 
+
+- Passo de Origem: 2.1.3.
+- O ator seleciona um item na tabela e altera detalhes como localização ou descrição, mantendo a quantidade. O fluxo segue para 2.1.5 (Validação) e retorna a 2.1.8.
+
+[FA02] Remoção de Item por Vencimento ou Dano:
+
+- Passo de Origem: 2.1.3.
+-  O ator seleciona um item e escolhe Remover Item. O ator deve inserir
+o motivo (ex: Vencimento, Dano). O Sistema registra a saída com o
+motivo (Referência: [RN01]) e o remove do inventário. O fluxo retorna
+a 2.1.8.
+
+[FA03] Anexar Documentos de Recebimento:
+
+- Passo de Origem: 2.1.4.
+- O ator anexa o arquivo de Nota Fiscal ou Documento de Doação
+(Referência: [PE02]) antes de submeter o formulário. O Sistema
+armazena o documento com o registro de estoque. O fluxo continua em
+2.1.5.
+
+#### 3.1.5 Fluxos de Exceção
 - FE01: Tentativa de estoque negativo.  
 - FE02: Campos obrigatórios não preenchidos.
 
-### Requisitos Especiais
+#### 3.1.6 Requisitos Especiais
 - Suporte offline com sincronização posterior.  
 - Interface responsiva.
 
-### Regras de Negócio
+#### 3.1.7 Regras de Negócio
 - RN01: Toda alteração deve gerar log de auditoria.  
 - RN02: Itens com validade <60 dias devem ter alerta.  
 - RN03: Quantidade influencia disponibilidade de serviços.
 
-### Pré-condições
+#### 3.1.8 Pré-condições
 - Ator autenticado e autorizado.
 
-### Pós-condições
+#### 3.1.9 Pós-condições
 - Estoque atualizado e log registrado.
 
 ## 3.2 Autenticar Usuário
 
-### Breve descrição
+#### 3.2.1 Breve descrição
 Permite login com autenticação online/offline e direcionamento conforme perfil.
 
-### Atores
+#### 3.2.2 Atores
 - Refugiado  
 - Agência Humanitária  
 - Empregador Parceiro  
 - Administrador
 
-### Fluxo Principal
+#### 3.2.3 Fluxo Principal
 1. Usuário acessa o formulário de login.  
 2. Sistema verifica conectividade.  
 3. Valida credenciais.  
 4. Identifica perfil e carrega permissões.  
 5. Direciona ao dashboard.
 
-### Fluxos Alternativos
+#### 3.2.4 Fluxos Alternativos
 - FA01: Autenticação offline com token local (validade 30 dias).  
 - FA02: Recuperação de senha.
 
-### Fluxos de Exceção
+#### 3.2.5 Fluxos de Exceção
 - FE01: Credenciais inválidas.  
 - FE02: Conta inativa/bloqueada.  
 - FE03: Token offline expirado.
 
-### Requisitos Especiais
+#### 3.2.6 Requisitos Especiais
 - Criptografia de senhas.  
 - Log de tentativas.
 
-### Regras de Negócio
+#### 3.2.7 Regras de Negócio
 - RN01: Todas as tentativas são auditadas.  
 - RN02: Tokens offline têm validade definida.  
 
-### Pré-condições
+#### 3.2.8 Pré-condições
 - Usuário cadastrado.
 
-### Pós-condições
+#### 3.2.9 Pós-condições
 - Sessão iniciada e permissões aplicadas.
 
 ## 3.3 Solicitar Serviços
 
-### Breve descrição
+#### 3.3.1 Breve descrição
 Permite que refugiados solicitem serviços como abrigo, saúde, alimentação ou cursos.
 
-### Atores
+#### 3.3.2 Atores
 - Refugiado
 
-### Fluxo Principal
+#### 3.3.3 Fluxo Principal
 1. Usuário acessa lista personalizada de serviços.  
 2. Seleciona categoria e serviço.  
 3. Preenche formulário de solicitação.  
 4. Sistema valida disponibilidade.  
 5. Gera protocolo e notifica provedor.
 
-### Fluxos Alternativos
+#### 3.3.4 Fluxos Alternativos
 - FA01: Exibir mapa interativo.  
 - FA02: Agendar horário quando necessário.
 
-### Fluxos de Exceção
+#### 3.3.5 Fluxos de Exceção
 - FE01: Serviço indisponível → oferecer alternativas.  
 - FE02: Modo offline → armazenar solicitação localmente.
 
-### Requisitos Especiais
+#### 3.3.6 Requisitos Especiais
 - Interface multilíngue (árabe/inglês).  
 - Modo offline com sincronização em 24h.
 
-### Regras de Negócio
+#### 3.3.7 Regras de Negócio
 - RN01: Protocolo segue padrão AAAAMMDD-HHMMSS-SEQ.  
 - RN02: Serviços exibidos em raio de 50 km.  
 - RN03: Personalização por perfil.  
 
-### Pré-condições
+#### 3.3.8 Pré-condições
 - Refugiado autenticado.
 
-### Pós-condições
+#### 3.3.9 Pós-condições
 - Solicitação registrada com status inicial *Pendente*.
 
 ## 3.4 Rastrear Status de Solicitações Submetidas
 
-### Breve descrição
+#### 3.4.1 Breve descrição
 Painel para agências visualizarem solicitações, históricos e relatórios.
 
-### Atores
+#### 3.4.2 Atores
 - Agência Humanitária
 
-### Fluxo Principal
+#### 3.4.3 Fluxo Principal
 1. Seleciona *Rastrear Solicitações*.  
 2. Visualiza dashboard com indicadores.  
 3. Filtra por status, tipo, período ou região.  
 4. Seleciona solicitação para ver histórico completo.
 
-### Fluxos Alternativos
+#### 3.4.4 Fluxos Alternativos
 - FA01: Buscar por protocolo.  
 - FA02: Visualizar mapa de demanda.  
 - FA03: Gerar relatórios (PDF, CSV).  
 - FA04: Registrar observação.
 
-### Fluxos de Exceção
+#### 3.4.5 Fluxos de Exceção
 - FE01: Protocolo inválido.  
 - FE02: Solicitação não encontrada.  
 - FE03: Falha ao carregar dados.
 
-### Requisitos Especiais
+#### 3.4.6 Requisitos Especiais
 - Exportação de dados.  
 - Suporte offline parcial.
 
-### Regras de Negócio
+#### 3.4.7 Regras de Negócio
 - RN01: Solicitações pendentes >72h destacadas.  
 - RN02: Todas observações são auditadas.  
 - RN03: Privacidade com dados anonimizados.
 
-### Pré-condições
+#### 3.4.8 Pré-condições
 - Acesso da Agência Humanitária.
 
-### Pós-condições
+#### 3.4.9 Pós-condições
 - Dados consultados e ações auditadas.
 
 ## 3.5 Candidatar-se para Curso
 
-### Breve descrição
+#### 3.5.1 Breve descrição
 Permite ao refugiado visualizar cursos recomendados e se inscrever.
 
-### Atores
+#### 3.5.2 Atores
 - Refugiado
 
-### Fluxo Principal
+#### 3.5.3 Fluxo Principal
 1. Sistema lista cursos recomendados.  
 2. Usuário visualiza detalhes.  
 3. Solicita inscrição.  
 4. Sistema valida pré-requisitos.  
 5. Confirma inscrição.
 
-### Fluxos Alternativos
+#### 3.5.4 Fluxos Alternativos
 - FA01: Operação offline (fila de sincronização).  
 - FA02: Filtro manual de cursos.
 
-### Fluxos de Exceção
+#### 3.5.5 Fluxos de Exceção
 - FE01: Perfil incompleto.  
 - FE02: Vagas esgotadas.
 
-### Regras de Negócio
+#### 3.5.6 Regras de Negócio
 - RN01: Cursos recomendados por perfil.  
 - RN02: Notificação a parceiros após inscrição.
 
-### Pré-condições
+#### 3.5.7 Pré-condições
 - Refugiado autenticado.
 
-### Pós-condições
+#### 3.5.8 Pós-condições
 - Inscrição registrada.
 
 ## 3.6 Consultar Usuários
 
-### Breve descrição
+#### 3.6.1 Breve descrição
 Permite que administradores consultem usuários, visualizem totais e gerenciem perfis.
 
-### Atores
+#### 3.6.2 Atores
 - Administrador do Sistema
 
-### Fluxo Principal
+#### 3.6.3 Fluxo Principal
 1. Administrador acessa *Gerenciar Usuários*.  
 2. Vê categorias e contadores (ativos/inativos).  
 3. Expande categoria para detalhes.  
 4. Acessa lista de usuários inativos.
 
-### Fluxos Alternativos
+#### 3.6.4 Fluxos Alternativos
 - FA01: Remover usuários.
 
-### Fluxos de Exceção
+#### 3.6.5 Fluxos de Exceção
 - FE01: Offline sem cache → contagem impossível.
 
-### Regras de Negócio
+#### 3.6.6 Regras de Negócio
 - RN01: Cache JSON para operação offline.  
 - RN02: Recontagem apenas ao reiniciar.  
 
-### Pré-condições
+#### 3.6.7 Pré-condições
 - Administrador autenticado.
 
-### Pós-condições
+#### 3.6.8 Pós-condições
 - Dados exibidos e ações registradas.
 
 ---
