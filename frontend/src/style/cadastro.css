@@ -1,0 +1,186 @@
+/* ========== CADASTRO CONTAINER ========== */
+.cadastro-container {
+    background-color: #0d2a5c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ========== FORM CARD ========== */
+.form-card {
+    background: #fff;
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* ========== LOGO ========== */
+.logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* ========== TITLES ========== */
+.cadastro-title {
+    margin: 0 0 10px 0;
+    color: #0d2a5c;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.form-card h2 {
+    margin: 5px 0 10px 0;
+    color: #444;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* ========== FORM ========== */
+.cadastro-form {
+    width: 100%;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0d2a5c;
+}
+
+/* ========== ERROR MESSAGE ========== */
+.error-message {
+    background-color: #fee2e2;
+    color: #ef4444;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ========== RESPONSIVE ROWS ========== */
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.col {
+    flex: 1;
+}
+
+/* ========== RADIO GROUP ========== */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    cursor: pointer;
+}
+
+/* ========== PRIMARY BUTTON ========== */
+.btn-primary {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #0d2a5c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #1e3a8a;
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ========== CENTER TEXT ========== */
+.center-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.center-text a {
+    color: #0d2a5c;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.center-text a:hover {
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .cadastro-title {
+        font-size: 20px;
+    }
+
+    .form-card h2 {
+        font-size: 18px;
+    }
+}

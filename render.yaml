@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: projuris-app
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r src/backend/requirements.txt
+      cd frontend
+      npm install
+      npm run build
+    startCommand: "gunicorn --chdir src/backend run:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FLASK_APP
+        value: "src/backend/run.py"
+      - key: FLASK_ENV
+        value: production
