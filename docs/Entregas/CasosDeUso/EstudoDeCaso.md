@@ -31,11 +31,9 @@ Os casos de uso documentados oferecem suporte a acessibilidade, operação em ba
 
 ---
 
-## 3. Casos de Uso
+# 3. Casos de Uso
 
----
-
-# 3.1 Gerenciar Estoque de Recursos
+## 3.1 Gerenciar Estoque de Recursos
 
 ### Breve descrição
 Permite que a Agência Humanitária registre, atualize e monitore itens do estoque (alimentos, kits, medicamentos etc.), mantendo o inventário confiável.
@@ -76,9 +74,7 @@ Permite que a Agência Humanitária registre, atualize e monitore itens do estoq
 ### Pós-condições
 - Estoque atualizado e log registrado.
 
----
-
-# 3.2 Autenticar Usuário
+## 3.2 Autenticar Usuário
 
 ### Breve descrição
 Permite login com autenticação online/offline e direcionamento conforme perfil.
@@ -119,9 +115,7 @@ Permite login com autenticação online/offline e direcionamento conforme perfil
 ### Pós-condições
 - Sessão iniciada e permissões aplicadas.
 
----
-
-# 3.3 Solicitar Serviços
+## 3.3 Solicitar Serviços
 
 ### Breve descrição
 Permite que refugiados solicitem serviços como abrigo, saúde, alimentação ou cursos.
@@ -159,9 +153,7 @@ Permite que refugiados solicitem serviços como abrigo, saúde, alimentação ou
 ### Pós-condições
 - Solicitação registrada com status inicial *Pendente*.
 
----
-
-# 3.4 Rastrear Status de Solicitações Submetidas
+## 3.4 Rastrear Status de Solicitações Submetidas
 
 ### Breve descrição
 Painel para agências visualizarem solicitações, históricos e relatórios.
@@ -201,9 +193,7 @@ Painel para agências visualizarem solicitações, históricos e relatórios.
 ### Pós-condições
 - Dados consultados e ações auditadas.
 
----
-
-# 3.5 Candidatar-se para Curso
+## 3.5 Candidatar-se para Curso
 
 ### Breve descrição
 Permite ao refugiado visualizar cursos recomendados e se inscrever.
@@ -236,9 +226,7 @@ Permite ao refugiado visualizar cursos recomendados e se inscrever.
 ### Pós-condições
 - Inscrição registrada.
 
----
-
-# 3.6 Consultar Usuários
+## 3.6 Consultar Usuários
 
 ### Breve descrição
 Permite que administradores consultem usuários, visualizem totais e gerenciem perfis.
