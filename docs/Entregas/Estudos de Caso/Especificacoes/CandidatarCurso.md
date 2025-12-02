@@ -1,70 +1,82 @@
-# Candidatar-se para curso
+# Candidatar a Curso
 
-## Breve Descrição
-Este caso de uso permite que o refugiado visualize oportunidades de capacitação profissional sugeridas pelo sistema com base em seu perfil e realize sua inscrição. O objetivo é conectar o usuário a cursos oferecidos por ONGs e parceiros para promover sua reintegração econômica e social.
+## Breve descrição
+Este caso de uso descreve como um refugiado pode se candidatar a um curso. O fluxo inclui desde o acesso à página de cursos, escolha de um curso de interesse, leitura de informações detalhadas e confirmação da candidatura, até mensagens de sucesso ou falha no processo.
 
 ## Atores
-- Refugiado
+- **Ator Principal**: Refugiado
+- **Atores Secundários**:
+    - Sistema de Gestão de Cursos
+    - API de Serviços
 
 ## Fluxo de Eventos
 
 ### Fluxo Principal
-Este caso de uso é iniciado quando o refugiado acessa a seção de "Capacitação e Oportunidades" na plataforma.
+2.1.1 O refugiado acessa o sistema e realiza o login com suas credenciais válidas.
 
-1. O sistema analisa o perfil do usuário (experiência prévia, interesses) e utiliza algoritmos para listar as opções de cursos mais adequadas disponíveis na região[FA01][FA02][FE01].
-2. O refugiado seleciona um curso de interesse na lista apresentada.
-3. O sistema apresenta os detalhes do curso (instituição, horários, local, conteúdo e requisitos).
-4. O refugiado confirma o interesse selecionando a opção "Candidatar-se".
-5. O sistema verifica se o usuário atende aos pré-requisitos e se há vagas disponíveis[RN01][FE01][FE02].
-6. O sistema registra a candidatura do usuário no curso selecionado.
-7. O sistema exibe uma mensagem de confirmação da inscrição e informa que notificações futuras serão enviadas[RN03].
-8. O caso de uso é encerrado.
+2.1.2 O sistema exibe a página inicial, que inclui acesso ao menu de cursos.
+
+2.1.3 O refugiado acessa a página que lista os cursos disponíveis.
+
+2.1.4 O sistema exibe a lista de cursos disponíveis com informações básicas como título, descrição e carga horária.
+
+2.1.5 O refugiado seleciona o curso desejado para visualizar os detalhes.
+
+2.1.6 O sistema exibe os detalhes completos do curso, incluindo pré-requisitos, horários e local de realização ou modalidade.
+
+2.1.7 O refugiado escolhe a opção de se candidatar ao curso.
+
+2.1.8 O sistema verifica se o refugiado atende aos pré-requisitos. (Possível exceção: FE01)
+
+2.1.9 O sistema verifica se ainda existem vagas no curso. (Possível exceção: FE02)
+
+2.1.10 O sistema registra a candidatura do refugiado ao curso.
+
+2.1.11 O sistema exibe a mensagem: "Candidatura realizada com sucesso."
+
+2.1.12 O fluxo se encerra.
 
 ### Fluxos Alternativos
 
-#### [FA01] Uso em Modo Offline
-No passo 1, o sistema detecta que não há conexão com a internet.
+#### FA01 — Usuário desiste da candidatura
+**Passo de origem**: 2.1.7
 
-1. O sistema carrega as informações de cursos armazenadas localmente no dispositivo durante a última sincronização.
-2. O refugiado seleciona o curso e clica em "Candidatar-se" (passos 2 a 4).
-3. O sistema armazena a solicitação de candidatura localmente e informa que a inscrição será processada assim que a conexão for restabelecida [RN02].
-4. O caso de uso é encerrado.
+O refugiado decide não candidatar ao curso e volta à página anterior.
 
-#### [FA02] Filtragem Manual de Cursos
-No passo 1, o refugiado decide buscar cursos fora das sugestões automáticas.
-
-1. O usuário utiliza filtros de busca (área de atuação, localização, tipo de curso).
-2. O sistema atualiza a lista de cursos conforme os filtros.
-3. O fluxo retorna ao passo 2.
+O fluxo retorna ao passo 2.1.5.
 
 ### Fluxos de Exceção
 
-#### [FE01] Perfil Incompleto
-- No passo 1 ou 5, o sistema identifica que faltam dados essenciais no perfil do refugiado para realizar a candidatura.
-- O sistema exibe uma mensagem solicitando o preenchimento dos dados faltantes e redireciona para o caso de uso "Manter Perfil".
+#### FE01 — Refugiado não atende aos pré-requisitos
+**Passo de origem**: 2.1.8
 
-#### [FE02] Vagas Esgotadas
-- No passo 5, o sistema verifica que o limite de participantes para o curso já foi atingido.
-- O sistema informa o usuário e oferece a opção de entrar em uma lista de espera.
+O sistema identifica que o refugiado não atende a todos os pré-requisitos exigidos pelo curso.
+
+O sistema exibe a mensagem: "Você não atende aos pré-requisitos para este curso."
+
+O fluxo retorna ao passo 2.1.6.
+
+#### FE02 — Curso sem vagas
+**Passo de origem**: 2.1.9
+
+O sistema identifica que não há vagas disponíveis para o curso escolhido.
+
+O sistema exibe a mensagem: "Não há vagas disponíveis para este curso."
+
+O fluxo retorna ao passo 2.1.6.
 
 ## Requisitos Especiais
-- A interface deve ser intuitiva e dar suporte a múltiplos idiomas (árabe e inglês) para atender refugiados com baixa familiaridade tecnológica.
-- O sistema deve garantir funcionamento básico e armazenamento de dados em áreas com baixa ou nenhuma conectividade (Modo Offline).
-- A aplicação deve ser compatível com dispositivos móveis simples.
+- **[RS01]**: O sistema deve apresentar os cursos com informações completas e atualizadas, incluindo os pré-requisitos.
+- **[RS02]**: O sistema deve permitir o funcionamento da candidatura somente quando houver conexão estável com a API de serviços.
 
 ## Regras de Negócio
-- **[RN01] Validação de Adequação (Match)**: O sistema deve priorizar a exibição de cursos que tenham "match" com o perfil do usuário (ex: um refugiado com experiência em construção civil deve ver cursos de reconstrução prioritariamente).
-- **[RN02] Sincronização de Dados Offline**: Candidaturas realizadas em modo offline devem ser mantidas em uma fila local e enviadas automaticamente para o servidor central assim que a conectividade for restaurada.
-- **[RN03] Notificação de Parceiros**: Sempre que uma candidatura for confirmada, o sistema deve permitir que o parceiro/empregador responsável acompanhe o interesse e organize as próximas etapas (entrevistas ou início das aulas).
+- **[RN01]**: O sistema deve validar automaticamente se o refugiado atende aos pré-requisitos do curso antes da candidatura.
+- **[RN02]**: A candidatura deve ser registrada imediatamente após a verificação de vagas.
 
-## Pré-condições
-- O refugiado deve estar cadastrado e autenticado na plataforma "HopeBridge".
-- Devem existir cursos com inscrições abertas cadastrados por parceiros ou ONGs.
+## Precondições
+- O refugiado deve estar autenticado no sistema.
+- O refugiado deve ter acesso à página de cursos.
 
 ## Pós-condições
-- O registro do refugiado é vinculado à lista de inscritos do curso.
-- O parceiro/ONG responsável pelo curso tem acesso aos dados do candidato para gestão.
-- O histórico do usuário é atualizado para facilitar futuras sugestões de emprego após a conclusão do curso.
-
-## Pontos de Extensão
-- Esse caso de uso não possui pontos de extensão.
+- A candidatura é registrada no sistema.
+- O refugiado passa a ter sua inscrição vinculada ao curso.
