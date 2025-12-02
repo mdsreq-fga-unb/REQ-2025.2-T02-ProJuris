@@ -8,16 +8,17 @@ nav:
   - Entregas:
     - 'Unidade 1': 'Entregas/Unidade 1.md'
     - 'Unidade 2': 'Entregas/Unidade 2.md'
-    - 'Atividades de Casos de Uso':
+    - 'Atividades de Estudo de Caso da Unidade 3':
       - 'Estudo de Caso':
         - 'Caso de Uso':
           - 'Visão Geral': 'Entregas/Estudos de Caso/Caso de Uso.md'
-          - 'Gerenciar Estoque': 'Entregas/Estudos de Caso/Especificacoes/GerenciarEstoque.md'
-          - 'Autenticar Usuário': 'Entregas/Estudos de Caso/Especificacoes/AutenticarUsuario.md'
-          - 'Solicitar Serviços': 'Entregas/Estudos de Caso/Especificacoes/SolicitarServicos.md'
-          - 'Rastrear Solicitações': 'Entregas/Estudos de Caso/Especificacoes/RastrearSolicitacoes.md'
-          - 'Candidatar-se para Curso': 'Entregas/Estudos de Caso/Especificacoes/CandidatarCurso.md'
-          - 'Consultar Usuários': 'Entregas/Estudos de Caso/Especificacoes/ConsultarUsuarios.md'
+          - 'Especificações':
+            - 'Gerenciar Estoque': 'Entregas/Estudos de Caso/Especificacoes/GerenciarEstoque.md'
+            - 'Autenticar Usuário': 'Entregas/Estudos de Caso/Especificacoes/AutenticarUsuario.md'
+            - 'Solicitar Serviços': 'Entregas/Estudos de Caso/Especificacoes/SolicitarServicos.md'
+            - 'Rastrear Solicitações': 'Entregas/Estudos de Caso/Especificacoes/RastrearSolicitacoes.md'
+            - 'Candidatar-se para Curso': 'Entregas/Estudos de Caso/Especificacoes/CandidatarCurso.md'
+            - 'Consultar Usuários': 'Entregas/Estudos de Caso/Especificacoes/ConsultarUsuarios.md'
       - 'PBB': 'Entregas/Estudos de Caso/PBB.md'
       - 'USM': 'Entregas/Estudos de Caso/USM.md'
   - Evidências:
